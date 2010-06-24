@@ -1,0 +1,6 @@
+imicsdk.ini im windows verzeichniss
+
+[imic]
+warminit=1
+[Joystick]
+enable = 0

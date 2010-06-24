@@ -1,0 +1,7 @@
+This program (RegulateTomW.vi) changes the AnalogOut until it archices the desired Power measured with a Photodiode.
+It can not change the Power very fast but within some ms. 
+AnalogOut and Photodiode connections are defined in the EOM_IO.vi
+Power calibration: Measure some datapoints: IRPower(wavelength) / EffectiveDiodeVoltage(wavelength) and put them into DiodeToPower.vi, DiodeVoltage is the effective Voltage corrected by DiodeEff.vi
+Change Bias Voltage of the Conoptics Knob in EOMEstimate.vi (and if it does not work good, also the constants in EOMEstimate.vi)
+If you can not readout the IR-Laserpower of the Laserhead, we have to estimate it: EstimateIR-Power: it contains some measured nm/mW values of the Laserhead
+With EOMscan.vi you can measure a SetVoltage-EffPhotodiode Diagram.

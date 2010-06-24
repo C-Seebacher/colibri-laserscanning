@@ -1,0 +1,6 @@
+GUI.ini and variables.ini: dafault in the Aplication Path, or via a ScanMicroscope.ini [ini-path] GUI=... variables=...
+InitRunDrivers.vi in the Drivers Path (runs the drivers at startup)
+InitTopLevelVIs.vi in the GUIs Path (loads the GUIs at startup); a GUI can be paced in a subfolder of InitTopLevelVIs.vi but this has to be added in the GUI.ini file.
+Job.ini in the same path as StartJobGui.vi. Name can be different; default: job.filename="Job.ini"
+RunImageQueues.vi has to be in the same path as SaveImaqFromQueue.vi and DeleteImaqFromSavedQueue.vi
+

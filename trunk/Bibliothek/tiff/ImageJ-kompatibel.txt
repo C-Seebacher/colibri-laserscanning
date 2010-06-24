@@ -1,0 +1,16 @@
+steht im Tag 270: 
+ImageJ=
+unit=µm
+werden die resolution tags 282 283 in µm interpretiert und gelesen
+der Z-abstand eines Stapels wird mit spacing=1.2324 angegeben. Dies funktioniert jedoch nur wenn auch images=.. anegeben wird.
+Wird jedoch images=.. angegeben ignoriert ImageJ die offsets der nachfolgenden Directory Entries und liest das bild als block
+ 
+Ändert man images in jmages weden die bilder richtig gelesen aber das z-Spacing ignoriert
+
+Joachims Image5D braucht:
+Description string of a 2-channel, 24 slices and 7 timepoints Image5D as displayed by ImageJ in debug mode:
+
+ImageJ=1.37r images=336 channels=2 slices=24 frames=7 unit=pixel spacing=0.8 fps=5.555555555555556E-4 Image5D=1.1.6
+
+images = channels*slices*frames
+otherwise error.
