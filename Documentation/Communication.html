@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>DataCommunication</title>
+</head>
+<body>
+<h2>Data communication in colibri</h2>
+2. July 2006, fixed 27. Nov 2006<br>
+This file is a short description how Drivers, GrafikUserInterface, ..
+is working.<br>
+<img alt="data flow" src="Driver-GUI-Notifier.gif"
+ style="width: 287px; height: 230px;"><br>
+<h3>Driver for acquisition of an image</h3>
+At startup of the driver it is initializing the hardware (some init
+sub-vis), and a queue called "SaveQueue".<br>
+Then there is a while loop with an Notifier (name: scan.number.set)
+waiting to acquire the image.<br>
+When the notifier arrives (the text contains the number of images to
+acquire) acqisition is started:<br>
+&nbsp;- Read all needed variables and configure the rest of the
+hardware (e.g. exposure time...) <br>
+&nbsp;- obtain a new IMAQ from ImaqStorage.vi<br>
+&nbsp;- grab the image and write it into the IMAQ<br>
+&nbsp;&nbsp;&nbsp;&nbsp; - if there is a new part available change the
+scan.imaq.list variable to the IMAQ-number to send a notification to
+update the
+display.<br>
+&nbsp;- send the IMAQ with its meta data into the SaveQueue<br>
+&nbsp;- change the scan.number variable to the sequence number (so a
+job
+controller or a GUI will be notified of the arrival of a new image)<br>
+&nbsp;- if there is a sequence to acquire: check if there is no error,
+check the notifier (i use the text "cancel" to abort a sequence): If
+everything is OK start a new acquisition.<br>
+When the notifier is deleted (main program is closed) quit the driver.<br>
+<h3>Driver for Hardware (easy without query)</h3>
+At startup of the driver it is initializing the hardware (some init
+sub-vis). Read the actual value and update the variables. <br>
+Then there is a while loop with an Notifier (listening to a .set
+variable) waiting.<br>
+When the notifier arrives (the text contains e.g. a number with
+the new value for the hardware):<br>
+&nbsp;- send the data to the hardware<br>
+&nbsp;- read the result and update the variable. <br>
+When the notifier is deleted (main program is closed) quit the driver.<br>
+<h3>Driver for Hardware (advanced with query)</h3>
+At startup of the driver it is initializing the hardware (some init
+sub-vis)<br>
+Then there is a while loop with an Notifier (.set name)
+waiting, use the timeout of the WaitForNotifier to start a query after
+some seconds.<br>
+When the notifier arrives (the text contains the new value for the
+hardware, or number="update" to force an
+update):<br>
+&nbsp;- send data to the hardware (new data or query)<br>
+&nbsp;- read the result and update the
+number variable. (the driver can not watch the notifier while waiting
+here, so maybe waiting is a problem)<br>
+You can use an extra while loop to query the device after some seconds
+if waiting for the result is too slow. <br>
+When the notifier is deleted (main program is closed) quit the driver.<span
+ style="font-weight: bold;"></span><br>
+<h3>GUI for a Variable (Hardware control)</h3>
+open a Notifier on the variable you want to control (without the .set!)<br>
+Have a WaitForNotifier loop to update your display with the actual
+values. Do an first update at startup.<br>
+Have a Event loop to watch the user input and change the
+variable.set to the new data. The Notifiacation for a driver is
+generated from Variables.vi.<br>
+It would be best to have two displays: One for the variable.set to
+start a change and one for the Notifier to watch the result. You can do
+this with one but there is periodically query or another application is
+changing the data you may see you control changing while editing the
+value.<br>
+<br>
+</body>
+</html>

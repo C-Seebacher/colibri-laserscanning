@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body>
+<h1>Scan timing</h1>
+timing of a bidirectional scan<br>
+sync AD and Galvo at t0, t1...<br>
+not neccesary a sync at tAD and tG so you can optimize it to<br>
+(Pixel+TurnPixel)*AD = integer * Galvo<br>
+where you can choose TurnPixel to integer number (at least the time tur
+turn the Galvo)<br>
+<br>
+<img alt="Scan timing" src="ScanTiming.gif"
+ style="width: 591px; height: 178px;"><br>
+red line: Galvo-updatecycle<br>
+Blue line: AD-sample<br>
+t0 start of the image<br>
+t1 start of the next line<br>
+<br>
+</body>
+</html>
