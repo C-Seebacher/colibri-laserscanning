@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  
+  
+  <title>Documentation for Labview ScanMicroscope</title>
+  <meta content="C.S." name="author">
+</head>
+
+
+<body>
+
+<h1>Documentation: Setup a 2 Photon Microscope<br>
+
+</h1>
+
+C.Seebacher<br>
+
+last change 16. Februar 2009 <br>
+
+Seebacher@biz.uni-muenchen.de<br>
+
+www.lmu.de/~chr<br>
+
+<h2>What you need<br>
+
+</h2>
+
+<h3>Hardware</h3>
+
+<img alt="Block diagram of a 2P setup" src="2Photon-setup.gif" style="width: 455px; height: 300px;">
+<h4>Microscope<br>
+
+</h4>
+
+Nikon,&nbsp; Leica, Olympus, Till-Photonics, Zeiss, and many more
+(access to the intermediate image)<br>
+
+motorized z-control (you want to do 3D)<br>
+
+dichroic mirrors and filters<br>
+
+<h4>Laser</h4>
+
+expensive femto second laser for 2 photon excitation: e.g. Spectra
+Physics, Coherent, Menlo-Systems, Toptica, Amplitude and so on ....<br>
+
+any CW-laser for confocal microscopy (you need an extra pinhole between
+dichroic and detector, or use a small detector, or use fiber coupling)<br>
+
+<h4>Laser attenuator</h4>
+All lasers have too much power. You have to attenuate the laser. Reflecting ND filters can do if they
+do not build up too strong kerr lenses. I tried a reflecting attenuation wheel at 1W power without succes.<br>
+
+An EOM is the recommendation. I have an ConOptics.<br>
+
+<h4>Laser beam expander</h4>
+
+most lasers have a 1mm collimated beam but for the
+scanner/scanlens/objective you need several mm. I use an approx. 4
+times expander.<br>
+
+<h4>Laser puls compressor (prechirp)</h4>
+
+You can get some improvement using prechired pulses to get as short as
+possible pulses at the sample.<br>
+
+<h4>Scanner </h4>
+
+Galvos: small and fast e.g. CTI6210,CTI6215, GT100 etc. <br>
+
+Galvo driver board:<br>
+
+<ul>
+
+  <li>analog input driver: conventional PID (option 1) or SmartMove
+(option
+2); connect Analog-Out
+on
+the
+National Instruments card with the analog inputs of the boards.</li>
+
+  <li>or digital input driver: Galvo control SmartMove with extra
+controller (option 3)
+connected to a
+serial RS232 port of the PC.</li>
+
+</ul>
+
+Scanlens, a&nbsp;f ~ 50nm achromat could do if you do not need a planar
+field, a
+large field and a confocal detection.<br>
+
+Or complete
+digital
+scanhead like the Yanus via Till-Photonics.<br>
+
+<h4>PMT-Detector</h4>
+
+PMT: sensitive, large area, e.g. Hamamatsu R6357.<br>
+
+High Voltage supply, e.g Hamamatsu C4900<br>
+
+Amplifier with ~1MHz bandwidth, (e.g 1k Ohm in, low noise ~100x
+Amplification, max. +-10V output for NI-card)<br>
+
+AD-Card: National Instruments PCI6111, PCI6110 or similar (should have
+4 MHz
+simultaneous sampling on each
+channel). You need a speed approx. 4 times the analog bandwidth for
+Nyquist sampling. You can work with slower cards but then you need an
+integrating circuit witch needs much more effort.<br>
+
+<h4>Cables for synchronizing galvos and AD-sampling:</h4>
+
+<ul>
+
+  <li>conventional PID
+(option1): connect PFI6 with PFI0/AI-Start</li>
+
+  <li>SmartMove analog in(option2): connect PFI6 with PFI0/AI-Start
+(delay is
+done with the "adclock.startdelay" parameter)</li>
+
+  <li>SmartMove with extra controller
+(option3): connect the trigger out (Pin0 or 1) on the extra controller
+with
+PFI0/AI-Start, and feed the 8MHz clock to PFI1.<br>
+
+Bit/Pin0: high during frame (frame start).<br>
+
+Bit/Pin1: high during line (line start) can be used for blanking.<br>
+
+Bit/Pin2: high during sequence<br>
+
+  </li>
+
+</ul>
+
+<h4>CCD-Spectrograph-Detector</h4>
+
+planned for near future, demo is working<br>
+
+<h4>APD-Photon counting-Detector</h4>
+The counters on the NI PCI611x card are not really good but is somehow works. I recmmend to take a&nbsp;better counter card.<br>
+
+<h4>Computer</h4>
+
+tested on a goof P4, 1.3GHz, 256BM RAM<br>
+
+I use a&nbsp;2.8GHz, 1GB RAM<span style="font-weight: bold;"><br>
+
+</span>
+<h4>Here is a photograph of our first setup:</h4>
+
+<img alt="Photograph of our setup" src="2Photon-oursetup.jpg" style="width: 580px; height: 557px;"><br>
+
+<h3>Software</h3>
+
+Labview 8 with IMAQ/Vision 8 and NIDAQmx<br>
+
+A small dll BinningDLL\Release\Binningdll.dll is compiled for Windows.
+Labview on Linux and Mac needs a
+new compilation.<br>
+
+The colibri software<br>
+
+or: Florian Engert Software <br>
+
+or: <a href="http://svobodalab.cshl.edu">Mathlab6.1 (ScanImage)</a> -
+(does not work with the digital galvo control).<br>
+
+Good to have: ImageJ, Irfanview, Autohotkey.
+<h2>Installation of Labview</h2>
+
+You have to install Labview first. At the moment I use version 8.0.1.
+Higher versions should also work. You need:<br>
+
+<ul>
+
+  <li>LabView<br>
+
+  </li>
+
+  <li>NI-VISA for the the RS232 ports</li>
+
+  <li>NI-DAQmx driver for the AD-card</li>
+
+  <li>NI-IMAQ <br>
+
+  </li>
+
+  <li>NI-Vision development module (e.g. the \vi.lib\Vision\Pixel
+Manipulation.llb)</li>
+
+</ul>
+
+I needed 3 CDs: Labview, NI-Vision Development and DAQmx that comes
+with the Card.<br>
+
+You can check the hardware and the installation with the program
+"Measurement and Automatisation Explorer". There you should have the
+following entries:<br>
+
+<pre>Ger&auml;te und Schnitstellen:</pre>
+
+<pre>&nbsp; Ports</pre>
+
+<pre>&nbsp; NI-DAQmx, here you can test the card</pre>
+
+<pre>Software:</pre>
+
+<pre>&nbsp; LabView8</pre>
+
+<pre>&nbsp; NI-Vision_ImageProcessing and Machine Vision:8.0.0.7845:NIVision.dll</pre>
+
+<pre>&nbsp; NI-Vision_Sevices:8.0.0.3393:NIVisSvc.dll</pre>
+
+<pre>&nbsp; NI-VISA:3.4.0.49152: Windows\System32\visa32.dll</pre>
+
+<pre>&nbsp; NI-DAQmx:8.0.0f0: NationalInstruments\NI-DAQ</pre>
+
+<pre>&nbsp; NI-IMAQ:3.5.0: NationalInstruments\NI-IMAQ</pre>
+
+<h2>Installation of Colibri<br>
+
+</h2>
+
+So far there is no installation file.<br>
+
+You need lots of vi-files in the \2Photon and in the \Bibliothek
+folders; download them all. <br>
+
+Remove the -template from the \2Photon\ScanMicroscope.ini-template
+and&nbsp; \2Photon\GUI.ini-template filenames (use copy if you are in
+SVN). <br>
+
+Try to open some VIs in the 2Photon folder and look if it finds VIs
+from the Bibliothek folder (e.g. try Variables\Variables.vi,
+Treiber\TJob.vi, ImaqQueue\ImaqStorage.vi..)<br>
+
+Create a c:\Temp folder. You can change
+the path in the SaveImaqFromQueue.vi and GetImage.vi. But it should be
+placed
+on a fast and large disk.<br>
+
+Copy /variables/Mic.ini to a new filename and change
+\2Photon\ScanMicroscope.ini accordingly. Modify the new file for
+different
+hardware. Delete all driver.list entries you do not need.<br>
+
+Modify the bitsize="6.14E-7" in /variables/Mic.ini for different
+hardware. We use 614 nanometer per bit in the intermediate image. With
+a 12bit DA (6115-card!) multiply by 16.<br>
+
+Option analog galvo control (1)(2) edit: galvo.type="analog"&nbsp;
+adclock.source="internal"<br>
+
+Option SmartMove with digital control(3) edit:
+galvo.type="digital"&nbsp;
+adclock.source="external"<br>
+
+Try to start ScanMicroscope.vi.<br>
+
+<h2>Features</h2>
+
+Comes with complete source code.<br>
+
+Vector based <a href="ScanControl.html">scan description</a>.<br>
+
+1 to 4 channels only limited by the AD-card.<br>
+
+support of the digital interface to the SmartMove boards (bidirectional
+scanning with all speeds).<br>
+
+4 MHz sampling speed (AD-card and computer dependent) with
+variable binning n=1...65635 (slower than 15ms/pixel)<br>
+
+flexible scan speeds from sub ms (40&micro;s) to several s
+(memory/binning-limit?) per line.<br>
+
+Tested: 10&micro; x10&micro;, 4x4 pixel with 12&micro;s/pixel achieves
+0.78ms per frame, but I lost data after 60 frames (buffer too small)<br>
+
+Tested: 100&micro; x100&micro;, 4000x1200 Pixel with 1&micro;s/pixel.
+4000x2000 does somehow not work (out of memory..)?!<br>
+
+Tested: 10&micro; x10&micro;, 100x100 Pixel with 1&micro;s/pixel
+achieves 46.5fps<br>
+
+Tested: 4&micro; x4&micro;, 80x80 pixel with 6&micro;s/pixel,
+40ms/frame
+100 frames continuous<br>
+
+Tested: 4&micro;x4&micro;, 80x80 pixel with 12&micro;s/pixel,
+78.7ms/frame 500 frames continous<br>
+
+Arbitrary scan tracks<br>
+
+Spot scan<br>
+
+Line scan (at the monent not tested)<br>
+
+Flexible Job control<br>
+
+Units are meter at the sample.<br>
+
+Some support of PCO CCD cameras.<br>
+
+Contionous running (almost no gap between scans)<br>
+
+<br>
+
+<br>
+
+<br>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>ScanControl</title>
+</head>
+<body>
+<h1>ScanControl</h1>
+Scan control language to describe a 2 or more dimensional path. <br>
+It is based on an array of position and velocity numbers.<br>
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">Galvo1 e.g. x<br>
+      </td>
+      <td style="vertical-align: top;">Galvo2 e.g. x</td>
+      <td style="vertical-align: top;">Galvo3<br>
+      </td>
+      <td style="vertical-align: top;">Device4<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">position<br>
+      </td>
+      <td style="vertical-align: top;">123<br>
+      </td>
+      <td style="vertical-align: top;">1000<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">velocity<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+There is a loop (constant time interval) that updates (send to galvo)
+the position and adds the velocity to the position.<br>
+Before the update the loop looks for commands that change the numbers
+in the array.<br>
+The commands consist of :<br>
+<ul>
+  <li>a time or a loop number when the command is to be used</li>
+  <li>a description what do do (e.g. change the velocity, change the
+position or add to the position)</li>
+  <li>a value</li>
+</ul>
+<h2>Commands for the Digital galvo board:</h2>
+see Original decription<br>
+Description, Loop counter, Channel, Value<br>
+like:<br>
+V,0,3,-531952<br>
+V,0,4,-992382A<br>
+S,120,9,751<br>
+E,3345,9,0<br>
+<br>
+<h3>Description:</h3>
+V: Value: Absolute position<br>
+I: Increment: velocity<br>
+R: Relative: add to absolute<br>
+S: Start program loop (Value: number of repeats)<br>
+E: End program loop<br>
+<h3>Channel:</h3>
+3: Galvo 1<br>
+4: Galvo 2<br>
+5: Galvo 3<br>
+7: Digital channels<br>
+9: Loop conter<br>
+<h3>Value</h3>
+Integer Number. <br>
+Multiply the 16bit Galvo values with 2^20 ("mycro counts")<br>
+<br>
+<br>
+To send this commands via RS232: an A before the command tells the
+reciever to Add this command to the program. A C clears the old comand
+list. A X executes a program. Any character cancels a program...<br>
+<br>
+<h2>Commands used in Labview</h2>
+Use the "ScanControl/ScanControl.ctl" Control element.<br>
+<img alt="Labview scancontrol" src="ScanControlctl.jpg"
+ style="width: 357px; height: 163px;"><br>
+<ul>
+  <li>Zeitpunkt: Time in seconds. (Take care when you want to send the
+scan to the digital control board: Time has to be a multiple of the
+Galvo-Clock (10 or 12&micro;s) because there it has to be an integer)</li>
+  <li>Wirkung: Abs: set poition, Rel:
+add to position, inc: set velocity, LoopStart, LoopEnd<br>
+  </li>
+  <li>Kanal: GalvoX,GalvoY, ImageX, DigitalOut,......</li>
+  <li>Wert: Value in meter (or m/s for the inc command, or pixel for
+the Image Channels, or pixel/s for inc+Image, or s for the SMove
+Channel)</li>
+</ul>
+<h2>Examples</h2>
+V,0,3,-100<br>
+V,1,3,-50&nbsp;&nbsp;&nbsp; set to -50<br>
+I,1,3,10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set velocity to 10<br>
+I,10,3,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after 9 cycles set
+velocity back to 0<br>
+<br>
+produces:<br>
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">time<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td style="vertical-align: top;">3<br>
+      </td>
+      <td style="vertical-align: top;">4<br>
+      </td>
+      <td style="vertical-align: top;">5<br>
+      </td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">7<br>
+      </td>
+      <td style="vertical-align: top;">8<br>
+      </td>
+      <td style="vertical-align: top;">9<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">11...<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">pos=galvo<br>
+      </td>
+      <td style="vertical-align: top;">-100<br>
+      </td>
+      <td style="vertical-align: top;">-50<br>
+      </td>
+      <td style="vertical-align: top;">-40<br>
+      </td>
+      <td style="vertical-align: top;">-30<br>
+      </td>
+      <td style="vertical-align: top;">-20<br>
+      </td>
+      <td style="vertical-align: top;">-10<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">20<br>
+      </td>
+      <td style="vertical-align: top;">30<br>
+      </td>
+      <td style="vertical-align: top;">40<br>
+      </td>
+      <td style="vertical-align: top;">40<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">inc<br>
+      </td>
+      <td style="vertical-align: top;">0 (startup)<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">10<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+      <td style="vertical-align: top;">0<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h3>Sawtooth </h3>
+10 times, 12 ms ramp, 1E6 amplitude, 3=XGalvo:<br>
+C&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; Clear<br>
+AV,0,3,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start with 0<br>
+AS,0,0,10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Loop 10 times<br>
+AI,0,3,1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ramp up with 1000
+per step<br>
+AI,500,3,-1000&nbsp;&nbsp; ramp down with 1000 per step<br>
+AI,1500,3,1000&nbsp; ramp up with 1000 per step<br>
+AE,2000,0,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now we are at 0 again
+and repeat this loop<br>
+AI,20001,3,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after the loop: stop
+last ramp up<br>
+<br>
+</body>
+</html>

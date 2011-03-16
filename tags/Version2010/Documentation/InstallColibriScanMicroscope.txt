@@ -1,0 +1,47 @@
+Install Labview >=8.6
+Install NI Vision Development Module (its Labview8 tools are enaugh)
+Install Tortuoise, (reboot not really needed)
+
+create a folder like c:\ScanMicroscope
+right click this folder, "SVN checkout...", url=http://opensvn.csie.org/colibri/trunk/
+
+Place the dlls for external devices you have (i am not sure if this is really important if they are already in system32):
+C:\ScanMicroscope\Bibliothek\iMicSDK\tillimic.dll, 
+C:\ScanMicroscope\Bibliothek\PCO\Senntcam.dll
+C:\ScanMicroscope\Bibliothek\iXon\Atmcd32d.dll
+
+
+create c:\temp folder
+
+copy C:\ScanMicroscope\2Photon\Variables\Mic.ini and save it with a custom name like C:\ScanMicroscope\2Photon\Variables\MyXYSetup.ini
+copy C:\ScanMicroscope\2Photon\GUI.ini-template and save it e.g. as C:\ScanMicroscope\2Photon\GUI.ini
+copy C:\ScanMicroscope\2Photon\ScanMicroscope.ini-template and save it as C:\ScanMicroscope\2Photon\ScanMicroscope.ini (do not change this name!)
+edit this new C:\ScanMicroscope\2Photon\ScanMicroscope.ini:
+[ini-files]
+GUI=GUI.ini
+variables=Variables\MyXYSetup.ini
+
+Edit the C:\ScanMicroscope\2Photon\Variables\MyXYSetup.ini, especially the following entries:
+galvo.port="com4" - change to the comport of the Galvo controller.
+Other comports... Poly, Laser, iMic
+
+driver.list="driver.scan,driver.preview,driver.imic,driver.laser,driver.lasereom,driver.job,driver.pmt" delete entries you do not need (not really important)
+in the following lines there are the details of the drivers to load:
+driver.scan="DScanContinous.vi" Scanning and AD-Card aquisition, probably you need this
+driver.preview="DFloatingPreview.vi" Pop-up images of the measurement, probably you want this, only if you have 1 detector you could use ViewImaq.vi accessable from the menu
+driver.imic="Timicsdk.vi" for TILL-Microscopes
+driver.laser="TMaitai.vi" for Spectra-Physics (Newport) MaiTai lasers
+driver.lasereom="Deom.vi" for EOM control with a photodiode and a analog out port
+driver.job="TJob.vi" for the internal scripting like z-stacks and time series
+driver.pmt="THighVoltage.vi" to control the PMT-Gain with analog-out ports named "SpannungAO0" and "SpannungAO1"
+driver.pco="DPCOContinous.vi" to get images from a PCO-camera (Sensicam QE, EM ..)
+driver.poly="poly4.vi" for a TILL-Polychrome 2-4 connected to an Comport
+the optional but recomendet list "....variables.list=" to what variable the driver is listening with a notifier, needed to stop a driver in a controled way.
+
+Open,Run C:\ScanMicroscope\2Photon\ScanMicroscope.vi
+check Error-popups
+Check driver status with Debug/Driver
+ 
+
+ToDO run a init-program if e.g. no ScanMicroscope.ini is found!
+

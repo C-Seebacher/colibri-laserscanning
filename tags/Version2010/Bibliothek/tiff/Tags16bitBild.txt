@@ -1,0 +1,77 @@
+C:\Programme\GnuWin32\bin>tiffinfo test-16.tif
+TIFF Directory at offset 0x8
+  Subfile Type: (0 = 0x0)
+  Image Width: 400 Image Length: 400
+  Bits/Sample: 16
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Image Description: "ImageJ=1.30r\nmin=0.0\nmax=65372.0\n"
+  Samples/Pixel: 1
+  Rows/Strip: 400
+  Planar Configuration: single image plane
+
+C:\Programme\GnuWin32\bin>tiffdump test-16.tif
+test-16.tif:
+Magic: 0x4d4d <big-endian> Version: 0x2a
+Directory 0: offset 8 (0x8) next 0 (0)
+SubFileType (254) LONG (4) 1<0>
+ImageWidth (256) SHORT (3) 1<400>
+ImageLength (257) SHORT (3) 1<400>
+BitsPerSample (258) SHORT (3) 1<16>
+Photometric (262) SHORT (3) 1<1>
+ImageDescription (270) ASCII (2) 34<ImageJ=1.30r\nmin=0.0\nmax ...>
+StripOffsets (273) LONG (4) 1<768>
+SamplesPerPixel (277) SHORT (3) 1<1>
+RowsPerStrip (278) SHORT (3) 1<400>
+StripByteCounts (279) LONG (4) 1<320000>
+
+C:\Programme\GnuWin32\bin>tiffdump test-16-4slice.tif
+test-16-4slice.tif:
+Magic: 0x4d4d <big-endian> Version: 0x2a
+Directory 0: offset 8 (0x8) next 20768 (0x5120)
+SubFileType (254) LONG (4) 1<0>
+ImageWidth (256) SHORT (3) 1<100>
+ImageLength (257) SHORT (3) 1<25>
+BitsPerSample (258) SHORT (3) 1<16>
+Photometric (262) SHORT (3) 1<1>
+ImageDescription (270) ASCII (2) 43<ImageJ=1.30r\nimages=4\nmi ...>
+StripOffsets (273) LONG (4) 1<768>
+SamplesPerPixel (277) SHORT (3) 1<1>
+RowsPerStrip (278) SHORT (3) 1<25>
+StripByteCounts (279) LONG (4) 1<5000>
+
+Directory 1: offset 20768 (0x5120) next 20894 (0x519e)
+SubFileType (254) LONG (4) 1<0>
+ImageWidth (256) SHORT (3) 1<100>
+ImageLength (257) SHORT (3) 1<25>
+BitsPerSample (258) SHORT (3) 1<16>
+Photometric (262) SHORT (3) 1<1>
+ImageDescription (270) ASCII (2) 43<ImageJ=1.30r\nimages=4\nmi ...>
+StripOffsets (273) LONG (4) 1<5768>
+SamplesPerPixel (277) SHORT (3) 1<1>
+RowsPerStrip (278) SHORT (3) 1<25>
+StripByteCounts (279) LONG (4) 1<5000>
+
+Directory 2: offset 20894 (0x519e) next 21020 (0x521c)
+SubFileType (254) LONG (4) 1<0>
+ImageWidth (256) SHORT (3) 1<100>
+ImageLength (257) SHORT (3) 1<25>
+BitsPerSample (258) SHORT (3) 1<16>
+Photometric (262) SHORT (3) 1<1>
+ImageDescription (270) ASCII (2) 43<ImageJ=1.30r\nimages=4\nmi ...>
+StripOffsets (273) LONG (4) 1<10768>
+SamplesPerPixel (277) SHORT (3) 1<1>
+RowsPerStrip (278) SHORT (3) 1<25>
+StripByteCounts (279) LONG (4) 1<5000>
+
+Directory 3: offset 21020 (0x521c) next 0 (0)
+SubFileType (254) LONG (4) 1<0>
+ImageWidth (256) SHORT (3) 1<100>
+ImageLength (257) SHORT (3) 1<25>
+BitsPerSample (258) SHORT (3) 1<16>
+Photometric (262) SHORT (3) 1<1>
+ImageDescription (270) ASCII (2) 43<ImageJ=1.30r\nimages=4\nmi ...>
+StripOffsets (273) LONG (4) 1<15768>
+SamplesPerPixel (277) SHORT (3) 1<1>
+RowsPerStrip (278) SHORT (3) 1<25>
+StripByteCounts (279) LONG (4) 1<5000>	

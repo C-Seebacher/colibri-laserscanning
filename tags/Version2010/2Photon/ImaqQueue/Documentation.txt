@@ -1,0 +1,26 @@
+There is a strict number <> Image relation starting with 0
+Normally the Imaqs are named scan0....scan12345789
+Normally the tempfiles are named temp00000.tif ...
+It is placed in c:\temp
+
+Path from Scan to Saved Temp-file:
+scan requests a new imaq: createIMAQ it has size 0,0 and Access=1
+scan resizes the IMAQ, fills with data and sends IMAQ and metadata into SaveQueue
+SaveImaqFromQueue.vi removes the elements, saves them to temp file (or altfilename?), saves Metadata, decreases Access, puts Numbers into SavedImaqQueue
+DeleteImaqFromSavedQueue.vi checks space and deletes the oldest with access=0.
+
+Problem was how to get memeory usage? 
+See the tries in IMAQMemory.vi
+
+
+test 217Bilder, 512x512, 115MB, abbe-computer
+Timing: get IMAQStatus(DLL) 12ms per run. 31..
+This MemoryUsage -1 needa 51-56ms per run! (32ms sub-vi)
+Single MemeoryUsage needs 88ms (61ms sub-vi)
+Metik.Datenmenge does not run! (delete Status..) 15-18ms/run and wrong number!
+
+Is there something double? Memory of ImaqStorage is 225MB! Repaired (was T in MemoryUsage!)
+
+BTW writeI16bitTiff_withtest need 1031ms for 186 images = 5.5ms = 94MB/s ???  data=4.5ms Head=0.8ms! saveIFD=0.1ms, down to 5ms average!
+started pageing -> unuseable!!
+contionous works with 30-40ms/image = 15MB/s!
