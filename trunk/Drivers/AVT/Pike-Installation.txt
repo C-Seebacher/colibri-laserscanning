@@ -1,0 +1,4 @@
+The Windows-Driver does not wirk in my system (Code 10)
+The AVT-Fire Package works, the NI-IMAQdx driver also works (right click the camera in MAX to select this driver)
+Set the base clock to 1ms or modify the converter (1000) in Dpike.vi
+Set it to 16Bit?
