@@ -1,0 +1,20 @@
+Programming of Technosoft Mortocontroller via RS232
+Basis:
+P091.055.MCII.TML.UM.0806.pdf
+P091.055.MCII.STP.UM.0806.pdf
+Tested with PIM2401 board and a standard 400 steps/turn 4 cable stepper motor (24V 1A)
+
+IF there is the TILL-Software on the board they behave different:
+Baud is 57600 insted of 9600
+First Axis to PC is 1 insted of 255
+MSR-Register is 27137 insted of 513 (axison and more)
+ISR is 2048 insted of 0 (interrupt mask triggerd)
+CSR is 6656 insted of 512 (57600baud)
+aar is 258 insted o f 511 (differnt axis no)
+mer is 0 insted of 2
+srh is 575 insted of 33343
+srl is 50176 insted of 1032
+the variable_speed etc parameters are random at startup
+
+Die Bordnummer ist beim TILL-Baseboard auf AD2/AD5/IO#37/IO#38 mit bit 0/1/2/3 codiert
+The programm is at EEPROM 4000-5e7b, the TEchnosoft setups are 5e7c-5fff, ram is above 8230
