@@ -1,0 +1,1135 @@
+Time: 06.04.2005 10:22:00
+Status=0
+Wavelength=800nm
+IR-Power=1.67W
+Pump-Power=8.62W
+Diode1 current=32.86A1
+Diode2 current=32.88A2
+Humidity%=42.3 HUM
+
+Time: 06.04.2005 18:30:00
+Status=0
+Wavelength=800nm
+IR-Power=1.67W
+Pump-Power=8.62W
+Diode1 current=32.86A1
+Diode2 current=32.88A2
+Humidity%=42.3 HUM
+
+Time: 07.04.2005 14:20:00
+Status=0
+Wavelength=750nm
+IR-Power=1.440W
+Pump-Power=7.81W
+Diode1 current=32.6A1
+Diode2 current=32.7A2
+Humidity%=9.6 HUM
+
+Time: 07.04.2005 17:20:00
+Status=0
+Wavelength=750nm
+IR-Power=1.440W
+Pump-Power=7.81W
+Diode1 current=31.91A1
+Diode2 current=31.95A2
+Humidity%=9.9 HUM
+
+Time: 14.04.2005 17:21:12
+Status=0
+Wavelength=750nm
+IR-Power=0.00070W
+Pump-Power=0.020W
+Diode1 current=0.14A1
+Diode2 current=0.14A2
+Humidity%=17.5583 HUM
+
+Time: 14.04.2005 17:26:40
+Status=3
+Wavelength=750nm
+IR-Power=1.48675W
+Pump-Power=7.820W
+Diode1 current=32.60A1
+Diode2 current=32.63A2
+Humidity%=17.1047 HUM
+
+Time: 14.04.2005 20:32:03
+Status=3
+Wavelength=800nm
+IR-Power=1.70865W
+Pump-Power=8.610W
+Diode1 current=32.40A1
+Diode2 current=32.43A2
+Humidity%=14.4117 HUM
+
+Time: 14.04.2005 20:33:00
+Status=0
+Wavelength=800nm
+IR-Power=0.00164W
+Pump-Power=0.020W
+Diode1 current=0.12A1
+Diode2 current=0.11A2
+Humidity%=14.7645 HUM
+
+Time: 21.04.2005 12:57:37
+Status=0
+Wavelength=800nm
+IR-Power=0.00082W
+Pump-Power=0.020W
+Diode1 current=0.15A1
+Diode2 current=0.13A2
+Humidity%=4.5972 HUM
+
+Time: 22.04.2005 16:31:02
+Status=3
+Wavelength=800nm
+IR-Power=1.67707W
+Pump-Power=8.620W
+Diode1 current=32.15A1
+Diode2 current=32.17A2
+Humidity%=4.8975 HUM
+
+Time: 22.04.2005 18:17:40
+Status=3
+Wavelength=800nm
+IR-Power=1.77057W
+Pump-Power=8.610W
+Diode1 current=32.49A1
+Diode2 current=32.53A2
+Humidity%=4.7020 HUM
+
+Time: 25.04.2005 17:32:39
+Status=3
+Wavelength=800nm
+IR-Power=1.65349W
+Pump-Power=8.610W
+Diode1 current=32.18A1
+Diode2 current=32.18A2
+Humidity%=5.9497 HUM
+
+Time: 25.04.2005 19:21:12
+Status=3
+Wavelength=785nm
+IR-Power=1.74115W
+Pump-Power=8.160W
+Diode1 current=32.45A1
+Diode2 current=32.46A2
+Humidity%=5.2483 HUM
+
+Time: 27.04.2005 10:09:09
+Status=3
+Wavelength=785nm
+IR-Power=1.71921W
+Pump-Power=8.160W
+Diode1 current=32.49A1
+Diode2 current=32.51A2
+Humidity%=4.8774 HUM
+
+Time: 27.04.2005 13:53:12
+Status=3
+Wavelength=777nm
+IR-Power=1.69734W
+Pump-Power=7.890W
+Diode1 current=32.17A1
+Diode2 current=32.20A2
+Humidity%=5.4458 HUM
+
+Time: 27.04.2005 14:57:19
+Status=3
+Wavelength=794nm
+IR-Power=1.77554W
+Pump-Power=8.490W
+Diode1 current=32.51A1
+Diode2 current=32.53A2
+Humidity%=5.9094 HUM
+
+Time: 27.04.2005 18:26:26
+Status=3
+Wavelength=790nm
+IR-Power=1.78438W
+Pump-Power=8.410W
+Diode1 current=32.34A1
+Diode2 current=32.36A2
+Humidity%=5.0548 HUM
+
+Time: 04.05.2005 10:38:10
+Status=3
+Wavelength=790nm
+IR-Power=1.79519W
+Pump-Power=8.410W
+Diode1 current=32.28A1
+Diode2 current=32.32A2
+Humidity%=5.6353 HUM
+
+Time: 04.05.2005 11:03:46
+Status=0
+Wavelength=803nm
+IR-Power=0.00081W
+Pump-Power=0.020W
+Diode1 current=7.91A1
+Diode2 current=8.00A2
+Humidity%=5.6917 HUM
+
+Time: 04.05.2005 16:38:39
+Status=3
+Wavelength=803nm
+IR-Power=1.76339W
+Pump-Power=8.620W
+Diode1 current=32.16A1
+Diode2 current=32.17A2
+Humidity%=5.3148 HUM
+
+Time: 04.05.2005 16:44:05
+Status=3
+Wavelength=803nm
+IR-Power=1.76746W
+Pump-Power=8.610W
+Diode1 current=32.48A1
+Diode2 current=32.51A2
+Humidity%=5.0749 HUM
+
+Time: 04.05.2005 16:44:14
+Status=3
+Wavelength=803nm
+IR-Power=1.76807W
+Pump-Power=8.620W
+Diode1 current=32.45A1
+Diode2 current=32.48A2
+Humidity%=5.6595 HUM
+
+Time: 04.05.2005 16:44:59
+Status=3
+Wavelength=803nm
+IR-Power=1.76624W
+Pump-Power=8.610W
+Diode1 current=32.45A1
+Diode2 current=32.48A2
+Humidity%=5.4841 HUM
+
+Time: 04.05.2005 18:34:20
+Status=3
+Wavelength=803nm
+IR-Power=1.76197W
+Pump-Power=8.610W
+Diode1 current=32.67A1
+Diode2 current=32.71A2
+Humidity%=5.6373 HUM
+
+Time: 04.05.2005 18:34:42
+Status=0
+Wavelength=803nm
+IR-Power=0.00122W
+Pump-Power=0.020W
+Diode1 current=0.12A1
+Diode2 current=0.11A2
+Humidity%=4.4984 HUM
+
+Time: 13.05.2005 17:17:02
+Status=3
+Wavelength=803nm
+IR-Power=1.52089W
+Pump-Power=8.610W
+Diode1 current=31.98A1
+Diode2 current=32.05A2
+Humidity%=4.5529 HUM
+
+Time: 13.05.2005 18:49:50
+Status=0
+Wavelength=800nm
+IR-Power=0.00082W
+Pump-Power=0.020W
+Diode1 current=10.00A1
+Diode2 current=9.50A2
+Humidity%=3.9119 HUM
+
+Time: 16.06.2005 11:56:15
+Status=11
+Wavelength=800nm
+IR-Power=1.67071W
+Pump-Power=8.610W
+Diode1 current=32.62A1
+Diode2 current=32.64A2
+Humidity%=42.4060 HUM
+
+Time: 16.06.2005 18:48:40
+Status=3
+Wavelength=800nm
+IR-Power=0.00041W
+Pump-Power=0.020W
+Diode1 current=9.40A1
+Diode2 current=8.91A2
+Humidity%=21.2571 HUM
+
+Time: 17.06.2005 14:22:50
+Status=3
+Wavelength=800nm
+IR-Power=1.46157W
+Pump-Power=8.610W
+Diode1 current=31.90A1
+Diode2 current=31.94A2
+Humidity%=10.4367 HUM
+
+Time: 17.06.2005 17:20:06
+Status=3
+Wavelength=803nm
+IR-Power=0.00163W
+Pump-Power=0.020W
+Diode1 current=9.70A1
+Diode2 current=9.20A2
+Humidity%=10.7996 HUM
+
+Time: 22.06.2005 15:32:26
+Status=15
+Wavelength=800nm
+IR-Power=1.75355W
+Pump-Power=8.620W
+Diode1 current=33.87A1
+Diode2 current=33.90A2
+Humidity%=26.9696 HUM
+
+Time: 22.06.2005 15:41:21
+Status=15
+Wavelength=800nm
+IR-Power=0.00021W
+Pump-Power=0.020W
+Diode1 current=11.80A1
+Diode2 current=8.60A2
+Humidity%=26.5483 HUM
+
+Time: 22.06.2005 18:19:59
+Status=7
+Wavelength=800nm
+IR-Power=1.59013W
+Pump-Power=8.610W
+Diode1 current=32.81A1
+Diode2 current=32.83A2
+Humidity%=19.6768 HUM
+
+Time: 22.06.2005 18:37:26
+Status=7
+Wavelength=800nm
+IR-Power=0.00123W
+Pump-Power=0.020W
+Diode1 current=11.20A1
+Diode2 current=10.70A2
+Humidity%=18.9713 HUM
+
+Time: 23.06.2005 10:33:07
+Status=7
+Wavelength=756nm
+IR-Power=1.29697W
+Pump-Power=8.610W
+Diode1 current=32.49A1
+Diode2 current=32.53A2
+Humidity%=10.9648 HUM
+
+Time: 23.06.2005 18:01:40
+Status=4
+Wavelength=745nm
+IR-Power=0.00096W
+Pump-Power=0.020W
+Diode1 current=0.13A1
+Diode2 current=0.11A2
+Humidity%=8.6790 HUM
+
+Time: 24.06.2005 10:10:22
+Status=7
+Wavelength=745nm
+IR-Power=0.92909W
+Pump-Power=7.190W
+Diode1 current=32.84A1
+Diode2 current=32.89A2
+Humidity%=7.6087 HUM
+
+Time: 24.06.2005 10:44:13
+Status=7
+Wavelength=745nm
+IR-Power=1.42417W
+Pump-Power=7.810W
+Diode1 current=32.13A1
+Diode2 current=32.16A2
+Humidity%=7.9110 HUM
+
+Time: 24.06.2005 18:39:15
+Status=7
+Wavelength=910nm
+IR-Power=1.16837W
+Pump-Power=8.610W
+Diode1 current=32.48A1
+Diode2 current=32.51A2
+Humidity%=7.2136 HUM
+
+Time: 12.07.2005 13:41:45
+Status=11
+Wavelength=800nm
+IR-Power=1.72382W
+Pump-Power=8.610W
+Diode1 current=32.98A1
+Diode2 current=33.00A2
+Humidity%=44.1274 HUM
+
+Time: 12.07.2005 14:07:55
+Status=11
+Wavelength=800nm
+IR-Power=0.00123W
+Pump-Power=0.020W
+Diode1 current=11.80A1
+Diode2 current=11.89A2
+Humidity%=41.8275 HUM
+
+Time: 13.07.2005 10:54:22
+Status=3
+Wavelength=770nm
+IR-Power=1.56336W
+Pump-Power=7.820W
+Diode1 current=32.66A1
+Diode2 current=32.73A2
+Humidity%=11.9364 HUM
+
+Time: 13.07.2005 17:12:23
+Status=0
+Wavelength=770nm
+IR-Power=0.00110W
+Pump-Power=0.020W
+Diode1 current=10.91A1
+Diode2 current=11.00A2
+Humidity%=10.4004 HUM
+
+Time: 27.07.2005 09:11:23
+Status=3
+Wavelength=911nm
+IR-Power=1.02994W
+Pump-Power=8.610W
+Diode1 current=33.22A1
+Diode2 current=33.00A2
+Humidity%=8.5823 HUM
+
+Time: 28.07.2005 12:56:00
+Status=3
+Wavelength=800nm
+IR-Power=1.77139W
+Pump-Power=8.620W
+Diode1 current=32.17A1
+Diode2 current=32.19A2
+Humidity%=7.1894 HUM
+
+Time: 28.07.2005 15:17:36
+Status=0
+Wavelength=900nm
+IR-Power=0.00101W
+Pump-Power=0.020W
+Diode1 current=10.90A1
+Diode2 current=10.76A2
+Humidity%=7.0705 HUM
+
+Time: 02.08.2005 10:38:33
+Status=5
+Wavelength=900nm
+IR-Power=0.00063W
+Pump-Power=0.020W
+Diode1 current=21.32A1
+Diode2 current=21.41A2
+Humidity%=6.0263 HUM
+
+Time: 09.08.2005 19:33:36
+Status=7
+Wavelength=800nm
+IR-Power=1.79272W
+Pump-Power=8.610W
+Diode1 current=32.78A1
+Diode2 current=32.79A2
+Humidity%=4.7867 HUM
+
+Time: 09.08.2005 19:39:06
+Status=7
+Wavelength=910nm
+IR-Power=1.25416W
+Pump-Power=7.630W
+Diode1 current=32.27A1
+Diode2 current=32.29A2
+Humidity%=5.5990 HUM
+
+Time: 09.08.2005 19:59:36
+Status=7
+Wavelength=910nm
+IR-Power=1.19593W
+Pump-Power=8.610W
+Diode1 current=32.75A1
+Diode2 current=32.78A2
+Humidity%=6.6331 HUM
+
+Time: 09.08.2005 22:17:36
+Status=4
+Wavelength=910nm
+IR-Power=0.00069W
+Pump-Power=0.020W
+Diode1 current=0.13A1
+Diode2 current=0.12A2
+Humidity%=4.8653 HUM
+
+Time: 09.08.2005 22:17:40
+Status=4
+Wavelength=910nm
+IR-Power=0.00104W
+Pump-Power=0.020W
+Diode1 current=0.12A1
+Diode2 current=0.11A2
+Humidity%=4.3815 HUM
+
+Time: 16.08.2005 16:51:56
+Status=7
+Wavelength=750nm
+IR-Power=1.49378W
+Pump-Power=7.810W
+Diode1 current=32.43A1
+Diode2 current=32.45A2
+Humidity%=5.1636 HUM
+
+Time: 23.08.2005 16:25:12
+Status=5
+Wavelength=764nm
+IR-Power=1.77002W
+Pump-Power=7.810W
+Diode1 current=32.78A1
+Diode2 current=32.83A2
+Humidity%=6.4718 HUM
+
+Time: 23.08.2005 17:14:48
+Status=5
+Wavelength=764nm
+IR-Power=1.71332W
+Pump-Power=7.810W
+Diode1 current=32.72A1
+Diode2 current=32.77A2
+Humidity%=6.0062 HUM
+
+Time: 16.09.2005 12:09:25
+Status=7
+Wavelength=750nm
+IR-Power=1.51346W
+Pump-Power=7.810W
+Diode1 current=32.87A1
+Diode2 current=32.90A2
+Humidity%=5.4458 HUM
+
+Time: 16.09.2005 18:27:22
+Status=7
+Wavelength=750nm
+IR-Power=1.48557W
+Pump-Power=7.810W
+Diode1 current=32.85A1
+Diode2 current=32.89A2
+Humidity%=6.5988 HUM
+
+Time: 26.09.2005 19:49:24
+Status=7
+Wavelength=750nm
+IR-Power=1.52002W
+Pump-Power=7.820W
+Diode1 current=32.91A1
+Diode2 current=32.93A2
+Humidity%=4.5226 HUM
+
+Time: 27.09.2005 14:51:48
+Status=7
+Wavelength=750nm
+IR-Power=1.52892W
+Pump-Power=7.820W
+Diode1 current=32.09A1
+Diode2 current=32.10A2
+Humidity%=5.5547 HUM
+
+Time: 27.09.2005 18:59:09
+Status=7
+Wavelength=751nm
+IR-Power=1.52068W
+Pump-Power=7.820W
+Diode1 current=32.75A1
+Diode2 current=32.78A2
+Humidity%=5.5547 HUM
+
+Time: 06.10.2005 15:53:44
+Status=7
+Wavelength=751nm
+IR-Power=1.51158W
+Pump-Power=7.820W
+Diode1 current=33.01A1
+Diode2 current=33.04A2
+Humidity%=4.7383 HUM
+
+Time: 06.10.2005 18:41:18
+Status=7
+Wavelength=751nm
+IR-Power=1.51555W
+Pump-Power=7.810W
+Diode1 current=32.85A1
+Diode2 current=32.89A2
+Humidity%=4.5831 HUM
+
+Time: 07.10.2005 18:19:42
+Status=4
+Wavelength=750nm
+IR-Power=0.00141W
+Pump-Power=0.020W
+Diode1 current=1.03A1
+Diode2 current=0.12A2
+Humidity%=5.3591 HUM
+
+Time: 14.10.2005 17:53:42
+Status=7
+Wavelength=750nm
+IR-Power=1.50713W
+Pump-Power=7.810W
+Diode1 current=32.98A1
+Diode2 current=33.01A2
+Humidity%=4.8431 HUM
+
+Time: 18.10.2005 16:39:30
+Status=7
+Wavelength=750nm
+IR-Power=1.51533W
+Pump-Power=7.820W
+Diode1 current=32.57A1
+Diode2 current=32.60A2
+Humidity%=4.2586 HUM
+
+Time: 18.10.2005 18:11:24
+Status=4
+Wavelength=800nm
+IR-Power=0.00164W
+Pump-Power=0.020W
+Diode1 current=0.13A1
+Diode2 current=0.11A2
+Humidity%=5.2241 HUM
+
+Time: 04.11.2005 14:59:32
+Status=7
+Wavelength=900nm
+IR-Power=1.17302W
+Pump-Power=8.620W
+Diode1 current=33.55A1
+Diode2 current=33.55A2
+Humidity%=5.5627 HUM
+
+Time: 04.11.2005 15:31:20
+Status=5
+Wavelength=850nm
+IR-Power=0.02408W
+Pump-Power=5.390W
+Diode1 current=35.76A1
+Diode2 current=35.83A2
+Humidity%=4.6758 HUM
+
+Time: 04.11.2005 17:32:03
+Status=4
+Wavelength=800nm
+IR-Power=0.00144W
+Pump-Power=0.020W
+Diode1 current=0.15A1
+Diode2 current=0.14A2
+Diode1 temperature=20.01C1
+Diode2 temperature=31.10C2
+Humidity%=4.8935 HUM
+
+Time: 04.11.2005 17:39:52
+Status=4
+Wavelength=800nm
+IR-Power=0.00103W
+Pump-Power=0.020W
+Diode1 current=0.15A1
+Diode2 current=0.14A2
+Diode1 temperature=19.99C1
+Diode2 temperature=31.10C2
+Humidity%=4.7000 HUM
+
+Time: 04.11.2005 17:41:50
+Status=7
+Wavelength=800nm
+IR-Power=1.80399W
+Pump-Power=8.610W
+Diode1 current=32.40A1
+Diode2 current=32.49A2
+Diode1 temperature=19.65C1
+Diode2 temperature=30.86C2
+Humidity%=4.8492 HUM
+
+Time: 11.11.2005 14:07:48
+Status=7
+Wavelength=990nm
+IR-Power=0.65559W
+Pump-Power=9.710W
+Diode1 current=32.15A1
+Diode2 current=32.17A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.49C2
+Diode1 hours=349.5H1
+Diode2 hours=349.5H2
+Humidity%=5.0749 HUM
+
+Time: 11.11.2005 16:40:39
+Status=7
+Wavelength=900nm
+IR-Power=1.23226W
+Pump-Power=8.610W
+Diode1 current=31.78A1
+Diode2 current=31.81A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=352.1H1
+Diode2 hours=352.1H2
+Humidity%=5.2402 HUM
+
+Time: 22.11.2005 15:07:57
+Status=7
+Wavelength=900nm
+IR-Power=1.23670W
+Pump-Power=8.610W
+Diode1 current=31.85A1
+Diode2 current=31.88A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=352.9H1
+Diode2 hours=352.9H2
+Humidity%=4.3331 HUM
+
+Time: 23.11.2005 12:59:50
+Status=7
+Wavelength=880nm
+IR-Power=1.35802W
+Pump-Power=8.610W
+Diode1 current=31.82A1
+Diode2 current=31.86A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=353.5H1
+Diode2 hours=353.5H2
+Humidity%=4.8512 HUM
+
+Time: 23.11.2005 17:49:43
+Status=7
+Wavelength=800nm
+IR-Power=1.87084W
+Pump-Power=8.610W
+Diode1 current=31.76A1
+Diode2 current=31.79A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.50C2
+Diode1 hours=358.4H1
+Diode2 hours=358.4H2
+Humidity%=3.0390 HUM
+
+Time: 23.11.2005 18:28:44
+Status=7
+Wavelength=800nm
+IR-Power=1.86756W
+Pump-Power=8.620W
+Diode1 current=31.75A1
+Diode2 current=31.79A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.50C2
+Diode1 hours=359.0H1
+Diode2 hours=359.0H2
+Humidity%=4.7081 HUM
+
+Time: 24.11.2005 18:23:33
+Status=7
+Wavelength=900nm
+IR-Power=1.23530W
+Pump-Power=8.610W
+Diode1 current=31.74A1
+Diode2 current=31.77A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=363.7H1
+Diode2 hours=363.7H2
+Humidity%=3.5188 HUM
+
+Time: 24.11.2005 18:29:43
+Status=7
+Wavelength=900nm
+IR-Power=1.23556W
+Pump-Power=8.610W
+Diode1 current=31.76A1
+Diode2 current=31.78A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.51C2
+Diode1 hours=363.8H1
+Diode2 hours=363.8H2
+Humidity%=3.8877 HUM
+
+Time: 25.11.2005 18:19:17
+Status=7
+Wavelength=900nm
+IR-Power=1.23124W
+Pump-Power=8.620W
+Diode1 current=31.73A1
+Diode2 current=31.75A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.52C2
+Diode1 hours=371.6H1
+Diode2 hours=371.6H2
+Humidity%=4.4238 HUM
+
+Time: 29.11.2005 18:42:54
+Status=7
+Wavelength=880nm
+IR-Power=1.35011W
+Pump-Power=8.610W
+Diode1 current=31.75A1
+Diode2 current=31.76A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.49C2
+Diode1 hours=378.6H1
+Diode2 hours=378.6H2
+Humidity%=3.8433 HUM
+
+Time: 21.12.2005 19:01:15
+Status=7
+Wavelength=730nm
+IR-Power=1.34669W
+Pump-Power=7.720W
+Diode1 current=31.61A1
+Diode2 current=31.64A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.49C2
+Diode1 hours=387.4H1
+Diode2 hours=387.4H2
+Humidity%=4.2666 HUM
+
+Time: 22.12.2005 15:12:04
+Status=7
+Wavelength=730nm
+IR-Power=1.34921W
+Pump-Power=7.720W
+Diode1 current=31.58A1
+Diode2 current=31.62A2
+Diode1 temperature=19.03C1
+Diode2 temperature=28.50C2
+Diode1 hours=391.6H1
+Diode2 hours=391.6H2
+Humidity%=3.3474 HUM
+
+Time: 22.12.2005 18:29:43
+Status=7
+Wavelength=730nm
+IR-Power=1.34871W
+Pump-Power=7.720W
+Diode1 current=31.59A1
+Diode2 current=31.62A2
+Diode1 temperature=19.02C1
+Diode2 temperature=28.50C2
+Diode1 hours=394.9H1
+Diode2 hours=394.9H2
+Humidity%=4.0267 HUM
+
+Time: 10.01.2006 18:21:09
+Status=3
+Wavelength=751nm
+IR-Power=1.58958W
+Pump-Power=7.820W
+Diode1 current=31.80A1
+Diode2 current=31.84A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=398.4H1
+Diode2 hours=398.3H2
+Humidity%=17.5905 HUM
+
+Time: 16.01.2006 17:40:26
+Status=3
+Wavelength=740nm
+IR-Power=1.51089W
+Pump-Power=7.810W
+Diode1 current=31.88A1
+Diode2 current=31.89A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=403.7H1
+Diode2 hours=403.7H2
+Humidity%=4.9177 HUM
+
+Time: 08.02.2006 11:46:40
+Status=7
+Wavelength=750nm
+IR-Power=1.56805W
+Pump-Power=7.820W
+Diode1 current=31.86A1
+Diode2 current=31.88A2
+Diode1 temperature=18.99C1
+Diode2 temperature=28.50C2
+Diode1 hours=404.4H1
+Diode2 hours=404.4H2
+Humidity%=4.6597 HUM
+
+Time: 21.02.2006 15:10:31
+Status=7
+Wavelength=751nm
+IR-Power=1.57814W
+Pump-Power=7.810W
+Diode1 current=31.77A1
+Diode2 current=31.80A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=412.3H1
+Diode2 hours=412.4H2
+Humidity%=5.1717 HUM
+
+Time: 21.02.2006 15:59:15
+Status=7
+Wavelength=751nm
+IR-Power=1.57487W
+Pump-Power=7.810W
+Diode1 current=31.77A1
+Diode2 current=31.80A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=413.1H1
+Diode2 hours=413.1H2
+Humidity%=4.5065 HUM
+
+Time: 21.02.2006 18:36:30
+Status=7
+Wavelength=751nm
+IR-Power=1.56880W
+Pump-Power=7.810W
+Diode1 current=31.75A1
+Diode2 current=31.78A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.51C2
+Diode1 hours=415.8H1
+Diode2 hours=415.8H2
+Humidity%=4.2283 HUM
+
+Time: 30.03.2006 18:27:00
+Status=3
+Wavelength=740nm
+IR-Power=1.48960W
+Pump-Power=7.820W
+Diode1 current=31.80A1
+Diode2 current=31.81A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.54C2
+Diode1 hours=423.6H1
+Diode2 hours=423.6H2
+Humidity%=4.1477 HUM
+
+Time: 12.06.2006 16:54:12
+Status=4
+Wavelength=740nm
+IR-Power=0.00024W
+Pump-Power=0.020W
+Diode1 current=0.15A1
+Diode2 current=0.13A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.54C2
+Diode1 hours=423.6H1
+Diode2 hours=423.6H2
+Humidity%=4.8895 HUM
+
+Time: 12.06.2006 16:58:18
+Status=7
+Wavelength=740nm
+IR-Power=1.48055W
+Pump-Power=7.810W
+Diode1 current=31.79A1
+Diode2 current=31.81A2
+Diode1 temperature=19.21C1
+Diode2 temperature=29.13C2
+Diode1 hours=423.6H1
+Diode2 hours=423.6H2
+Humidity%=4.5145 HUM
+
+Time: 12.06.2006 19:28:37
+Status=7
+Wavelength=800nm
+IR-Power=1.88068W
+Pump-Power=8.610W
+Diode1 current=31.74A1
+Diode2 current=31.77A2
+Diode1 temperature=18.99C1
+Diode2 temperature=28.50C2
+Diode1 hours=426.1H1
+Diode2 hours=426.1H2
+Humidity%=4.5851 HUM
+
+Time: 12.06.2006 20:41:10
+Status=7
+Wavelength=800nm
+IR-Power=1.88048W
+Pump-Power=8.610W
+Diode1 current=31.74A1
+Diode2 current=31.78A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.49C2
+Diode1 hours=427.3H1
+Diode2 hours=427.3H2
+Humidity%=5.5244 HUM
+
+Time: 21.06.2006 18:15:38
+Status=7
+Wavelength=800nm
+IR-Power=1.87679W
+Pump-Power=8.610W
+Diode1 current=31.58A1
+Diode2 current=31.62A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=429.3H1
+Diode2 hours=429.3H2
+Humidity%=6.0284 HUM
+
+Time: 11.09.2006 17:29:30
+Status=8
+Wavelength=740nm
+IR-Power=0.00049W
+Pump-Power=0.020W
+Diode1 current=0.15A1
+Diode2 current=0.14A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.50C2
+Diode1 hours=437.5H1
+Diode2 hours=437.5H2
+Humidity%=32.3536 HUM
+
+Time: 11.09.2006 17:37:10
+Status=11
+Wavelength=740nm
+IR-Power=1.49866W
+Pump-Power=7.820W
+Diode1 current=32.60A1
+Diode2 current=32.61A2
+Diode1 temperature=19.48C1
+Diode2 temperature=28.95C2
+Diode1 hours=437.5H1
+Diode2 hours=437.5H2
+Humidity%=31.5171 HUM
+
+Time: 11.09.2006 18:20:57
+Status=15
+Wavelength=750nm
+IR-Power=1.55705W
+Pump-Power=7.820W
+Diode1 current=31.73A1
+Diode2 current=31.74A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=438.2H1
+Diode2 hours=438.2H2
+Humidity%=28.6084 HUM
+
+Time: 11.09.2006 20:23:07
+Status=15
+Wavelength=990nm
+IR-Power=0.51573W
+Pump-Power=9.710W
+Diode1 current=32.35A1
+Diode2 current=32.40A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=440.2H1
+Diode2 hours=440.2H2
+Humidity%=24.3593 HUM
+
+Time: 11.09.2006 20:24:09
+Status=7
+Wavelength=774nm
+IR-Power=1.70575W
+Pump-Power=7.850W
+Diode1 current=31.75A1
+Diode2 current=31.76A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=440.2H1
+Diode2 hours=440.2H2
+Humidity%=24.6133 HUM
+
+Time: 27.09.2006 12:10:01
+Status=7
+Wavelength=750nm
+IR-Power=1.59453W
+Pump-Power=7.820W
+Diode1 current=31.87A1
+Diode2 current=31.91A2
+Diode1 temperature=19.01C1
+Diode2 temperature=28.50C2
+Diode1 hours=444.4H1
+Diode2 hours=444.4H2
+Humidity%=14.8653 HUM
+
+Time: 27.09.2006 21:27:03
+Status=7
+Wavelength=770nm
+IR-Power=1.74130W
+Pump-Power=7.810W
+Diode1 current=31.52A1
+Diode2 current=31.55A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=453.6H1
+Diode2 hours=453.6H2
+Humidity%=13.9441 HUM
+
+Time: 17.10.2006 20:10:09
+Status=7
+Wavelength=740nm
+IR-Power=1.54197W
+Pump-Power=7.820W
+Diode1 current=31.55A1
+Diode2 current=31.58A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.49C2
+Diode1 hours=456.6H1
+Diode2 hours=456.6H2
+Humidity%=18.1408 HUM
+
+Time: 18.10.2006 18:26:52
+Status=7
+Wavelength=741nm
+IR-Power=1.53859W
+Pump-Power=7.810W
+Diode1 current=31.61A1
+Diode2 current=31.65A2
+Diode1 temperature=18.98C1
+Diode2 temperature=28.50C2
+Diode1 hours=457.7H1
+Diode2 hours=457.7H2
+Humidity%=18.2355 HUM
+
+Time: 19.10.2006 17:54:45
+Status=7
+Wavelength=740nm
+IR-Power=1.53389W
+Pump-Power=7.820W
+Diode1 current=31.56A1
+Diode2 current=31.60A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.49C2
+Diode1 hours=459.0H1
+Diode2 hours=459.0H2
+Humidity%=17.9715 HUM
+
+Time: 06.12.2006 18:35:59
+Status=7
+Wavelength=750nm
+IR-Power=1.57345W
+Pump-Power=7.820W
+Diode1 current=31.71A1
+Diode2 current=31.75A2
+Diode1 temperature=19.00C1
+Diode2 temperature=28.50C2
+Diode1 hours=461.8H1
+Diode2 hours=461.8H2
+Humidity%=23.2385 HUM
+
+Time: 06.12.2006 20:12:57
+Status=7
+Wavelength=750nm
+IR-Power=1.59899W
+Pump-Power=7.810W
+Diode1 current=31.70A1
+Diode2 current=31.73A2
+Diode1 temperature=18.99C1
+Diode2 temperature=28.50C2
+Diode1 hours=463.4H1
+Diode2 hours=463.4H2
+Humidity%=23.9037 HUM
+

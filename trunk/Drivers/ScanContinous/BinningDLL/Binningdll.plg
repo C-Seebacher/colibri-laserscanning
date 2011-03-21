@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Binningdll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOKUME~1\CHRIST~1.BIZ\LOKALE~1\Temp\RSP1B.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "DLL_EXPORTS" /Fp"Release/Binningdll.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"T:\TILL ID (Joachim und Christian)\LabVIEW Data\2Photon\Binning DLL\Binningdll.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\CHRIST~1.BIZ\LOKALE~1\Temp\RSP1B.tmp" 
+Creating temporary file "C:\DOKUME~1\CHRIST~1.BIZ\LOKALE~1\Temp\RSP1C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib vfw32.lib /nologo /dll /incremental:no /pdb:"Release/Binningdll.pdb" /machine:I386 /out:"Release/Binningdll.dll" /implib:"Release/Binningdll.lib" 
+".\Release\Binningdll.obj"
+]
+Creating command line "link.exe @C:\DOKUME~1\CHRIST~1.BIZ\LOKALE~1\Temp\RSP1C.tmp"
+<h3>Output Window</h3>
+Compiling...
+Binningdll.c
+Linking...
+   Creating library Release/Binningdll.lib and object Release/Binningdll.exp
+
+
+
+<h3>Results</h3>
+Binningdll.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
