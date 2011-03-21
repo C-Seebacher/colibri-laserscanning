@@ -1,0 +1,2 @@
+long IMIC_OpenByRS232(unsigned char *port, long *handle);
+long IMIC_Close(long handle);
