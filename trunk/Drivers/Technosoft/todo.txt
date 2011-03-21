@@ -1,0 +1,8 @@
+sniff transmission..
+availabale axis
+init
+init: cal, rm
+get set speed, accel
+position commands
+cancel movement?
+estimate arrival

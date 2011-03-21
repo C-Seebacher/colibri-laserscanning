@@ -1,0 +1,36 @@
+Till hat vermutlich Programme in der Technosoft abgelegt:
+GOTO calibrate
+GOTO relativeMove2
+GOTO stopp
+
+Init geht etwa so:
+Open..57600 Bps
+target=1 "GetVersion" -> 0012F150
+dann? 
+target=1 "GetVersion" -> 0012F1B8
+target=1 "? x, dm 16b VersionTMLProgram" -> 5
+target=1 "? x, spi 32b MagicNumber" -> 14940
+target=1 "? x, spi 32b VersionParameters" -> 6
+Firmware F442E, TML program version 5
+...
+y-achse
+target=2 "GetVersion" -> 0012F1B8
+
+Turret
+target=3 "GetVersion" -> 0012F1B8
+filter1 
+target=4 "GetVersion" -> 0012F1B8
+
+
+häufiges pollen von 
+target=1 "? x, dm 32b status" -> 1073741824
+target=1 "? x, dm 16b 28830" -> 135
+
+
+Intern sind wohl viele layer:
+Register-Layer zugiff normalerweiser nur controller, Konstanten, Variablen
+TML instructions zugriff über schnitstelle, dazu nötig die Namen der parameter wie cpos....
+
+Die Achsen auf dem Till Board sind (zumindest mit Till sw) 1,2,3,4 die Hostachse ist 1
+
+Die Magic number ist im EEPROM-Image an zeile 4101 (=offset zu 0x?4000?) bei zeile 4098 hört FFFF auf, bei 4148 gehts wieder los, nach 7806 ist ggf noch was

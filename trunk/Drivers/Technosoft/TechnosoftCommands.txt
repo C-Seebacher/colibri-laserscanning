@@ -1,0 +1,168 @@
+com3 baud: 115200 no! 57600??, connected axis =255, other axis are coded by slot read 1000ms, timeout 400/700ms, wait after run=2000ms
+send 0d ,get 0d: communication is working, Start does work with MotionStudio but not with labview?!
+units 256 per step = 51200 (200steps) or 102400(400er) per revolution
+
+dtect axis( so there is commands that send more tan 1 return!):
+20:46:58 Bytes Write :  08 10 00 D6 00 0F F1 07 D0 C5
+20:46:58 Bytes Read :  4F
+20:46:58 Bytes Read :  08
+20:46:58 Bytes Read :  0F F1 D6 02 34 34 32 45 BF
+20:46:58 Bytes Read :  08
+20:46:58 Bytes Read :  0F F1 D6 03 34 34 32 45 C0
+20:46:58 Bytes Read :  08
+20:46:58 Bytes Read :  0F F1 D6 04 34 34 32 45 C1
+20:46:59 Bytes Read :  08
+20:46:59 Bytes Read :  0F F1 D6 FF 34 34 32 45 BC
+Detected motor/drives:
+  Axis ID 2, with firmware version F442E
+  Axis ID 3, with firmware version F442E
+  Axis ID 4, with firmware version F442E
+  Axis ID 255, with firmware version F442E
+
+  //Position profile
+  CACC = 0.0052;//acceleration rate = 1[rad/s^2] [encoder units=256microseps, 400*256=1turn]
+  CSPD = 0.6827;//slew speed = 1[rpm]
+  CPOS = 51200L;//position command = 1[rot]
+  CPR; //position command is relative
+  MODE PP;
+  TUM1; //set Target Update Mode 1
+  UPD; // execute immediate
+  !MC; WAIT!; // wait for completion
+
+Im MER-register 08 FC sind linit switches
+
+  //Position profile ohne wait
+  CACC = 0.0052;//acceleration rate = 1[rad/s^2]
+  CSPD = 0.6827;//slew speed = 1[rpm]
+  CPOS = 51200L;//position command = 1[rot]
+  CPR; //position command is relative
+  MODE PP;
+  TUM1; //set Target Update Mode 1 nur für relativ bedeutend
+  UPD; // execute immediate
+reset
+04 00 10 04 02 1A 
+4f
+
+?apos;
+send 08 0F F0 B0 05 0F F1 02 28 E6 
+get 4F   0C   0F F1 B4 05 0F F0 02 28 5A 5B AB BA 08 
+
+?tpos;
+send 08 0F F0 B0 05 0F F1 02 b2 70 
+4F 0C 0F F1 B4 05 0F F0 02 B2 5A 5B AB BA 92 
+
+upd;
+send 04 0F F0 01 08 0C 
+get 4F
+
+cpos=1 (0x029E)
+send 08 0F F0 24 9E 00 01 00 00 CA 
+get 4F
+
+cpa;
+08 0F F0 59 09 FF FF 20 00 87 
+get 4f
+
+mode pp3
+08 0F F0 59 09 BF C1 87 01 71 
+get 4f
+
+tum1
+08 0F F0 59 09 FF FF 40 00 A7 
+get 4f
+
+?tpos255 (0x02B2) 
+08 0F F0 B0 05 0F F1 02 B2 70 
+get 4F 0C 0F F1 B4 05 0F F0 02 B2 5A 5B AB BA 92 
+
+?tpos 2 (0x02B2)
+08 00 20 B0 05 0F F1 02 B2 91 
+get 4F 0C 0F F1 B4 05 00 20 02 B2 5A 5B AB BA B3 
+
+endinit
+04 0F F0 00 20 23 
+return 4f
+
+axison
+04 0F F0 01 02 06 
+return 4f
+
+?mer ?MSR!!!!0x0308
+08 0F F0 B0 04 0F F1 08 FC BF 
+return
+4F 0A 0F F1 B4 04 0F F0 08 FC 5A 5B 7A 
+
+?mer
+Umgesteckt #1 master..
+08 00 10 B0 04 00 11 08 FC E1
+4F 0A 00 11 B4 04 00 10 08 FC 00 4F 36 
+
+?msr
+08 00 10 B0 04 00 11 03 08 E8 
+4F 0A 00 11 B4 04 00 10 03 08 00 4F 3D 
+
+?SRH
+08 0F F0 B0 04 0F F1 09 0F D3 
+4F 0A 0F F1 B4 04 0F F0 09 0F 5A 5B 8E 
+
+?SRL
+08 0F F0 B0 04 0F F1 09 0E D2 
+4F 0A 0F F1 B4 04 0F F0 09 0E 5A 5B 8D 
+
+mode pp=mode pp3
+08 0F F0 59 09 BF C1 87 01 71 
+4f
+
+mode sp
+08 0F F0 59 09 BB C1 83 01 69 
+4f
+
+cspd=-1234
+08 0F F0 24 A0 00 00 FB 2E F4 
+4f
+
+cacc=1234
+08 0F F0 24 A2 00 00 04 D2 A3 
+4f
+
+cpos=1234
+08 0F F0 24 9E 04 D2 00 00 9F
+4f
+
+sap -123 (0x85)
+08 0F F0 84 00 FF 85 FF FF 0D 
+4f
+
+goto tillcal (till 400B) uses till speed and till homespeed
+06 0F F0 74 00 40 0B C4
+
+goto tillabs (till 4011) uses tillspeed and till pos
+06 0F F0 74 00 40 11 CA 
+
+MSR:
+27137=0110101000000001 (tillsw power on, endinit,axison,-cspd,modesp,)
+11265=0010110000000001 (upd moving: 9off=inmotion, 10on=conturupdate,14off=resetaafterupdate )
+11777=0010111000000001 (im limitswitch, mode pp3,cpos=...nach updmove: 9on=motioncomplete )
+
+
+
+so legt EasyStudioLos:
+16:25:58 MSK Info : Channel opened sucessfully vermutlich mit 9600!!!
+16:25:58 Bytes Write :  FF
+16:25:58 Bytes Read :  0D
+16:25:58 Bytes Write :  06 0F F0 D8 01 0F F1 DE
+16:25:58 Bytes Read :  4F
+16:25:58 Bytes Read :  08
+16:25:58 Bytes Read :  0F F1 D8 01 34 34 32 45 C0
+16:25:58 Bytes Write :  06 0F F0 D8 01 0F F1 DE
+16:25:58 Bytes Read :  4F
+16:25:58 Bytes Read :  08
+16:25:58 Bytes Read :  0F F1 D8 01 34 34 32 45 C0
+16:25:58 Bytes Write :  08 0F F0 B0 09 0F F1 7F BF FE
+16:25:58 Bytes Read :  4F
+16:25:58 Bytes Read :  0C
+16:25:58 Bytes Read :  0F F1 B4 05 0F F0 7F BF 00 50 00 30 82
+16:25:58 Bytes Write :  08 0F F0 B0 09 0F F1 7F C1 00
+16:25:58 Bytes Read :  4F
+16:25:58 Bytes Read :  0C
+16:25:58 Bytes Read :  0F F1 B4 05 0F F0 7F C1 00 33 00 35 6C
