@@ -1,0 +1,41 @@
+R
+C
+AV,0,0,-704586
+AV,0,1,-527409
+AV,0,2,8000
+AI,0,0,1374		vor die loop gezogen, d.h für den 2. durchgang muß am ende der loop was stehen
+AI,0,1,-6
+AI,0,2,-3523
+AS,80, ,10
+AI,1000,0,0
+AI,1000,1,0
+AI,1000,2,0
+AI,1000,0,147
+AI,1000,1,16222
+AI,1000,2,0		incremente werden am ende des Vektors auf 0 gesetzt
+AI,1004,0,0		Wenn gleich wieder einer kommt (wie hier) könnte man sich dies sparen
+AI,1004,1,0
+AI,1004,2,0
+AI,1004,0,-1374
+AI,1004,1,6
+AI,1004,2,3523
+AV,1080,3,1
+AV,1084,3,0
+AI,2004,0,0
+AI,2004,1,0
+AI,2004,2,0
+AI,2004,0,147
+AI,2004,1,16222
+AI,2004,2,0
+AI,2008,0,0
+AI,2008,1,0
+AI,2008,2,0
+AI,2008,0,1374		hier ist das increment für den 2. durchgang!
+AI,2008,1,-6
+AI,2008,2,-3523
+AV,2084,3,1
+AV,2088,3,0
+AE,2088, , 
+AI,20161,0,0		Der letzte Durchgang hat eine falsche Rampe gestartet> wieder stoppen
+AI,20161,1,0
+AI,20161,2,0
