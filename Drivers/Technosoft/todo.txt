@@ -6,3 +6,6 @@ get set speed, accel
 position commands
 cancel movement?
 estimate arrival
+
+Debug-Tool!
+where to store motor currents and speeds???
