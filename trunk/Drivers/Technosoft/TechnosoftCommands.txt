@@ -1,8 +1,8 @@
-com3 baud: 115200 no! 57600??, connected axis =255, other axis are coded by slot read 1000ms, timeout 400/700ms, wait after run=2000ms
+com3 baud: 115200 no! 57600??, connected axis =255, other axis are coded by slot, read 1000ms, timeout 400/700ms, wait after run=2000ms
 send 0d ,get 0d: communication is working, Start does work with MotionStudio but not with labview?!
 units 256 per step = 51200 (200steps) or 102400(400er) per revolution
 
-dtect axis( so there is commands that send more tan 1 return!):
+detect axis( so there is commands with more than 1 return!):
 20:46:58 Bytes Write :  08 10 00 D6 00 0F F1 07 D0 C5
 20:46:58 Bytes Read :  4F
 20:46:58 Bytes Read :  08
