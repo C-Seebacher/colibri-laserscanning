@@ -8,6 +8,6 @@ EXPORT long BinningIMAQ(unsigned char NChannels, short int* IMAQPointerList[],
 	short int In[], unsigned long NResult, unsigned short int Binning, 
 	unsigned long *Position, unsigned long LinePixel[]);
 EXPORT long BinningIMAQt(unsigned char NChannels, short int* IMAQPointerList[], 
-	short int In[], unsigned long NResult, unsigned short int Binning, 
+	short int In[], unsigned long NResult, unsigned short int Binning, byte shift,
 	unsigned long *Position, unsigned long LinePixel[]);
 #endif
