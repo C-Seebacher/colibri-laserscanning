@@ -1,5 +1,6 @@
 //Author:		C.Seebacher
 //Copyright:	Licensed under the Academic Free License.
+//todo: delete or comment out the unused calls
 
 #include <windows.h>
 #include "Binningdll.h"
@@ -91,7 +92,7 @@ EXPORT long BinningIMAQ(unsigned char NChannels, short int* IMAQPointerList[],
 }
 
 EXPORT long BinningIMAQt(unsigned char NChannels, short int* IMAQPointerList[], 
-	short int In[], unsigned long NResult, unsigned short int Binning, 
+	short int In[], unsigned long NResult, unsigned short int Binning, byte shift, 
 	unsigned long *Position, unsigned long LinePixel[])
 	{
 // jetzt mit pointer auf IMAQ-I16Daten!
@@ -102,7 +103,7 @@ EXPORT long BinningIMAQt(unsigned char NChannels, short int* IMAQPointerList[],
 	   unsigned long i, j, k, InPos;
        long sum;							
 	   sum=0;  //sum leeren
-	   
+	   if(shift>16) return (1);  //exit  (shifting more than 16 bits is nonsense)
 		for (k=0; k<NChannels; k++)  //alle kanäle
 		{
 			InPos = k*Binning*NResult;     //Aktuelle AD-position im Kanal k
@@ -112,7 +113,7 @@ EXPORT long BinningIMAQt(unsigned char NChannels, short int* IMAQPointerList[],
 				{
 				sum+=In[InPos+i*Binning+j];
 				}    
-			IMAQPointerList[k][LinePixel[*Position+i]] = ((sum<<4)/Binning);  //Pixel schreiben, 4 bit schieben16<<12bit?
+			IMAQPointerList[k][LinePixel[*Position+i]] = ((sum<<shift)/Binning);  //Pixel schreiben, 4 bit schieben16<<12bit?
 			sum=0;
 			}
 		}
