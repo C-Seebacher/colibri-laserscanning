@@ -1,0 +1,22 @@
+1. check the correct comport. For the USB-RS232 convertes unplug USB, check ports, plug again, check difference.
+2. Get ID of Axis connected to Rs232 (Till-systems this is 1, blank boards this is 255)
+3. Open "Technosoft_standalone.vi", enter Comport and ID, run it.
+4. Check limit switches
+4.1. run ?mer and bit 6 and 7 should be off
+4.2. Plave a magnet close to the switches and check ?mer again.
+4.3. Limit switch close to the motor must correspont to bit7 far from motor bit6, otherwise change cable.
+5. check motion direction
+5.1. program a motion away from motor: till_speed2=100, tillspeed=100, till_pos=123456 (larger than ?tpos)
+5.2. goto tillabs and ensure the movement is away from the motor, otherwise change one polepair (at least towards the bit6 limit switch) 
+6. calculate microstep-meter conversion: 256*StepsPerTurn/Pitch[m], if it is a position changer use "positions per turns" for Pitch
+7. Edit the ini-parameters e.g
+technosoft.port=com5
+(see 1)
+technosoft.hostaxis=1
+(see 2)
+technosoft.config=stage.x.set,1,51200000,0;stage.y.set,2,51200000,0
+(name of motor, AxisNo, conversion see 6, Microstep offset used for Filter positions
+
+Tested 20110607 for TILL-Firmware, 
+I had to do correct 4.2 (one sensor not connected) and 5.2 (wrong direction)
+
