@@ -166,3 +166,16 @@ so legt EasyStudioLos:
 16:25:58 Bytes Read :  4F
 16:25:58 Bytes Read :  0C
 16:25:58 Bytes Read :  0F F1 B4 05 0F F0 7F C1 00 33 00 35 6C
+
+todo
+sniff transmission..
+availabale axis
+init
+init: cal, rm
+get set speed, accel
+position commands
+cancel movement?
+estimate arrival
+
+Debug-Tool!
+where to store motor currents and speeds???
