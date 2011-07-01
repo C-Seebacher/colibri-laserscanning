@@ -1,3 +1,6 @@
+Installation of TILL-stage Technosoft-driverboard with colibri
+todo: add images and screenshots
+
 1. check the correct comport. For the USB-RS232 convertes unplug USB, check ports, plug again, check difference.
 2. Get ID of Axis connected to Rs232 (Till-systems this is 1, blank boards this is 255)
 3. Open "Technosoft_standalone.vi", enter Comport and ID, run it.
