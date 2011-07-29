@@ -12,9 +12,9 @@ The project was developded on a PCI6111.
 = Details =
 
 ==These cards are tested:==
-* PCI6111 2ch 4MHz
-* PCI6110 4ch 4MHz
-* PCIe6361 1ch 2MHz, 2ch 1MHZ, 4ch 0.5MHz
+- PCI6111 2ch 4MHz
+- PCI6110 4ch 4MHz
+- PCIe6361 1ch 2MHz, 2ch 1MHZ, 4ch 0.5MHz
 
 ==I know of users with these cards:==
-* PCI6115
+- PCI6115
