@@ -1,0 +1,20 @@
+#summary Analog to digital converter cards
+#labels Featured,Phase-Design
+
+= Introduction =
+
+AD-card means anaolg to digital converter card.
+For fast dataaquisition you need a fast converter for the PC.
+National Instruments provides good cards for that purpose.
+The project was developded on a PCI6111. 
+
+
+= Details =
+
+==These cards are tested:==
+* PCI6111 2ch 4MHz
+* PCI6110 4ch 4MHz
+* PCIe6361 1ch 2MHz, 2ch 1MHZ, 4ch 0.5MHz
+
+==I know of users with these cards:==
+* PCI6115
