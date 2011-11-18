@@ -1,0 +1,581 @@
+# additional TILL-Variables
+UINT	TILL_POINTER 		@0x3b0  	a pointer for spi = 32b
+UINT	TILL_VERSION  		@0x3b1
+LONG	TILL_POS  		@0x3b2		for move
+FIXED	TILL_SPEED  		@0x3b4  	for move
+UINT	TILL_PROFILE 		@0x3b6  	0=trapezoid, 1=s-curve
+FIXED	TILL_HOMESPEED  	@0x3b8  	to move out of limit sensor
+FIXED	TILL_SPEED2  		@0x3be  	for service move
+UINT	TILL_STATUS  		@0x3C0  	bit 0-13 tpos, 14:busy 
+#TILL-EPROM-Variablen
+UINT	TILLE_Version 		@0x15001 	Till-EPROM Version
+UINT	TILLE_Magic 		@0x15003 	Till-EPROM Magic Number?
+UINT	TILLE_DeviceType 	@0x15005 	Till-EPROM Device Type
+FIXED	TILLE_VelMax 		@0x15006 	Till-EPROM VelMax [mm/s]?
+FIXED	TILLE_VelCalIn 		@0x15008 	Till-EPROM VelCalIn
+FIXED	TILLE_VelCalOut 	@0x1500A 	Till-EPROM VelCalOut
+FIXED	TILLE_Pitch 		@0x15010 	Till-EPROM PitchMechanical [units/turn]
+FIXED	TILLE_PosLogicalInit 	@0x1501C 	Till-EPROM PosLogicalInit [mm] after init
+FIXED	TILLE_PosLogicalDelta 	@0x15020 	Till-EPROM-PosLogicalDelta [mm]
+FIXED	TILLE_PosLogicalOffset 	@0x15022 	Till-EPROM PosLogicalOffset [mm] =pos"0"
+FIXED	TILLE_Kii 		@0x15028 	Till-EPROM MotorCurrentKi
+FIXED	TILLE_Kpi 		@0x1502A 	Till-EPROM MotorCurrentKp
+UINT	TILLE_Steps 		@0x1502D 	Till-EPROM Steps per turn
+UINT	TILLE_RunCurrent 	@0x1502F 	Till-EPROM RunCurrent [mA] ->*9> IDMAX
+UINT	TILLE_StyCurrent 	@0x15031 	Till-EPROM StandbyCurrent [mA?] ->*9>IDMIN
+# end of additional TILL-Variables
+
+UINT		AAR		@0x030C
+UINT		AAR_table	@0x0913
+INT		ACCPL		@0x02FF
+UINT		ACC_LIMIT	@0x02C7
+UINT		ACR		@0x0912
+UINT		AD0		@0x023c
+UINT		AD0OFF		@0x244
+UINT		AD1		@0x023d
+UINT		AD1OFF		@0x245
+UINT		AD2		@0x023e		[V]
+UINT		AD2OFF		@0x246
+UINT		AD3		@0x023f
+UINT		AD3OFF		@0x247
+UINT		AD4		@0x240		[V ]
+UINT		AD4OFF		@0x248
+UINT		AD5		@0x241		[V]
+INT		AD5OFF		@0x249
+UINT		AD6		@0x242
+UINT		AD6OFF		@0x024a
+UINT		AD7		@0x243		[°C]
+UINT		AD7OFF		@0x024b
+UINT		AD8		@0x080B
+LONG		ALPHA		@0x295
+LONG		APOS		@0x228		[rot]
+LONG		APOS_LD		@0x228		[rot]
+LONG		APOS_MT		@0x988		[rot]
+LONG		APOS2		@0x081C
+FIXED		ASPD		@0x022c		[µsteps per Ts_S]
+FIXED		ASPD_LD		@0x098A		[µsteps per Ts_S]
+FIXED		ASPD_MT		@0x022c		[µsteps per Ts_S]
+LONG		ATIME		@0x02c0		[s]
+UINT		AXISONACTIVE	@0x037A
+LONG		BETA		@0x0293
+INT		BOOST		@0x027d
+UINT		BRAKEDC		@0x028b
+UINT		BRAKELIM	@0x028a
+UINT		BRAKEOFF	@0x028c
+FIXED		CACC		@0x02a2		[µstep/Ts_S^2]
+INT		CADIN		@0x025c
+LONG		CAMOFF		@0x03AD
+INT		CAMSTART	@0x03AC
+FIXED		CAMX		@0x0903
+FIXED		CAMY		@0x0905
+LONG		CAPPOS		@0x02bc		[rot]
+LONG		CAPPOS2		@0x081E
+UINT		CBR		@0x030D
+UINT		CBR_table	@0x0928
+UINT		CCR		@0x030A
+FIXED		CDEC		@0x0859		[µstep/Ts_S^2]
+FIXED		CDREF		@0x02a4
+UINT		CER		@0x0301
+INT		CI0		@0x028d
+INT		CIQ		@0x028e
+UINT		CLPER		@0x250
+INT		CORDDTH		@0x028e
+INT		CORDTH		@0x028d
+INT		COSRES		@0x227
+INT		COSTH		@0x226
+LONG		CPOS		@0x029e		[µstep]
+INT		CRTERR		@0x231		[A?]
+FIXED		CSPD		@0x02a0		[µsteps per Ts_S]
+UINT		CSR		@0x030B
+UINT		CTIME		@0x02a6		[s?]
+INT		CVDC		@0x025b
+INT		CWEAK		@0x0257
+UINT		DBT		@0x253
+INT		DBTLIM		@0x027e
+UINT		DEBUG		@0x08D0
+INT		DEFAULT_INT0		@0x0140
+INT		DEFAULT_INT1		@0x0170
+INT		DEFAULT_INT10		@0x01A1
+INT		DEFAULT_INT11		@0x01A2
+INT		DEFAULT_INT2		@0x017D
+INT		DEFAULT_INT3		@0x018A
+INT		DEFAULT_INT4		@0x0197
+INT		DEFAULT_INT5		@0x019C
+INT		DEFAULT_INT6		@0x019D
+INT		DEFAULT_INT7		@0x019E
+INT		DEFAULT_INT8		@0x019F
+INT		DEFAULT_INT9		@0x01A0
+INT		delta_el_pos		@0x0877
+UINT		DIGIN_ACTIVE_LEVEL		@0x090C
+UINT		DIGIN_INVERSION_MASK		@0x090A
+UINT		DIGOUT_INVERSION_MASK		@0x090B
+INT		E_LEVEL_AD5		@0x0870
+INT		EFLEVEL		@0x02c7
+UINT		EIR		@0x0305
+INT		ELPOS		@0x221
+LONG		ELPOSL		@0x080e
+UINT		ELRES		@0x279
+LONG		ELRESL		@0x0875
+UINT		ENC2TH		@0x278
+LONG		ENC2THL		@0x024C
+LONG		EREF		@0x02a8
+LONG		EREFP		@0x02a8		[rot]
+FIXED		EREFS		@0x02a8		[µsteps per Ts_S]
+INT		EREFT		@0x02a9		[A]
+INT		EREFV		@0x02a9		[V]
+UINT		ERRMAX		@0x02c5		[rot]
+INT		FFL		@0x223
+INT		FILTER1		@0x029d
+INT		FILTERQ		@0x0982
+INT		FLAGUV		@0x02fb
+FIXED		GEAR		@0x02ac
+UINT		GEARMASTER		@0x255
+INT		GEARSLAVE		@0x256
+INT		GUARD		@0x027e
+INT		HALL		@0x0227
+INT		HALL30		@0x0877
+INT		HALLCASE		@0x0259
+INT		HALLDIR		@0x028f
+LONG 		HOMEPOS		@0x0992  	[rot]
+FIXED		HOMESPD		@0x0994		[µsteps per Ts_S]
+ULONG		I2TINTLIM_D	@0x0980
+ULONG		I2TINTLIM_M	@0x0815
+INT		IA		@0x239		[A]
+INT		IB		@0x023a		[A]
+INT		IBETA		@0x087b		[A]
+INT		IC		@0x023b		[A]
+UINT		ICR		@0x0304
+INT		ID		@0x234		[A*9027]
+INT		IDMAX		@0x027b		[A*9027] Move Current
+INT		IDMIN		@0x027c		[A*9027] Stby Current
+INT		IDREF		@0x233		[A*9027]
+INT		IDRSTEP		@0x027b		[A*9027]
+INT		II2TPROT_D	@0x0986		
+INT		II2TPROT_M	@0x0814	
+ULONG		II2TWARLIM_D	@0x097C
+ULONG		I2TWARLIM_M	@0x097E
+INT		IMAXP		@0x266
+INT		IMAXPROT	@0x297		[A*9027]
+INT		IMAXS		@0x026c
+UINT		INSTATUS	@0x0908
+INT		INTTABLE	@0x307
+INT		IQ		@0x230		[A]
+INT		IQREF		@0x022f		[A]
+INT		IQREFFILTERED	@0x0987		[A*90277]
+INT		IQRSTEP		@0x027c		[A*9027]
+UINT		ISR		@0x0306
+FIXED		JERK		@0x08D1		[rad/s^3]
+INT		KDFP		@0x264
+INT		KDP		@0x262
+INT		KFFA		@0x026e
+INT		KFFL		@0x026f
+INT		KFFS		@0x026d
+INT		KII		@0x273
+INT		KIP		@0x0260
+INT		KIS		@0x269
+INT		KISPDEST	@0x095B
+INT		KPI		@0x271
+INT		KPP		@0x025e
+INT		KPS		@0x267
+INT		KPSPDEST	@0x095C
+INT		KSLIP		@0x279
+INT		KSPD		@0x277
+INT		KVOLT		@0x279
+INT		LEVEL_AD5	@0x086f
+UINT		LOG_PTR		@0x0365
+INT		LSACTIVE	@0x0832
+INT		MASTERID	@0x0927
+LONG		MASTERRES	@0x081A
+UINT		MAXPWMWOB	@0x028f
+UINT		MCR		@0x0309
+UINT		MCR_1		@0x02B0
+UINT		MECRES		@0x0277
+LONG		MECRESL		@0x024E
+UINT		MER		@0x08FC		Motion error
+UINT		MER_MASK	@0x0965
+INT		MOTORON		@0x0312
+LONG		MPOS0		@0x02E5
+LONG		MREF		@0x02aa
+INT		MSPD		@0x820
+UINT		MSR		@0x0308		Motion Status
+UINT		MTSTYPE		@0x028c
+UINT		NEWPERWOB	@0x287
+LONG		NI2T		@0x255
+UINT		OSR		@0x0302
+UINT		PCR		@0x0303
+UINT		PFOVF		@0x029c
+INT		PHASEADV	@0x257
+LONG		POS0		@0x02b8
+INT		POSERR		@0x022a		[rot]
+INT		POSINC		@0x222
+UINT		POSOKLIM		@0x036A		[rot]
+LONG		POSTRIGG1		@0x091A		[rot]
+LONG		POSTRIGG2		@0x091C		[rot]
+LONG		POSTRIGG3		@0x091E		[rot]
+LONG		POSTRIGG4		@0x0920		[rot]
+LONG		PROD		@0x030e
+LONG		PRODH		@0x030f
+INT		PSFILT		@0x288
+INT		PVTBUFBEGIN		@0x0864
+INT		PVTBUFLEN		@0x0865
+UINT		PVTMODE		@0x086B
+LONG		PVTPOS0		@0x0869
+INT		PVTSENDOFF	@0x092B
+UINT		PVTSTS		@0x0863
+UINT		PWMPER		@0x252
+INT		QUICKSTOPS		@0x082f
+FIXED		REF0		@0x02a8
+FIXED		REF0_fixed		@0x02a8
+LONG		REF0_long		@0x02a8
+INT		REFTST		@0x281
+INT		REFTST_A		@0x281		[A]
+INT		REFTST_V		@0x281		[V]
+INT		RINCTST		@0x280
+INT		RINCTST_A		@0x280		[A/s]
+INT		RINCTST_V		@0x280		[V/s]
+LONG		RPOS		@0x02ba
+LONG		RTIME		@0x02c2		[s]
+INT		SAMPWD		@0x257
+INT		SATID		@0x275
+INT		SATIQ		@0x276
+INT		SATP		@0x265
+INT		SATPWM		@0x0254
+INT		SATS		@0x026b
+INT  		SBYCRT  	@0x024a  [A]
+UINT		SCIBR_table		@0x098D
+INT		SCL2H		@0x281
+UINT		SCL2L		@0x282
+INT		SCL3		@0x283
+INT		SCL4		@0x286
+UINT		SCR		@0x0300
+INT		SENSE		@0x288
+INT		SERRMAX		@0x0879		[µsteps per Ts_S]
+UINT		SETAD01		@0x024c
+UINT		SETAD23		@0x024d
+UINT		SETAD45		@0x024e
+UINT		SETAD67		@0x024f
+INT		SFI2T_D		@0x098C
+INT		SFI2T_M		@0x0819
+INT		SFTADIN		@0x025d
+INT		SFTAFFW		@0x291
+INT		SFTCRT		@0x290
+UINT		SFTCWEAK		@0x0258
+INT		SFTKDP		@0x263
+INT		SFTKFF		@0x270
+INT		SFTKII		@0x274
+INT		SFTKIP		@0x0261
+INT		SFTKIS		@0x026a
+INT		SFTKPI		@0x272
+INT		SFTKPP		@0x025f
+INT		SFTKPS		@0x268
+INT		SFTKSLIP		@0x027a
+INT		SFTKSPD		@0x278
+INT		SFTKVOLT		@0x027a
+INT		SFTSCL1		@0x280
+INT		SFTSFFW		@0x292
+UINT		SFTSP		@0x248
+INT		SGCODTH		@0x289
+INT		SIN2REC		@0x287
+INT		SINRES		@0x213
+INT		SINTH		@0x225
+INT		SLAVEID		@0x311
+UINT		SLPER		@0x251
+INT		SPDERR		@0x022e		[µsteps per Ts_S]
+INT		SPDREF		@0x022b		[µsteps per Ts_S]
+ULONG		SR32		@0x090E
+INT		SRCOR		@0x027f
+INT		SRECTCOMP		@0x028f
+UINT		SRH		@0x090F
+UINT		SRH_MASK		@0x0963
+UINT		SRL		@0x090E
+UINT		SRL_MASK		@0x0962
+INT		SSIBR		@0x0845
+INT		SSIREV		@0x0843
+INT		SSISENSE	@0x0841
+INT		SSITURNS	@0x0844
+INT		SSITYPE		@0x0846
+INT		SSPL		@0x02fe
+INT		STATE		@0x288
+UINT		T1MAXPROT		@0x298		[s]
+UINT		T1ONA		@0x284		[s]
+UINT		T1ONB		@0x285		[s]
+UINT		T2MAXPROT		@0x299		[°C]
+FIXED		TACC		@0x02b6		[µsteps per Ts_S^2]
+UINT		TERRMAX		@0x02c6		[s]
+INT		THETA		@0x224		[deg]
+INT		THETAINC		@0x020e		[deg/s]
+INT		THTST		@0x282		[deg]
+UINT		TIMAXPROT		@0x02c4		[s]
+LONG		TIME0		@0x02be		[s]
+UINT		TIMELIM		@0x286		[s]
+UINT  		TIMESBC  	@0x028b  	[s]
+INT		TINCTST		@0x283		[deg/s]
+LONG		TJERK		@0x08D1		[s]
+UINT		TMLINTPER		@0x0983		[s]
+UINT		TONPOSOK		@0x036B		[s]
+LONG		TPOS		@0x02b2		[µstep]
+LONG		TPOSFAST		@0x0959		[µstep]
+FIXED		TRANSMISSION	@0x037C
+LONG		TREF		@0x02ae
+FIXED		TREF_fixed		@0x02ae
+UINT		TSERRMAX		@0x087A		[s]
+FIXED		TSPD		@0x02b4		[µsteps per Ts_S]
+INT		UAREF		@0x236		[V]
+INT		UBREF		@0x237		[V]
+INT		UCREF		@0x238		[V]
+INT		UDREF		@0x235		[V]
+UINT		UMAXPROT		@0x029a		[V ]
+UINT		UMINPROT		@0x029b		[V ]
+INT		UPGRADE		@0x0857
+INT		UQREF		@0x232		[V]
+INT		VAR_I1		@0x366
+UINT	VAR_U1		@0x366
+INT		VAR_I2		@0x367
+UINT	VAR_U2		@0x367
+INT		VAR_I3		@0x979
+UINT	VAR_U3		@0x979
+LONG		VAR_LF		@0x368
+FIXED		VAR_LF_fixed		@0x368
+LONG		VAR_LF_long		@0x368
+UINT		VDCN		@0x025a
+INT		WEAKINC		@0x259
+UINT		ZAOFF		@0x289
+
+#TILL Photonics variables
+INT		CRTOM		@0x886
+INT		CRTOM_1		@0x887
+INT		PSAP		@0x888
+INT 	TPOM 		@0x889
+LONG	DOM		@0x88a
+INT		IPDAC		@0x88c
+INT		APW		@0x88d
+INT		out_active		@0x88e
+INT		is_distance		@0x88f
+INT		tpom_counter		@0x890
+INT		dom_counter0		@0x891
+INT		dom_counter1		@0x892
+INT		dom_counter2		@0x893
+INT		Active_counter		@0x894
+INT		Dom_inc_0		@0x895
+INT		Dom_inc_1		@0x896
+INT		Dom_inc_temp_0		@0x897
+INT		Dom_inc_temp_1		@0x898
+INT		mask_or_out_rev		@0x899
+INT		mask_and_out_rev		@0x89A
+LONG  DOM_counter			@0x892
+
+#Probably very-very unimportant 
+#System configuration and interrupts
+UINT	SCSR1			@0x7018	#System Control and Status Register 1
+UINT	SCSR2 		@0x7019	#System Control and Status Register 2
+UINT	DINR			@0x701C	#Device Identification Number Register
+UINT	IFR			@0x0006	#Interrupt Flag Register 
+UINT	IMR 			@0x0004	#Interrupt Mask Register 
+UINT	PIVR 			@0x701E	#Peripheral Interrupt Vector Register
+UINT	PIRQR0 		@0x7010	#Peripheral Interrupt Request Register 0 
+UINT	PIRQR1 		@0x7011	#Peripheral Interrupt Request Register 1 
+UINT	PIRQR2 		@0x7012	#Peripheral Interrupt Request Register 2 
+UINT	PIACKR0 		@0x7014	#Peripheral Interrupt Acknowledge Register 0 
+UINT	PIACKR1 		@0x7015	#Peripheral Interrupt Acknowledge Register 1 
+UINT	PIACKR2 		@0x7016	#Peripheral Interrupt Acknowledge Register 2 
+UINT	XINT1CR 		@0x7070	#External Interrupt 1 Control Register 
+UINT	XINT2CR 		@0x7071	#External Interrupt 2 Control Register 
+#Digital I/O Port Control Registers Implementation
+UINT	MCRA			@0x7090  #I/O MUX Control Register A
+UINT	MCRB			@0x7092  #I/O MUX Control Register B
+UINT	MCRC			@0x7094  #I/O MUX Control Register C
+UINT	PADATDIR		@0x7098  #I/O port A Data and Direction Register
+UINT	PBDATDIR		@0x709A  #I/O port B Data and Direction Register
+UINT	PCDATDIR		@0x709C  #I/O port C Data and Direction Register
+UINT	PDDATDIR		@0x709E  #I/O port D Data and Direction Register
+UINT	PEDATDIR		@0x7095  #I/O port E Data and Direction Register
+UINT	PFDATDIR		@0x7096  #I/O port F Data and Direction Register
+#Addresses of EVA Timer Registers
+UINT	GPTCONA		@0x7400 	#Timer control register
+UINT	T1CNT			@0x7401	#Timer 1 counter register
+UINT	T1CMPR		@0x7402 	#Timer 1 compare register
+UINT	T1PR			@0x7403	#Timer 1 period register
+UINT	T1CON			@0x7404	#Timer 1 control register
+UINT	T2CNT			@0x7405	#Timer 2 counter register
+UINT	T2CMPR		@0x7406	#Timer 2 compare register
+UINT	T2PR			@0x7407	#Timer 2 period register
+UINT	T2CON			@0x7408	#Timer 2 control register
+#Addresses of EVB Timer Registers
+UINT	GPTCONB		@0x7500  #Timer control register
+UINT	T3CNT			@0x7501  #Timer 3 counter register
+UINT	T3CMPR		@0x7502  #Timer 3 compare register
+UINT	T3PR			@0x7503  #Timer 3 period register
+UINT	T3CON			@0x7504  #Timer 3 control register
+UINT	T4CNT			@0x7505  #Timer 4 counter register
+UINT	T4CMPR		@0x7506  #Timer 4 compare register
+UINT	T4PR			@0x7507  #Timer 4 period register
+UINT	T4CON			@0x7508  #Timer 4 control register
+#Addresses of EVA Compare Control Registers
+UINT	COMCONA		@0x7411  #Compare control register
+UINT	ACTRA			@0x7413  #Compare action control register
+UINT	DBTCONA		@0x7415  #Dead-band timer control register
+UINT	CMPR1			@0x7417  #Compare register 1
+UINT	CMPR2			@0x7418  #Compare register 2
+UINT	CMPR3			@0x7419  #Compare register 3
+#Addresses of EVB Compare Control Registers
+UINT	COMCONB		@0x7511  #Compare control register
+UINT	ACTRB			@0x7513  #Compare action control register
+UINT	DBTCONB		@0x7515  #Dead-band timer control register
+UINT	CMPR4			@0x7517  #Compare register 4
+UINT	CMPR5			@0x7518  #Compare register 5
+UINT	CMPR6			@0x7519  #Compare register 6
+#Addresses of EVA Capture Registers
+UINT	CAPCONA		@0x7420  #Capture control register
+UINT	CAPFIFOA		@0x7422  #Capture FIFO status register
+UINT	CAP1FIFO		@0x7423  #Two-level-deep capture FIFO stack 1
+UINT	CAP2FIFO		@0x7424  #Two-level-deep capture FIFO stack 2
+UINT	CAP3FIFO		@0x7425  #Two-level-deep capture FIFO stack 3
+#Bottom registers of FIFO stacks, allows most recent value to be read
+UINT	CAP1FBOT		@0x7427 
+UINT	CAP2FBOT		@0x7428 
+UINT	CAP3FBOT		@0x7429 
+#Addresses of EVB Capture Registers
+UINT	CAPCONB		@0x7520  #Capture control register
+UINT	CAPFIFOB 	@0x7522	#Capture FIFO status register
+UINT	CAP4FIFO		@0x7523  #Two-level-deep capture FIFO stack 4
+UINT	CAP5FIFO		@0x7524  #Two-level-deep capture FIFO stack 5
+UINT	CAP6FIFO		@0x7525  #Two-level-deep capture FIFO stack 6
+#Bottom registers of FIFO stacks, allows most recent value to be read
+UINT	CAP4FBOT		@0x7527  
+UINT	CAP5FBOT		@0x7528
+UINT	CAP6FBOT		@0x7529
+#Addresses of EVA Interrupt Registers
+UINT	EVAIMRA		@0x742C  #Interrupt mask register A
+UINT	EVAIMRB		@0x742D  #Interrupt mask register B
+UINT	EVAIMRC		@0x742E  #Interrupt mask register C
+UINT	EVAIFRA		@0x742F  #Interrupt flag register A
+UINT	EVAIFRB		@0x7430  #Interrupt flag register B
+UINT	EVAIFRC		@0x7431  #Interrupt flag register C
+#Addresses of EVB Interrupt Registers
+UINT	EVBIMRA		@0x752C  #Interrupt mask register A
+UINT	EVBIMRB		@0x752D  #Interrupt mask register B
+UINT	EVBIMRC		@0x752E  #Interrupt mask register C
+UINT	EVBIFRA		@0x752F  #Interrupt flag register A
+UINT	EVBIFRB		@0x7530  #Interrupt flag register B
+UINT	EVBIFRC		@0x7531  #Interrupt flag register C
+#Addresses of ADC Registers
+UINT	ADCTRL1		@0x70A0  #ADC control register 1
+UINT	ADCTRL2		@0x70A1  #ADC control register 2
+UINT	MAX_CONV		@0x70A2  #Maximum conversion channels register
+UINT	CHSELSEQ1	@0x70A3  #Channel select sequencing control register 1
+UINT	CHSELSEQ2	@0x70A4  #Channel select sequencing control register 2
+UINT	CHSELSEQ3	@0x70A5  #Channel select sequencing control register 3
+UINT	CHSELSEQ4	@0x70A6  #Channel select sequencing control register 4
+UINT	AUTO_SEQ_SR	@0x70A7  #Autosequence status register
+UINT	RESULT0		@0x70A8  #Conversion result buffer register 0
+UINT	RESULT1		@0x70A9  #Conversion result buffer register 1
+UINT	RESULT2		@0x70AA  #Conversion result buffer register 2
+UINT	RESULT3		@0x70AB  #Conversion result buffer register 3
+UINT	RESULT4		@0x70AC  #Conversion result buffer register 4
+UINT	RESULT5		@0x70AD  #Conversion result buffer register 5
+UINT	RESULT6		@0x70AE 	#RESULT6 Conversion result buffer register 6
+UINT	RESULT7		@0x70AF  #RESULT7 Conversion result buffer register 7
+UINT	RESULT8		@0x70B0  #RESULT8 Conversion result buffer register 8
+UINT	RESULT9		@0x70B1  #RESULT9 Conversion result buffer register 9
+UINT	RESULT10		@0x70B2  #RESULT10 Conversion result buffer register 10
+UINT	RESULT11		@0x70B3  #RESULT11 Conversion result buffer register 11
+UINT	RESULT12		@0x70B4  #RESULT12 Conversion result buffer register 12
+UINT	RESULT13		@0x70B5  #RESULT13 Conversion result buffer register 13
+UINT	RESULT14		@0x70B6  #RESULT14 Conversion result buffer register 14
+UINT	RESULT15		@0x70B7  #RESULT15 Conversion result buffer register 15
+UINT	CALIBRATION	@0x70B8  #Calibration result, used to correct subsequent conversions
+#Addresses of SCI Registers
+UINT	SCICCR		@0x7050  #SCI communication control register
+UINT	SCICTL1		@0x7051  #SCI control register 1 Controls the RX/TX and receiver error interrupt enable, TXWAKE and SLEEP functions, and the SCI software reset.
+UINT	SCIHBAUD		@0x7052  #SCI baud register, high bits. Stores the data (MSbyte) required to generate the bit rate.
+UINT	SCILBAUD		@0x7053  #SCI baud register, low bits. Stores the data (LSbyte) required to generate the bit rate.
+UINT	SCICTL2		@0x7054  #SCI control register 2 Contains the transmitter interrupt enable, the receiver-buffer/break interrupt enable, the transmitter ready flag, and the transmitter empty flag.
+UINT	SCIRXST		@0x7055  #SCI receiver status register. Contains seven receiver status flags.
+UINT	SCIRXEMU		@0x7056  #SCI emulation data buffer register. Contains data received for screen updates, principally used by the emulator. (Not a real register – just an alternate address for reading SCIRXEMU without clearing RXRDY)
+UINT	SCIRXBUF		@0x7057  #SCI receiver data buffer register. Contains the current data from the receiver shift register.
+UINT	SCITXBUF		@0x7059  #SCI transmit data buffer register. Stores data bits to be transmitted by the SCITX.
+UINT	SCIPRI		@0x705F  #SCI priority control register. Contains the receiver and transmitter interrupt priority select bits and the emulator suspend enable bit.
+#Addresses of SPI Registers
+UINT	SPICCR		@0x7040  #SPI configuration control register
+UINT	SPICTL		@0x7041  #SPI operation control register
+UINT	SPISTS		@0x7042  #SPI status register
+UINT	SPIBRR		@0x7044  #SPI baud rate register
+UINT	SPIRXEMU		@0x7046  #SPI receive emulation buffer register
+UINT	SPIRXBUF		@0x7047  #SPI serial receive buffer register
+UINT	SPITXBUF		@0x7048  #SPI serial transmit buffer register
+UINT	SPIDAT		@0x7049  #SPI serial data register
+UINT	SPIPRI		@0x704F  #SPI priority control register
+#Addresses of CAN Registers
+UINT	MDER			@0x7100  #Mailbox Direction/Enable Register (bits 7 to 0)
+UINT	TCR			@0x7101  #Transmission Control Register (bits 15 to 0)
+UINT	RCR			@0x7102  #Receive Control Register (bits 15 to 0)
+UINT	MCR_DSP		@0x7103  #Master Control Register (bits 13 to 6, 1, 0)
+UINT	BCR2			@0x7104  #Bit Configuration Register 2 (bits 7 to 0)
+UINT	BCR1			@0x7105  #Bit Configuration Register 1 (bits 10 to 0)
+UINT	ESR			@0x7106  #Error Status Register (bits 8 to 0)
+UINT	GSR			@0x7107  #Global Status Register (bits 5 to 0)
+UINT	CEC			@0x7108  #Transmit and Receive Error Counters (bits 15 to 0)
+UINT	CAN_IFR		@0x7109  #Interrupt Flag Register (bits 13 to 8, 6 to 0)
+UINT	CAN_IMR		@0x710A  #Interrupt Mask Register (bits 15, 13 to 0)
+UINT	LAM0_H		@0x710B  #Local Acceptance Mask for MBOX0 and 1 (bits 31, 28 to 16)
+UINT	LAM0_L		@0x710C  #Local Acceptance Mask for MBOX0 and 1 (bits 15 to 0)
+UINT	LAM1_H		@0x710D  #Local Acceptance Mask for MBOX2 and 3 (bits 31, 28 to 16)
+UINT	LAM1_L		@0x710E  #Local Acceptance Mask for MBOX2 and 3 (bits 15 to 0)
+#Mailbox Addresses - MBOX_0
+UINT	MSG_ID0L		@0x7200
+UINT	MSG_ID0H 	@0x7201
+UINT	MSG_CTRL0 	@0x7202
+#0x7203 is Reserved
+UINT	MBOX0A 		@0x7204
+UINT	MBOX0B 		@0x7205
+UINT	MBOX0C 		@0x7206
+UINT	MBOX0D 		@0x7207
+#Mailbox Addresses - MBOX_1
+UINT	MSG_ID1L		@0x7208
+UINT	MSG_ID1H 	@0x7209
+UINT	MSG_CTRL1 	@0x720A
+#0x720B is Reserved
+UINT	MBOX1A 		@0x720C
+UINT	MBOX1B 		@0x720D
+UINT	MBOX1C 		@0x720E
+UINT	MBOX1D 		@0x720F
+#Mailbox Addresses - MBOX_2
+UINT	MSG_ID2L		@0x7210
+UINT	MSG_ID2H 	@0x7211
+UINT	MSG_CTRL2 	@0x7212
+#0x7213 is Reserved
+UINT	MBOX2A 		@0x7214
+UINT	MBOX2B 		@0x7215
+UINT	MBOX2C 		@0x7216
+UINT	MBOX2D 		@0x7217
+#Mailbox Addresses - MBOX_3
+UINT	MSG_ID3L		@0x7218
+UINT	MSG_ID3H 	@0x7219
+UINT	MSG_CTRL3 	@0x721A
+#0x721B is Reserved
+UINT	MBOX3A 		@0x721C
+UINT	MBOX3B 		@0x721D
+UINT	MBOX3C 		@0x721E
+UINT	MBOX3D 		@0x721F
+#Mailbox Addresses - MBOX_4
+UINT	MSG_ID4L		@0x7220
+UINT	MSG_ID4H 	@0x7221
+UINT	MSG_CTRL4 	@0x7222
+#0x7223 is Reserved
+UINT	MBOX4A 		@0x7224
+UINT	MBOX4B 		@0x7225
+UINT	MBOX4C 		@0x7226
+UINT	MBOX4D 		@0x7227
+#Mailbox Addresses - MBOX_5
+UINT	MSG_ID5L		@0x7228
+UINT	MSG_ID5H 	@0x7229
+UINT	MSG_CTRL5 	@0x722A
+#0x722B is Reserved
+UINT	MBOX5A 		@0x722C
+UINT	MBOX5B 		@0x722D
+UINT	MBOX5C 		@0x722E
+UINT	MBOX5D 		@0x722F
+#Watchdog Control Registers
+UINT	WDCNTR	@0x7023
+UINT	WDKEY		@0x7025
+UINT	WDCR		@0x7029
