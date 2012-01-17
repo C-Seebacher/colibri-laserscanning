@@ -1,0 +1,16 @@
+Visual Studio minimum 2005 (std, Prof, Team, x64 Compilers and Tools)
+c/c++ dll..
+
+
+64 bit
+ Build/configuration Manager
+ Solution configuration: Release, Platform: New
+ x64 copy from win32 create new project platforms
+
+
+to static link to MSVCR100.dll
+ Properties
+ configRelaease
+ ConfigProperties/ C/C++ / CodeGeneration
+ RuntimeLiberySetting > Multi-treades (/MT)
+ rebuild
