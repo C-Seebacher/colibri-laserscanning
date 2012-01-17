@@ -1,10 +1,14 @@
-Install Labview >=8.6
-Install NI Vision Development Module (its Labview8 tools are enaugh)
-Install Tortuoise, (reboot not really needed)
+Install Labview >=8.6; disable Tools/Options/FrontPanel/Use localized decimal Point
+Install NI Vision Development Module (its Labview tools are enaugh)
+Install NI-DADmx and NI-VISA drivers
+Install NI-IMAQdx for Firewire and USB-Cameras
+Install Tortuoise, (recommended; reboot after installation not really needed)
 
 Create a folder for example c:\ScanMicroscope it should work on any drive in any subfolder with your favourite name. 
 Labview sometimes uses sub-vis in different folders so delete or zip all old colibri files.
 Right click this folder, "SVN checkout...", url=http://opensvn.csie.org/colibri/trunk/
+
+Hide all other (old) colibri versions by putting them into a zip file.
 
 Place the dlls for external devices you have (i am not sure if this is really important if they are already in system32):
 C:\ScanMicroscope\Drivers\TILLPhotonics\tillimic.dll, 
@@ -23,7 +27,7 @@ pmt.1.ch="Dev1/ao0"
 pmt.2.ch="Dev1/ao1" the DA-Card for the Highvoltage
 galvo.type="digital" if you have the digital TILL-Yanus with the 8MHz clock synchronisation
 galvo.port="com4" - change to the comport of the Galvo controller.
-And other comports... Poly, Laser, iMic
+And other comports... Polychrome, Laser, iMic, Motors
 
 With the folowing lines you specify the drivers to load.
 driver.list="driver.scan,driver.preview,driver.imic,driver.laser,driver.lasereom,driver.job,driver.pmt" delete entries you do not need (not really important)
@@ -34,13 +38,13 @@ driver.imic="Timicsdk.vi" for TILL-Microscopes
 driver.laser="TMaitai.vi" for Spectra-Physics (Newport) MaiTai lasers
 driver.lasereom="Deom.vi" for EOM control with a photodiode and a analog out port
 driver.job="TJob.vi" for the internal scripting like z-stacks and time series
-driver.pmt="THighVoltage.vi" to control the PMT-Gain with analog-out ports named "SpannungAO0" and "SpannungAO1"
+driver.pmt="THighVoltage.vi" to control the PMT-Gain with analog-out ports
 driver.pco="DPCOContinous.vi" to get images from a old PCO-camera (Sensicam QE)
 driver.poly="poly4.vi" for a TILL-Polychrome 2-4 connected to an Comport
 the optional but recomendet list "....variables.list=" to what variable the driver is listening with a notifier, needed to stop a driver in a controled way.
 
 Finally open and Run C:\ScanMicroscope\Colibri.vi 
-If the ini is not existing or entries are missing you will be asked for 
+If the top level Colibri.ini is not existing or entries are missing you will be asked to select a file.
 check Error messages
 A GUI will be loaded at the end
 Check driver status with the tool Debug/Driver from the menu line. This tool can stop or start drivers.
