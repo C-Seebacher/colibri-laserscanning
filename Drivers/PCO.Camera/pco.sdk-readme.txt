@@ -1,0 +1,11 @@
+This PCO.sdk is property of the PCO AG
+you get these files from the PCO hompege 
+http://www.pco.de
+Dowload the SDK package e.g. 'SW_PCOSDKWIN_115.zip'
+unzip, install, get the SC2_cam.dll from the bin and bin64 directories
+I renamed the version in the bin directory to SC2_cam32.dll and that from the bin64 to SC2_cam64.dll to benefit from the * wildcard features of Labview. 
+I do a call to SC2_cam*.* which is the appropriate file.
+The sc2_cam.dll depend on an installed pco camera in the windows devive manager.
+You should test the camera with the PCO Camware software available (in 32 and 64 bit) from the PCO homage.
+The sdk-desciption is a document called MA_DCSDKWINE_115.pdf
+ 
