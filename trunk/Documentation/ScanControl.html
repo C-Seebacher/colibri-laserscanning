@@ -104,6 +104,15 @@ add to position, inc: set velocity, LoopStart, LoopEnd<br>
 the Image Channels, or pixel/s for inc+Image, or s for the SMove
 Channel)</li>
 </ul>
+<h3>Limitations</h3>
+At the moment there is some limitations when designing scans for Colibri.
+<ul>
+<li>Only one (the first) "Inc-Image1X" is used to set the Pixel dwell time for the rest of the image (difficult to change, i use a constant pixel dwell time).
+<li>Only the pixels in one image can be described with Image1X Image1Y. Of course you can use several channels (difficult to change).
+<li>The digital trigger to synchronize Galvo and AD-conversion is asumed to be at t=0 (digital only, medium to change)
+<li>Do not use negative image pixel coordiantes (could crash?, medium to fix).
+<li>Only one loop can be used with the contionous run option (will be possible soon).
+</ul>
 <h2>Examples</h2>
 V,0,3,-100<br>
 V,1,3,-50&nbsp;&nbsp;&nbsp; set to -50<br>
