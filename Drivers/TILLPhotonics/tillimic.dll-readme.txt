@@ -1,0 +1,9 @@
+You need the tillsdk for you operation system.
+It is a file called tillimic.dll for 32-bit and 64-bit programs (i have 0.6.0.3).
+Labvew has a feature to load the 32 or 64 bit version depending on the Labview version running.
+It expects the name to be 
+tillimic32.dll for 32bit, windows
+tillimic64.dll for 64bit, windows
+other OS would probably be tillimic64.so or tillimic46.framework. 
+Place the renamed file in the TILLPhotonics folder.
+Probably i am not allowed to add the dll's in the svn repository.
