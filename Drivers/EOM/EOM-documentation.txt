@@ -1,7 +1,28 @@
-This program (RegulateTomW.vi) changes the AnalogOut until it archices the desired Power measured with a Photodiode.
-It can not change the Power very fast but within some ms. 
-AnalogOut and Photodiode connections are defined in the EOM_IO.vi
-Power calibration: Measure some datapoints: IRPower(wavelength) / EffectiveDiodeVoltage(wavelength) and put them into DiodeToPower.vi, DiodeVoltage is the effective Voltage corrected by DiodeEff.vi
-Change Bias Voltage of the Conoptics Knob in EOMEstimate.vi (and if it does not work good, also the constants in EOMEstimate.vi)
-If you can not readout the IR-Laserpower of the Laserhead, we have to estimate it: EstimateIR-Power: it contains some measured nm/mW values of the Laserhead
-With EOMscan.vi you can measure a SetVoltage-EffPhotodiode Diagram.
+New Version July 2014: Contol! no regulate any more, use a formula with lambda and transmission.
+Connect a photodiode to analog in, i use a BPW34 with 34kOhm shunt at a USB-6008
+Put the diode on a weak relection after the EOM e.g. scatter of beam expander.
+Connect the EOM to an analog out, i removed the 50Ohm at the conoptics videio input with the USB-6008.
+Check modulation with EOMscan.vi
+My bis knob has to be below -250V to get the minima at 990nm. 
+Don't adjust the Bias any more.
+Collect wavelenth, minima, maxima an calulate formula with SetupEOM.vi
+The efficency is the ratio from Laserpower to the point where you want to control the power to the laserpower. (e.g. to the objective or to the entrance of the microscope) 
+Your control range is from 0 to laserpower*efficency
+
+The phododiode detection system will is an independent powermeter
+laser.power.diodecalibration consistis of pairs of wavelenth and Watt/Volt diode efficency values.
+e.g if your laser is at 750nm, the diode is reading 0.02V (See Driver GUI), a Powermeter at the sample reads 2mW you get the Pair 750,0.1
+
+It is not really a bug that when you set 10mW the reading will be different. Check with a powermeter at the sample if efficency and/or diodecalibration needs changes.  
+
+You need at least something like this in you ini:
+laser.power="-0.001131"
+laser.power.set="0.005000"
+laser.power.da="Dev2/ao0"
+laser.power.ad="Dev2/ai0"
+laser.power.formula="5.349146+-0.005459*l+(-0.554254+0.004911*l)*0.63662*asin(t^0.5)"
+laser.power.efficency="0.2"
+laser.irpower="1.0 W"
+laser.wavelength="738.0 nm"
+laser.power.diodecalibration="700,0.2;750,0.18;850,0.12;950,0.09;1000,0.07"
+
