@@ -12,6 +12,8 @@ DeleteImaqFromSavedQueue.vi checks space and deletes the oldest with access=0.
 Problem was how to get memeory usage? 
 See the tries in IMAQMemory.vi
 
+Test 10504 Images each 2,5MB = 26GB OK (1GB Memory limit, 1.296G 64Bit-Labview) seems there is no memory leak.
+Windows explorer gets slow above 10000 files (Win7-64) 
 
 test 217Bilder, 512x512, 115MB, abbe-computer
 Timing: get IMAQStatus(DLL) 12ms per run. 31..
