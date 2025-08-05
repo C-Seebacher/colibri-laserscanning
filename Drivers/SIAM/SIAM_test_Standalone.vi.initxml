@@ -1,0 +1,16 @@
+[SIAM_test_Standalone]
+<LvVariant>
+<Name>Variant Data</Name>
+<String>
+<Name>address</Name>
+<Val>192.168.1.223</Val>
+</String>
+</LvVariant>
+
+<LvVariant>
+<Name>Variant Data</Name>
+<String>
+<Name>instrument name</Name>
+<Val>LVBT-2</Val>
+</String>
+</LvVariant>

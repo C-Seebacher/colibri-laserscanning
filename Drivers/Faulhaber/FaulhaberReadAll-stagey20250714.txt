@@ -1,0 +1,877 @@
+0x10000000,Device type,U32,ro,,,4325778,read
+0x10010000,Error register,U8,ro,,,0x0,read
+0x10030000,Pre-defined error field_Number of errors,U8,rw,0,255,0x8,read
+0x10030001,Pre-defined error field_Standard error field 1,U32,ro,,,536904959,read
+0x10030002,Pre-defined error field_Standard error field 2,U32,ro,,,536904959,read
+0x10030003,Pre-defined error field_Standard error field 3,U32,ro,,,537036305,read
+0x10030004,Pre-defined error field_Standard error field 4,U32,ro,,,536904959,read
+0x10030005,Pre-defined error field_Standard error field 5,U32,ro,,,536904959,read
+0x10030006,Pre-defined error field_Standard error field 6,U32,ro,,,537036305,read
+0x10030007,Pre-defined error field_Standard error field 7,U32,ro,,,536904959,read
+0x10030008,Pre-defined error field_Standard error field 8,U32,ro,,,536904959,read
+0x10050000,COB-ID SYNC,U32,rw,1,4294967295,128,read
+0x10080000,Manufacturer device name,string,const,,,IMC 2232 BX4 RS,read
+0x10090000,Manufacturer hardware version,string,const,,,1001.01,read
+0x100A0000,Manufacturer software version,string,const,,,0161.01O,read
+0x100C0000,Guard time,U16,rw,0,65535,0x0,read
+0x100D0000,Life time factor,U8,rw,0,255,0x0,read
+0x10100000,Store parameters_Number of entries,U8,ro,,,0x9,read
+0x10100001,Store parameters_Save all parameters,U32,rw,,,1,read
+0x10100002,Store parameters_Save comm parameters,U32,rw,,,1,read
+0x10100003,Store parameters_Save app parameters,U32,rw,,,1,read
+0x10100004,Store parameters_Save app parameters 1,U32,rw,,,1,read
+0x10100005,Store parameters_Save app parameters 2,U32,rw,,,1,read
+0x10100006,Store parameters_Save cal parameters,U32,ro,,,0,read
+0x10100007,Store parameters_Save factory parameter alls,U32,ro,,,0,read
+0x10100008,Store parameters_Save factory parameters com,U32,ro,,,0,read
+0x10100009,Store parameters_Save factory parameters app,U32,ro,,,0,read
+0x10110000,Restore default parameters_Number of entries,U8,ro,,,0x6,read
+0x10110001,Restore default parameters_Restore all default parameters,U32,rw,,,1,read
+0x10110002,Restore default parameters_Restore comm default parameters,U32,rw,,,1,read
+0x10110003,Restore default parameters_Restore app default parameters,U32,rw,,,1,read
+0x10110004,Restore default parameters_Restore app saved,U32,rw,,,1,read
+0x10110005,Restore default parameters_Restore app 1 saved,U32,rw,,,1,read
+0x10110006,Restore default parameters_Restore app 2 saved,U32,rw,,,1,read
+0x10140000,COB-ID EMCY,U32,rw,,,129,read
+0x10160000,Consumer heartbeat time_Number of entries,U8,ro,,,0x1,read
+0x10160001,Consumer heartbeat time_Consumer heartbeat time,U32,rw,0,0x007FFFFF,0,read
+0x10170000,Producer heartbeat time,U16,rw,0,65535,0x0,read
+0x10180000,Identity object_Number of entries,U8,ro,,,0x4,read
+0x10180001,Identity object_Vendor ID,U32,ro,,,327,read
+0x10180002,Identity object_Product code,U32,ro,,,48,read
+0x10180003,Identity object_Revision number,U32,ro,0x0,,65536,read
+0x10180004,Identity object_Serial number,U32,ro,,,412400323,read
+0x10290000,Error behaviour / Number of error classes_Number of error classes,U8,ro,,,0x1,read
+0x10290001,Error behaviour / Number of error classes_Communication error,U8,unknown,,,0x0,read
+0x12000000,Server SDO parameter_Number of entries,U8,ro,,,0x2,read
+0x12000001,Server SDO parameter_COB-ID client to server (rx),U32,ro,,,1537,read
+0x12000002,Server SDO parameter_COB-ID server to client (tx),U32,ro,,,1409,read
+0x14000000,Receive PDO1 parameter_Number of entries,U8,ro,,,0x2,read
+0x14000001,Receive PDO1 parameter_COB-ID used by RxPDO1,U32,rw,1,4294967295,513,read
+0x14000002,Receive PDO1 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x14010000,Receive PDO2 parameter_Number of entries,U8,ro,,,0x2,read
+0x14010001,Receive PDO2 parameter_COB-ID used by RxPDO2,U32,rw,1,4294967295,769,read
+0x14010002,Receive PDO2 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x14020000,Receive PDO3 parameters_Number of entries,U8,ro,,,0x2,read
+0x14020001,Receive PDO3 parameters_COB-ID used by RxPDO3,U32,rw,1,4294967295,1025,read
+0x14020002,Receive PDO3 parameters_Transmission type,U8,rw,0,255,0xFF,read
+0x14030000,Receive PDO4 parameter_Number of entries,U8,ro,,,0x2,read
+0x14030001,Receive PDO4 parameter_COB-ID used by RxPDO4,U32,rw,1,4294967295,1281,read
+0x14030002,Receive PDO4 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x16000000,Receive PDO1 mapping / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x1,read
+0x16000001,Receive PDO1 mapping / Number of mapped objects_RxPDO 1 mapping entry 1,U32,rw,0,4294967295,1614807056,read
+0x16000002,Receive PDO1 mapping / Number of mapped objects_RxPDO 1 Mapping entry 2,U32,rw,0,4294967295,0,read
+0x16000003,Receive PDO1 mapping / Number of mapped objects_RxPDO 1 Mapping entry 3,U32,rw,0,4294967295,0,read
+0x16000004,Receive PDO1 mapping / Number of mapped objects_RxPDO 1 Mapping entry 4,U32,rw,0,4294967295,0,read
+0x16010000,Receive PDO2 mapping / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x16010001,Receive PDO2 mapping / Number of mapped objects_RxPDO2 mapping entry 1,U32,rw,0,4294967295,1614807056,read
+0x16010002,Receive PDO2 mapping / Number of mapped objects_RxPDO2 mapping entry 2,U32,rw,0,4294967295,1618608160,read
+0x16010003,Receive PDO2 mapping / Number of mapped objects_RxPDO2 mapping entry 3,U32,rw,0,4294967295,0,read
+0x16010004,Receive PDO2 mapping / Number of mapped objects_RxPDO2 mapping entry 4,U32,rw,0,4294967295,0,read
+0x16020000,Receive PDO3 mapping / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x16020001,Receive PDO3 mapping / Number of mapped objects_RxPDO3 mapping entry 1,U32,rw,0,4294967295,1614807056,read
+0x16020002,Receive PDO3 mapping / Number of mapped objects_RxPDO3 mapping entry 2,U32,rw,0,4294967295,1627324448,read
+0x16020003,Receive PDO3 mapping / Number of mapped objects_RxPDO3 mapping entry 3,U32,rw,0,4294967295,0,read
+0x16020004,Receive PDO3 mapping / Number of mapped objects_RxPDO3 mapping entry 4,U32,rw,0,4294967295,0,read
+0x16030000,Receive PDO4 mapping / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x16030001,Receive PDO4 mapping / Number of mapped objects_RxPDO4 mapping entry 1,U32,rw,0,4294967295,1614807056,read
+0x16030002,Receive PDO4 mapping / Number of mapped objects_RxPDO4 mapping entry 2,U32,rw,0,4294967295,1618018320,read
+0x16030003,Receive PDO4 mapping / Number of mapped objects_RxPDO4 mapping entry 3,U32,rw,0,4294967295,0,read
+0x16030004,Receive PDO4 mapping / Number of mapped objects_RxPDO4 mapping entry 4,U32,rw,0,4294967295,0,read
+0x18000000,Transmit PDO1 parameter_Number of entries,U8,ro,,,0x5,read
+0x18000001,Transmit PDO1 parameter_COB-ID used by TxPDO1,U32,rw,1,4294967295,385,read
+0x18000002,Transmit PDO1 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x18000005,Transmit PDO1 parameter_Eventtimer,U16,rw,0,65535,0x0,read
+0x18010000,Transmit PDO2 parameter_Number of entries,U8,ro,,,0x5,read
+0x18010001,Transmit PDO2 parameter_COB-ID used by TxPDO2,U32,rw,1,4294967295,641,read
+0x18010002,Transmit PDO2 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x18010005,Transmit PDO2 parameter_Eventtimer,U16,rw,0,65535,0x0,read
+0x18020000,Transmit PDO3 parameter_Number of entries,U8,ro,,,0x5,read
+0x18020001,Transmit PDO3 parameter_COB-ID used by TxPDO3,U32,rw,1,4294967295,897,read
+0x18020002,Transmit PDO3 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x18020005,Transmit PDO3 parameter_Eventtimer,U16,rw,0,65535,0x0,read
+0x18030000,Transmit PDO4 parameter_Number of entries,U8,ro,,,0x5,read
+0x18030001,Transmit PDO4 parameter_COB-ID used by TxPDO4,U32,rw,1,4294967295,1153,read
+0x18030002,Transmit PDO4 parameter_Transmission type,U8,rw,0,255,0xFF,read
+0x18030005,Transmit PDO4 parameter_Eventtimer,U16,rw,0,65535,0x0,read
+0x1A000000,Transmit PDO1 mapping  / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x1,read
+0x1A000001,Transmit PDO1 mapping  / Number of mapped objects_TPDO1 mapping entry 1,U32,rw,0,4294967295,1614872592,read
+0x1A000002,Transmit PDO1 mapping  / Number of mapped objects_TPDO1 mapping entry 2,U32,rw,0,4294967295,0,read
+0x1A000003,Transmit PDO1 mapping  / Number of mapped objects_TxPDO1 mapping entry 3,U32,rw,0,4294967295,0,read
+0x1A000004,Transmit PDO1 mapping  / Number of mapped objects_TxPDO1 mapping entry 4,U32,rw,0,4294967295,0,read
+0x1A010000,Transmit PDO2 mapping  / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x1A010001,Transmit PDO2 mapping  / Number of mapped objects_TxPDO1 mapping entry 1,U32,rw,0,4294967295,1614872592,read
+0x1A010002,Transmit PDO2 mapping  / Number of mapped objects_TxPDO2 mapping entry 2,U32,rw,0,4294967295,1617166368,read
+0x1A010003,Transmit PDO2 mapping  / Number of mapped objects_TxPDO3 mapping entry 3,U32,rw,0,4294967295,0,read
+0x1A010004,Transmit PDO2 mapping  / Number of mapped objects_TxPDO4 mapping entry 4,U32,rw,0,4294967295,0,read
+0x1A020000,Transmit PDO3 mapping  / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x1A020001,Transmit PDO3 mapping  / Number of mapped objects_TxPDO3 mapping entry 1,U32,rw,0,4294967295,1614872592,read
+0x1A020002,Transmit PDO3 mapping  / Number of mapped objects_TxPDO3 mapping entry 2,U32,rw,0,4294967295,1617690656,read
+0x1A020003,Transmit PDO3 mapping  / Number of mapped objects_TxPDO3 mapping entry 3,U32,rw,0,4294967295,0,read
+0x1A020004,Transmit PDO3 mapping  / Number of mapped objects_TxPDO3 mapping entry 4,U32,rw,0,4294967295,0,read
+0x1A030000,Transmit PDO4 mapping  / Number of mapped objects_Number of mapped objects,U8,rw,0,4,0x2,read
+0x1A030001,Transmit PDO4 mapping  / Number of mapped objects_TxPDO4 mapping entry 1,U32,rw,0,4294967295,1614872592,read
+0x1A030002,Transmit PDO4 mapping  / Number of mapped objects_TxPDO4 mapping entry 2,U32,rw,0,4294967295,1618411536,read
+0x1A030003,Transmit PDO4 mapping  / Number of mapped objects_TxPDO4 mapping entry 3,U32,rw,0,4294967295,0,read
+0x1A030004,Transmit PDO4 mapping  / Number of mapped objects_TxPDO4 mapping entry 4,U32,rw,0,4294967295,0,read
+0x23000000,Number of I/Os_Number of entries,U8,ro,,,0x4,read
+0x23000001,Number of I/Os_Number of digital inputs,U8,ro,,,0x3,read
+0x23000002,Number of I/Os_Number of digital outputs,U8,ro,,,0x2,read
+0x23000003,Number of I/Os_Number of analog inputs,U8,ro,,,0x1,read
+0x23000004,Number of I/Os_Number of emulated digital inputs,U8,unknown,,,0x0,read
+0x23100000,Digital input settings_Number of entries,U8,ro,,,0x12,read
+0x23100001,Digital input settings_Select lower limit switch inputs,U8,unknown,,,0x0,read
+0x23100002,Digital input settings_Select upper limit switch inputs,U8,unknown,,,0x0,read
+0x23100003,Digital input settings_Limit switch option code,S16,unknown,,,0x1,read
+0x23100004,Digital input settings_Select reference switch input,U8,rw,0,8,0x0,read
+0x23100005,Digital input settings_Emulated input threshold level,U8,rw,0,0x03,0x0,read
+0x23100006,Digital input settings_Select stop input,U8,unknown,,,0x0,read
+0x23100008,Digital input settings_Debug Write Digital Input Values,U8,wo,0,255,0x1,read
+0x23100009,Digital input settings_Debug Write Brake / Fault Pin,U8,wo,0,255,0x1,read
+0x2310000F,Digital input settings_Select digital inputs used,U8,rw,0,255,0xFF,read
+0x23100010,Digital input settings_Input polarity,U8,rw,0,255,0x0,read
+0x23100011,Digital input settings_Input threshold level,U8,unknown,,,0x0,read
+0x23100012,Digital input settings_Input filter active,U8,rw,0,255,0x0,read
+0x23110000,Digital I/O status_Number of entries,U8,ro,,,0x4,read
+0x23110001,Digital I/O status_Digital input logical state,U8,ro,0x0,,0x0,read
+0x23110002,Digital I/O status_Digital input physical state,U8,ro,0x0,,0x0,read
+0x23110003,Digital I/O status_Digital output status,U8,ro,0x0,,0x0,read
+0x23110004,Digital I/O status_Write digital outputs,U16,rw,0,65535,0x0,read
+0x23120000,Digital output settings_Number of entries,U8,ro,,,0x10,read
+0x23120001,Digital output settings_Select fault output pin,U8,rw,0,255,0x0,read
+0x23120002,Digital output settings_Select brake control pin,U8,rw,0,255,0x0,read
+0x23120003,Digital output settings_Brake delay time,U8,rw,0,255,0x0,read
+0x23120008,Digital output settings_DiagOut 1 pin selection,U8,rw,0,255,0x0,read
+0x23120009,Digital output settings_DiagOut 1 mask,U32,rw,0,4294967295,0,read
+0x2312000A,Digital output settings_DiagOut 2 pin selection,U8,rw,0,255,0x0,read
+0x2312000B,Digital output settings_DiagOut 2 mask,U32,rw,0,4294967295,0,read
+0x2312000C,Digital output settings_DiagOut 3 pin selection,U8,rw,0,255,0x0,read
+0x2312000D,Digital output settings_DiagOut 3 mask,U32,rw,0,4294967295,0,read
+0x2312000E,Digital output settings_DiagOut 4 pin selection,U8,rw,0,255,0x0,read
+0x2312000F,Digital output settings_DiagOut 4 mask,U32,rw,0,4294967295,0,read
+0x23120010,Digital output settings_Output polarity,U8,rw,0,0x07,0x0,read
+0x23130000,Analog inputs_Number of entries,U8,ro,,,0x1A,read
+0x23130001,Analog inputs_AnIn 1 gain (numerator/divisor),S32,rw,-2147483648,2147483647,2147450880,read
+0x23130002,Analog inputs_AnIn 1 offset,S16,rw,-32768,32767,0x0,read
+0x23130003,Analog inputs_AnIn 1 filter time,U16,rw,0,65535,0x0,read
+0x23130004,Analog inputs_AnIn 1 user scaled value,S32,ro,,,-38,read
+0x23130005,Analog inputs_AnIn 1 resolution as encoder,U16,rw,0,65535,0x3E8,read
+0x23130006,Analog inputs_AnIn 1 min input limit,S16,rw,-32768,32767,0x8000,read
+0x23130007,Analog inputs_AnIn 1 max input limit,S16,rw,-32768,32767,0x7FFF,read
+0x23130008,Analog inputs_AnIn 1 select dir pin,U8,rw,0,8,0x0,read
+0x23130009,Analog inputs_AnIn 1 virtual input value,S16,rw,-32768,32767,0x0,read
+0x2313000A,Analog inputs_AnIn 1 enable virtual input,U8,unknown,,,0x0,read
+0x23130011,Analog inputs_AnIn 2 gain (numerator/divisor),S32,rw,-2147483648,2147483647,2147450880,read
+0x23130012,Analog inputs_AnIn 2 offset,S16,rw,-32768,32767,0x0,read
+0x23130013,Analog inputs_AnIn 2 filter time,U16,rw,0,65535,0x0,read
+0x23130014,Analog inputs_AnIn 2 user scaled value,S32,ro,,,16,read
+0x23130015,Analog inputs_AnIn 2 resolution as encoder,U16,rw,0,65535,0x3E8,read
+0x23130016,Analog inputs_AnIn 2 min input limit,S16,rw,-32768,32767,0x8000,read
+0x23130017,Analog inputs_AnIn 2 max input limit,S16,rw,-32768,32767,0x7FFF,read
+0x23130018,Analog inputs_AnIn 2 select dir pin,U8,rw,0,8,0x0,read
+0x23130019,Analog inputs_AnIn 2 virtual input value,S16,rw,-32768,32767,0x0,read
+0x2313001A,Analog inputs_AnIn 2 enable virtual input,U8,unknown,,,0x0,read
+0x23140000,Manufacturer scaled analog input values_Number of entries,U8,ro,,,0xC,read
+0x23140001,Manufacturer scaled analog input values_AnIn 1 scaled value (IA),S16,ro,,,0xFFFF,read
+0x23140002,Manufacturer scaled analog input values_AnIn 2 scaled value (IB),S16,ro,,,0x0,read
+0x23140003,Manufacturer scaled analog input values_AnIn 3 scaled value (IC),S16,ro,,,0xFFFA,read
+0x23140004,Manufacturer scaled analog input values_AnIn 4 scaled value (Hall A),S16,ro,,,0x3AF,read
+0x23140005,Manufacturer scaled analog input values_AnIn 5 scaled value (Hall B),S16,ro,,,0x932,read
+0x23140006,Manufacturer scaled analog input values_AnIn 6 scaled value (Hall C),S16,ro,,,0x543,read
+0x23140007,Manufacturer scaled analog input values_AnIn 7 scaled value ,S16,ro,,,0xFFD9,read
+0x23140008,Manufacturer scaled analog input values_AnIn 8 scaled value ,S16,ro,,,0x11,read
+0x23140009,Manufacturer scaled analog input values_AnIn 9 scaled value ,S16,ro,,,0x963,read
+0x2314000A,Manufacturer scaled analog input values_AnIn 10 scaled value ,S16,ro,,,0x962,read
+0x2314000B,Manufacturer scaled analog input values_AnIn 11 scaled value ,S16,ro,,,0x338,read
+0x2314000C,Manufacturer scaled analog input values_AnIn 12 scaled value ,S16,ro,,,0x421,read
+0x23150000,Motor encoder_Number of entries,U8,ro,,,0xA,read
+0x23150001,Motor encoder_Operation mode, index polarity,U16,rw,0,0x9F07,0x0,read
+0x23150002,Motor encoder_IE resolution,U32,rw,0,4194304,2048,read
+0x23150003,Motor encoder_Motor encoder position,S32,ro,,,0,read
+0x23150004,Motor encoder_Gain  (numerator/divisor),S32,rw,-2147483648,2147483647,1073758208,read
+0x23150005,Motor encoder_MotorEnc scaled position,S32,rw,-2147483648,2147483647,0,read
+0x23150006,Motor encoder_Absolute encoder bits,U32,rw,0x0,4294967295,12,read
+0x23150007,Motor encoder_Encoder status,U8,ro,,,0x0,read
+0x23150008,Motor encoder_Motor encoder act speed,S32,ro,,,0,read
+0x23150009,Motor encoder_Speed filter,U16,rw,0,65535,0xA,read
+0x2315000A,Motor encoder_Single turn position 16 bit,U16,ro,,,0x0,read
+0x23160000,Reference encoder_Number of entries,U8,ro,,,0x9,read
+0x23160001,Reference encoder_Operation mode, index polarity,U16,rw,0,0x0107,0x0,read
+0x23160002,Reference encoder_IE resolution,U32,rw,0,4294967295,2048,read
+0x23160003,Reference encoder_Reference encoder position,S32,ro,,,0,read
+0x23160004,Reference encoder_Gain  (numerator/divisor),S32,rw,-2147483648,2147483647,1073758208,read
+0x23160005,Reference encoder_RefEnc scaled position,S32,rw,-2147483648,2147483647,0,read
+0x23160008,Reference encoder_Reference encoder act speed,S32,ro,,,0,read
+0x23160009,Reference encoder_Speed filter,U16,rw,0,65535,0xA,read
+0x23170000,PWM input_Number of entries,U8,ro,,,0x7,read
+0x23170001,PWM input_Digital input pin,U8,unknown,,,0x0,read
+0x23170002,PWM input_PWM input frequency,U32,ro,,,0,read
+0x23170003,PWM input_Duty cycle raw value,S16,ro,,,0x0,read
+0x23170004,PWM input_Duty cycle  gain (numerator/divisor),U32,rw,0,4294967295,2147450880,read
+0x23170005,PWM input_Duty cycle offset,S16,rw,-32768,32767,0x0,read
+0x23170006,PWM input_Duty cycle scaled value,S32,ro,,,0,read
+0x23170007,PWM input_Resolution as encoder,S16,rw,-32768,32767,0x3E8,read
+0x23180000,Hall configuration_Number of entries,U8,ro,,,0x5,read
+0x23180001,Hall configuration_Hall sensor type,U8,ro,,0x83,0x2,read
+0x23180002,Hall configuration_Enable adaptation,U8,rw,0,255,0x0,read
+0x23180003,Hall configuration_Adaptation threshold speed,U32,rw,0,4294967295,1000,read
+0x23180004,Hall configuration_Digital hall settings of Non-Faulhaber motors,U8,rw,0,0x81,0x0,read
+0x23180005,Hall configuration_Hall filter configuration,U8,rw,0,0x03,0x0,read
+0x23190000,Reduction ratio, external position encoder_Number of entries,U8,ro,,,0x2,read
+0x23190001,Reduction ratio, external position encoder_Numerator,U32,rw,1,4294967295,1,read
+0x23190002,Reduction ratio, external position encoder_Divisor,U32,rw,1,4294967295,1,read
+0x231F0000,231F_00_Number of entries,U8,ro,,,0xF,read
+0x231F0001,231F_00_231F_01,S16,ro,,,0x3B4,read
+0x231F0002,231F_00_231F_02,S16,ro,,,0x93A,read
+0x231F0003,231F_00_231F_03,S16,ro,,,0x53E,read
+0x231F0004,231F_00_231F_04,S16,ro,,,0x0,read
+0x231F0005,231F_00_231F_05,S16,ro,,,0x0,read
+0x231F0006,231F_00_231F_06,S16,ro,,,0x0,read
+0x231F0007,231F_00_231F_07,S16,ro,,,0x173C,read
+0x231F0008,231F_00_231F_08,S16,ro,,,0x3C24,read
+0x231F0009,231F_00_231F_09,S16,ro,,,0x172C,read
+0x231F000A,231F_00_231F_0A,S16,ro,,,0x3C44,read
+0x231F000B,231F_00_231F_0B,S16,ro,,,0xFFD5,read
+0x231F000C,231F_00_231F_0C,S16,ro,,,0xFFED,read
+0x231F000D,231F_00_231F_0D,S16,ro,,,0x0,read
+0x231F000E,231F_00_231F_0E,S16,ro,,,0x0,read
+0x231F000F,231F_00_231F_0F,S16,ro,,,0x0,read
+0x23200000,Faulhaber error register,U16,ro,,,0x0,read
+0x23210000,Error mask_Number of entries,U8,ro,,,0x7,read
+0x23210001,Error mask_EMCY mask,U16,rw,0,65535,0xFFFF,read
+0x23210002,Error mask_Fault mask,U16,rw,0,0xBFD3,0x0,read
+0x23210003,Error mask_Error out mask,U16,rw,0,65535,0x0,read
+0x23210004,Error mask_Disable voltage mask manufacturer,U16,ro,,,0x402C,read
+0x23210005,Error mask_Disable voltage mask user,U16,rw,0,0xBFD3,0x0,read
+0x23210006,Error mask_Quick stop mask,U16,rw,0,0xBFD3,0x0,read
+0x23210007,Error mask_Error bit mask,U16,rw,0,65535,0x0,read
+0x23220000,Error codes_Number of entries,U8,ro,,,0x1,read
+0x23220001,Error codes_ScriptingError,U16,ro,,,0x0,read
+0x23240000,Device status_Number of entries,U8,ro,,,0x9,read
+0x23240001,Device status_Device status word,U32,ro,0x0,,4121,read
+0x23240002,Device status_Limit check delay time,U16,rw,0,65535,0xA,read
+0x23240003,Device status_Reserved 3,U8,ro,,,0xFF,read
+0x23240004,Device status_Reserved 4,S16,ro,,,0x0,read
+0x23240005,Device status_Reserved 5,S16,ro,,,0x0,read
+0x23240006,Device status_Reserved 6,S32,ro,,,4902,read
+0x23240007,Device status_Reserved 7,S32,ro,,,4902,read
+0x23240008,Device status_Reserved 8,U8,wo,0,255,0x1,read
+0x23240009,Device status_Reserved 9,U8,wo,0,255,0x1,read
+0x23250000,Voltage monitor_Number of entries,U8,ro,,,0x7,read
+0x23250001,Voltage monitor_Device supply lower threshold,U16,ro,,,0x23A,read
+0x23250002,Voltage monitor_Motor supply lower threshold,U16,rw,0,65535,0xC8,read
+0x23250003,Voltage monitor_Motor supply max threshold,U16,ro,,,0xC80,read
+0x23250004,Voltage monitor_Motor supply upper threshold,U16,rw,0,65535,0xACA,read
+0x23250005,Voltage monitor_Voltage error delay time,U16,rw,0,65535,0xC8,read
+0x23250006,Voltage monitor_Device supply voltage,U16,ro,,,0x963,read
+0x23250007,Voltage monitor_Motor supply voltage,U16,ro,,,0x963,read
+0x23260000,Device temperature_Number of entries,U8,ro,,,0xB,read
+0x23260001,Device temperature_CPU temperature,S16,ro,,,0x33,read
+0x23260002,Device temperature_Power stage temperature,S16,ro,,,0x32,read
+0x23260003,Device temperature_Winding temperature,S16,ro,,,0x22,read
+0x23260004,Device temperature_CPU temperature shutdown threshold,S16,ro,,,0x69,read
+0x23260005,Device temperature_CPU temperature warning threshold,S16,ro,,,0x64,read
+0x23260006,Device temperature_Power stage temperature shutdown threshold,S16,ro,,,0x73,read
+0x23260007,Device temperature_Power stage temperature warning threshold,S16,ro,,,0x6E,read
+0x23260008,Device temperature_Winding temperature shutdown threshold,S16,rw,-32768,32767,0x7D,read
+0x23260009,Device temperature_Winding temperature warning threshold,S16,rw,-32768,32767,0x73,read
+0x2326000A,Device temperature_Motor NTC temperature,S16,ro,,,0x22,read
+0x2326000B,Device temperature_Motor NTC enable,S16,ro,0,1,0x1,read
+0x23270000,Device data_Number of entries,U8,ro,,,0x3,read
+0x23270001,Device data_Device nominal current,U16,ro,1000,5000,0x7D0,read
+0x23270002,Device data_Device peak current,U16,ro,,,0x1388,read
+0x23270003,Device data_Device nominal voltage,U16,ro,,,0xBB8,read
+0x23280000,Device data for thermal model_Number of entries,U8,ro,,,0x9,read
+0x23280001,Device data for thermal model_Controller type,U8,unknown,,,0x1,read
+0x23280002,Device data for thermal model_Power stage Rdson,U8,ro,,,0x1A,read
+0x23280003,Device data for thermal model_Power stage LossFactor,U16,ro,,,0x44C,read
+0x23280004,Device data for thermal model_Power stage Rth1,U16,ro,,,0xFFF0,read
+0x23280005,Device data for thermal model_Power stage Time Constant 1,U16,ro,,,0xFA0,read
+0x23280006,Device data for thermal model_Power stage Rth2,U16,ro,,,0x4268,read
+0x23280007,Device data for thermal model_Power stage Time Constant 2,U16,ro,,,0x258,read
+0x23280008,Device data for thermal model_Power stage Rth3,U16,ro,,,0xFFF0,read
+0x23280009,Device data for thermal model_Power stage Rth4,U16,ro,,,0x7D0,read
+0x23290000,Motor and application data for motor control_Number of entries,U8,ro,,,0x12,read
+0x23290001,Motor and application data for motor control_Rated current,U16,rw,0,65535,0x26C,read
+0x23290002,Motor and application data for motor control_Continous current,U16,rw,0,65535,0x26C,read
+0x23290003,Motor and application data for motor control_Peak current,U16,rw,0,65535,0x135,read
+0x23290004,Motor and application data for motor control_Torque constant / Force constant,U32,rw,0,3500000,32400,read
+0x23290005,Motor and application data for motor control_Terminal inductance,U32,rw,0,200000,410,read
+0x23290006,Motor and application data for motor control_Inductance Ld,U32,rw,0,200000,410,read
+0x23290007,Motor and application data for motor control_Number of pole pairs,U8,ro,,,0x2,read
+0x23290008,Motor and application data for motor control_Phase angle offset,S16,rw,-32768,32767,0x0,read
+0x23290009,Motor and application data for motor control_Rotor inertia / Rod weight,U32,rw,0,4294967295,5100,read
+0x2329000A,Motor and application data for motor control_Load inertia / Load mass,U32,rw,0,4294967295,1400,read
+0x2329000B,Motor and application data for motor control_Motor type,U8,unknown,,,0x0,read
+0x2329000C,Motor and application data for motor control_Magnetic pitch of linear motor,U8,rw,0,60,0x0,read
+0x2329000D,Motor and application data for motor control_Filter phase inductance,U8,rw,0,255,0x0,read
+0x2329000E,Motor and application data for motor control_Factor speed constant,U16,rw,750,1250,0x3E8,read
+0x2329000F,Motor and application data for motor control_Steps per turn,U16,rw,0,65535,0x18,read
+0x23290010,Motor and application data for motor control_Stepper interpolation factor,U16,rw,0,65535,0x200,read
+0x23290011,Motor and application data for motor control_Stepper current reduction at n=0,U8,rw,0,100,0x3C,read
+0x23290012,Motor and application data for motor control_Current holding time at n=0,U16,rw,0,65535,0xC8,read
+0x232A0000,Motor and application data for thermal motor model_Number of entries,U8,ro,,,0xA,read
+0x232A0001,Motor and application data for thermal motor model_Terminal resistance,U32,rw,0,4294967295,12500,read
+0x232A0002,Motor and application data for thermal motor model_Friction,U32,rw,0,4294967295,460000,read
+0x232A0003,Motor and application data for thermal motor model_Friction,dynamic,U32,rw,0,4294967295,110000,read
+0x232A0004,Motor and application data for thermal motor model_Thermal resistance 1,U16,rw,0,65535,0x708,read
+0x232A0005,Motor and application data for thermal motor model_Thermal resistance 2,U32,rw,0,4294967295,0,read
+0x232A0006,Motor and application data for thermal motor model_Thermal time constant 1,U16,rw,0,65535,0x4,read
+0x232A0007,Motor and application data for thermal motor model_Thermal time constant 2,U16,rw,0,65535,0x0,read
+0x232A0008,Motor and application data for thermal motor model_Ambient temperature,U8,rw,0,255,0x16,read
+0x232A0009,Motor and application data for thermal motor model_Reduction of thermal resistance 2,U8,rw,0,99,0xF,read
+0x232A000A,Motor and application data for thermal motor model_Selection of thermal model,U8,rw,0,2,0x0,read
+0x232B0000,Motor alignment parameters_Number of entries,U8,ro,,,0x5,read
+0x232B0001,Motor alignment parameters_Setup time,U16,rw,0,65535,0x5,read
+0x232B0002,Motor alignment parameters_Delta time step 1,U16,rw,0,65535,0xFA,read
+0x232B0003,Motor alignment parameters_Delta time step 2,U16,rw,0,65535,0xFA,read
+0x232B0004,Motor alignment parameters_Delta time step 3,U16,rw,0,65535,0xFA,read
+0x232B0005,Motor alignment parameters_Delta postion tolerance,U16,rw,0,65535,0x1000,read
+0x232C0000,Motor alignment results_Number of entries,U8,ro,,,0x3,read
+0x232C0001,Motor alignment results_Position A1,U16,ro,,,0x0,read
+0x232C0002,Motor alignment results_Position B,U16,ro,,,0x0,read
+0x232C0003,Motor alignment results_Position A2,U16,ro,,,0x0,read
+0x23300000,Switch position for actual values _Number of entries,U8,ro,,,0x3,read
+0x23300001,Switch position for actual values _Actual commutation angle source,U8,unknown,,,0x1,read
+0x23300002,Switch position for actual values _Actual velocity source,U8,unknown,,,0x1,read
+0x23300003,Switch position for actual values _Actual position source,U8,unknown,,,0x1,read
+0x23310000,Discrete sources_Number of entries,U8,ro,,,0x4,read
+0x23310001,Discrete sources_Target voltage source,U8,unknown,,,0x0,read
+0x23310002,Discrete sources_Target current source,U8,unknown,,,0x0,read
+0x23310003,Discrete sources_Target velocity source,U8,unknown,,,0x0,read
+0x23310004,Discrete sources_Target position source,U8,unknown,,,0x0,read
+0x23320000,Cyclic mode interpolation rate ,U16,rw,1,65535,0x1,read
+0x233A0000,Manufacturer specified bits_Number of entries,U8,ro,,,0x2,read
+0x233A0001,Manufacturer specified bits_Bit mask for bit 14,U32,rw,0,4294967295,0,read
+0x233A0002,Manufacturer specified bits_Bit mask for bit 15,U32,rw,0,4294967295,0,read
+0x233E0000,Selection of controller scaling,U8,rw,0,255,0x0,read
+0x233F0000,Operation mode options,U16,rw,0x0,0x80FF,0x31,read
+0x23400000,General parameters_Number of entries,U8,ro,,,0x9,read
+0x23400001,General parameters_Commutation type,U8,unknown,,,0x3,read
+0x23400002,General parameters_Motor output voltage DC,S16,rw,-32768,32767,0x0,read
+0x23400003,General parameters_Motor output voltage BL block,S16,rw,-32768,32767,0x0,read
+0x23400004,General parameters_Motor output voltage Xd,S16,rw,-32768,32767,0x3,read
+0x23400005,General parameters_Motor output voltage Xq,S16,rw,-32768,32767,0x1C,read
+0x23400006,General parameters_Sinus output voltage Ua,U16,ro,,,0x78D8,read
+0x23400007,General parameters_Sinus output voltage Ub,U16,ro,,,0x7ABC,read
+0x23400008,General parameters_Sinus output voltage Uc,U16,ro,,,0x7860,read
+0x23400009,General parameters_Sinus output voltage Ud,U16,ro,,,0x0,read
+0x23410000,Target voltage,S16,rw,-32768,32767,0x19,read
+0x23420000,Torque control parameters_Number of entries,U8,ro,,,0x2,read
+0x23420001,Torque control parameters_Gain Kpi,U32,rw,0,4294967295,3250,read
+0x23420002,Torque control parameters_Integral time Tni,U16,rw,150,2600,0x96,read
+0x23430000,Flux control parameters_Number of entries,U8,ro,,,0x2,read
+0x23430001,Flux control parameters_Gain Kpi,U32,rw,0,4294967295,6250,read
+0x23430002,Flux control parameters_Integral time Tni,U16,rw,150,2600,0x96,read
+0x23440000,Velocity control parameters_Number of entries,U8,ro,,,0x6,read
+0x23440001,Velocity control parameters_Gain KP,U32,rw,0,4294967295,276,read
+0x23440002,Velocity control parameters_Integral time TN,U16,rw,20,1000,0x1C,read
+0x23440003,Velocity control parameters_Velocity deviation threshold,U16,rw,0,65535,0xFFFF,read
+0x23440004,Velocity control parameters_Velocity deviation time,U16,rw,1,65535,0x64,read
+0x23440005,Velocity control parameters_Velocity warning threshold,U32,rw,1,0x007FFFFF,30000,read
+0x23440006,Velocity control parameters_Integral part option,U8,unknown,,,0x0,read
+0x23450000,Velocity filter parameters_Number of entries,U8,ro,,,0x2,read
+0x23450001,Velocity filter parameters_Actual velocity filter TF,U16,rw,0,65535,0x4,read
+0x23450002,Velocity filter parameters_Display velocity filter,U16,rw,0,65535,0x14,read
+0x23460000,Setpoint velocity filter parameters_Number of entries,U8,ro,,,0x2,read
+0x23460001,Setpoint velocity filter parameters_Setpoint velocity filter TF,U16,rw,0,65535,0x1C,read
+0x23460002,Setpoint velocity filter parameters_Setpoint filter enable,U8,unknown,,,0x0,read
+0x23470000,Gain scheduling_Number of entries,U8,ro,,,0x2,read
+0x23470001,Gain scheduling_Gain factor Kpn,U8,rw,0,255,0x80,read
+0x23470002,Gain scheduling_Gain factor Kv,U8,rw,0,255,0x80,read
+0x23480000,Position control parameters_Number of entries,U8,ro,,,0x1,read
+0x23480001,Position control parameters_Gain Kv,U8,rw,0,255,0x39,read
+0x23490000,Current feedforward parameters_Number of entries,U8,ro,,,0x2,read
+0x23490001,Current feedforward parameters_Current feedforward factor,U8,rw,0,128,0x80,read
+0x23490002,Current feedforward parameters_Current feedforward delay,U16,rw,0,65535,0x0,read
+0x234A0000,Velocity feedforward parameters_Number of entries,U8,ro,,,0x2,read
+0x234A0001,Velocity feedforward parameters_Velocity feedforward factor,U8,rw,0,128,0x80,read
+0x234A0002,Velocity feedforward parameters_Velocity feedforward delay,U16,rw,0,65535,0x0,read
+0x234B0000,Current filter parameters_Number of entries,U8,ro,,,0x2,read
+0x234B0001,Current filter parameters_Display current filter TF,U16,rw,0,65535,0xC8,read
+0x234B0002,Current filter parameters_Display torque filter TF,U16,rw,0,65535,0x14,read
+0x234C0000,Current compensation parameters_Number of entries,U8,ro,,,0x3,read
+0x234C0001,Current compensation parameters_Gravity compensation,S16,rw,-32768,32767,0x0,read
+0x234C0002,Current compensation parameters_Positive friction compensation,U16,rw,0,6000,0x0,read
+0x234C0003,Current compensation parameters_Negative friction compensation,U16,rw,0,6000,0x0,read
+0x23500000,Positive torque limit homing,U16,rw,0,6000,0x3E3,read
+0x23510000,Negative torque limit homing,U16,rw,0,6000,0x3E3,read
+0x23600000,Actual values_Number of entries,U8,ro,,,0xA,read
+0x23600001,Actual values_Motor current Id actual value,S16,ro,,,0x4,read
+0x23600002,Actual values_Motor current Iq actual value,S16,ro,,,0xFFFE,read
+0x23600003,Actual values_Motor currrent IBlock actual value,S16,ro,,,0xFFFF,read
+0x23600004,Actual values_Motor current IDC actual value,S16,ro,,,0x3,read
+0x23600005,Actual values_Velocity actual internal value,S16,ro,,,0x0,read
+0x23600006,Actual values_Position actual internal value,S32,ro,,,4902,read
+0x23600007,Actual values_Actual commutation segment,U8,ro,,,0x2,read
+0x23600008,Actual values_Actual commutation angle,S16,ro,,,0x7291,read
+0x23600009,Actual values_Reserved 9,S32,ro,,,-16597,read
+0x2360000A,Actual values_Reserved 10,S32,wo,-2147483648,2147483647,100728833,read
+0x23700000,Trace configuration_Number of entries,U8,ro,,,0xF,read
+0x23700001,Trace configuration_Trigger value,U32,rw,0,4294967295,0,read
+0x23700002,Trace configuration_Trigger threshold,S32,rw,-2147483648,2147483647,0,read
+0x23700003,Trace configuration_Trigger offset,S16,rw,-32768,32767,0x0,read
+0x23700004,Trace configuration_Trigger mode,U16,rw,0,65535,0x0,read
+0x23700005,Trace configuration_Buffer length,U16,rw,1,2048,0x200,read
+0x23700006,Trace configuration_Sample time,U8,rw,1,255,0x1,read
+0x23700007,Trace configuration_Trace source of channel 1,U32,rw,0,4294967295,6317056,read
+0x23700008,Trace configuration_Trace source of channel 2,U32,rw,0,4294967295,6319104,read
+0x23700009,Trace configuration_Trace source of channel 3,U32,rw,0,4294967295,6322176,read
+0x2370000A,Trace configuration_Trace source of channel 4,U32,rw,0,4294967295,0,read
+0x2370000B,Trace configuration_Monitor source of channel 1,U32,rw,0,4294967295,0,read
+0x2370000C,Trace configuration_Monitor source of channel 2,U32,rw,0,4294967295,0,read
+0x2370000D,Trace configuration_Monitor source of channel 3,U32,rw,0,4294967295,0,read
+0x2370000E,Trace configuration_Monitor source of channel 4,U32,rw,0,4294967295,0,read
+0x2370000F,Trace configuration_Extended recorder mode,U16,wo,0,65535,0x1,read
+0x23710000,Trace buffer_Number of entries,U8,ro,,,0x5,read
+0x23710001,Trace buffer_Trace state,U16,ro,,,0x0,read
+0x23720000,Logic trigger configuration_Number of entries,U8,ro,,,0x2,read
+0x23720001,Logic trigger configuration_Logic trigger AND mask,U32,rw,0,4294967295,0,read
+0x23720002,Logic trigger configuration_Logic trigger OR mask,U32,rw,0,4294967295,0,read
+0x23730000,Event trigger configuration_Number of entries,U8,ro,,,0x1,read
+0x23730001,Event trigger configuration_Event trigger event selection,U16,unknown,,,0x0,read
+0x23740000,Event flag configuration_Number of entries,U8,ro,,,0x2,read
+0x23740001,Event flag configuration_Event flag set mask,U16,rw,0,65535,0x0,read
+0x23740002,Event flag configuration_Event flag reset mask,U16,rw,0,65535,0x0,read
+0x23780000,Trace channel configuration_Number of entries,U8,ro,,,0x17,read
+0x23780001,Trace channel configuration_Channel 1 filter time,U16,rw,0,65535,0x0,read
+0x23780002,Trace channel configuration_Channel 1 sample time,U16,rw,0,65535,0x1,read
+0x23780003,Trace channel configuration_Channel 1 number of samples,U16,rw,0,65535,0x200,read
+0x23780004,Trace channel configuration_Channel 1 monitoring values,U16,rw,0,0x003F,0x0,read
+0x23780005,Trace channel configuration_Channel 1 start event selection,U8,unknown,,,0x0,read
+0x23780006,Trace channel configuration_Channel 1 update event selection,U8,unknown,,,0x0,read
+0x23780007,Trace channel configuration_Channel 1 number of eval-cycles,U32,rw,0,4294967295,0,read
+0x2378000E,Trace channel configuration_Channel 1 number of turnovers,U32,ro,,,0,read
+0x2378000F,Trace channel configuration_Channel 1 done,U8,ro,,,0x1,read
+0x23780010,Trace channel configuration_Channel 1 abs min value,S32,ro,,,2147483647,read
+0x23780011,Trace channel configuration_Channel 1 abs max value,S32,ro,,,-2147483648,read
+0x23780012,Trace channel configuration_Channel 1 minimum,S32,ro,,,0,read
+0x23780013,Trace channel configuration_Channel 1 maximum,S32,ro,,,0,read
+0x23780014,Trace channel configuration_Channel 1 mean value,S32,ro,,,0,read
+0x23780015,Trace channel configuration_Channel 1 rms value,S32,ro,,,0,read
+0x23780016,Trace channel configuration_Channel 1 period time,U32,ro,,,0,read
+0x23780017,Trace channel configuration_Channel 1 sigma,S32,ro,,,0,read
+0x23790000,Trace channel configuration_Number of entries,U8,ro,,,0x17,read
+0x23790001,Trace channel configuration_Channel 2 filter time,U16,rw,0,65535,0x0,read
+0x23790002,Trace channel configuration_Channel 2 sample time,U16,rw,0,65535,0x1,read
+0x23790003,Trace channel configuration_Channel 2 number of samples,U16,rw,0,65535,0x200,read
+0x23790004,Trace channel configuration_Channel 2 monitoring values,U16,rw,0,0x003F,0x0,read
+0x23790005,Trace channel configuration_Channel 2 startevent selection,U8,unknown,,,0x0,read
+0x23790006,Trace channel configuration_Channel 2 update event selection,U8,unknown,,,0x0,read
+0x23790007,Trace channel configuration_Channel 2 number of eval-cycles,U32,rw,0,4294967295,0,read
+0x2379000E,Trace channel configuration_Channel 2 number of turn-overs,U32,ro,,,0,read
+0x2379000F,Trace channel configuration_Channel 2 done,U8,ro,,,0x1,read
+0x23790010,Trace channel configuration_Channel 2 abs min value,S32,ro,,,2147483647,read
+0x23790011,Trace channel configuration_Channel 2 abs max value,S32,ro,,,-2147483648,read
+0x23790012,Trace channel configuration_Channel 2 minimum,S32,ro,,,0,read
+0x23790013,Trace channel configuration_Channel 2 maximum,S32,ro,,,0,read
+0x23790014,Trace channel configuration_Channel 2 mean value,S32,ro,,,0,read
+0x23790015,Trace channel configuration_Channel 2 rms value,S32,ro,,,0,read
+0x23790016,Trace channel configuration_Channel 2 period time,U32,ro,,,0,read
+0x23790017,Trace channel configuration_Channel 2 sigma,S32,ro,,,0,read
+0x237A0000,Trace channel configuration_Number of entries,U8,ro,,,0x17,read
+0x237A0001,Trace channel configuration_Channel 3 filter time,U16,rw,0,65535,0x0,read
+0x237A0002,Trace channel configuration_Channel 3 sample time,U16,rw,0,65535,0x1,read
+0x237A0003,Trace channel configuration_Channel 3 number of samples,U16,rw,0,65535,0x200,read
+0x237A0004,Trace channel configuration_Channel 3 monitoring values,U16,rw,0,0x003F,0x0,read
+0x237A0005,Trace channel configuration_Channel 3 start event selection,U8,unknown,,,0x0,read
+0x237A0006,Trace channel configuration_Channel 3 update event selection,U8,unknown,,,0x0,read
+0x237A0007,Trace channel configuration_Channel 3 number of eval-cycles,U32,rw,0,4294967295,0,read
+0x237A000E,Trace channel configuration_Channel 3 number of turn-overs,U32,ro,,,0,read
+0x237A000F,Trace channel configuration_Channel 3 done,U8,ro,,,0x1,read
+0x237A0010,Trace channel configuration_Channel 3 abs min value,S32,ro,,,2147483647,read
+0x237A0011,Trace channel configuration_Channel 3 abs max value,S32,ro,,,-2147483648,read
+0x237A0012,Trace channel configuration_Channel 3 minimum,S32,ro,,,0,read
+0x237A0013,Trace channel configuration_Channel 3 maximum,S32,ro,,,0,read
+0x237A0014,Trace channel configuration_Channel 3 mean value,S32,ro,,,0,read
+0x237A0015,Trace channel configuration_Channel 3 rms value,S32,ro,,,0,read
+0x237A0016,Trace channel configuration_Channel 3 period time,U32,ro,,,0,read
+0x237A0017,Trace channel configuration_Channel 3 sigma,S32,ro,,,0,read
+0x237B0000,Trace channel configuration_Number of entries,U8,ro,,,0x17,read
+0x237B0001,Trace channel configuration_Channel 4 filter time,U16,rw,0,65535,0x0,read
+0x237B0002,Trace channel configuration_Channel 4 sample time,U16,rw,0,65535,0x1,read
+0x237B0003,Trace channel configuration_Channel 4 number of samples,U16,rw,0,65535,0x200,read
+0x237B0004,Trace channel configuration_Channel 4 monitoring values,U16,rw,0,0x003F,0x0,read
+0x237B0005,Trace channel configuration_Channel 4 start event selection,U8,unknown,,,0x0,read
+0x237B0006,Trace channel configuration_Channel 4 update event selection,U8,unknown,,,0x0,read
+0x237B0007,Trace channel configuration_Channel 4 number of eval-cycles,U32,rw,0,4294967295,0,read
+0x237B000E,Trace channel configuration_Channel 4 number of turn-overs,U32,ro,,,0,read
+0x237B000F,Trace channel configuration_Channel 4 done,U8,ro,,,0x1,read
+0x237B0010,Trace channel configuration_Channel 4 abs min value,S32,ro,,,2147483647,read
+0x237B0011,Trace channel configuration_Channel 4 abs max value,S32,ro,,,-2147483648,read
+0x237B0012,Trace channel configuration_Channel 4 minimum,S32,ro,,,0,read
+0x237B0013,Trace channel configuration_Channel 4 maximum,S32,ro,,,0,read
+0x237B0014,Trace channel configuration_Channel 4 mean value,S32,ro,,,0,read
+0x237B0015,Trace channel configuration_Channel 4 rms value,S32,ro,,,0,read
+0x237B0016,Trace channel configuration_Channel 4 period time,U32,ro,,,0,read
+0x237B0017,Trace channel configuration_Channel 4 sigma,S32,ro,,,0,read
+0x23800000,PRBS generator_Number of entries,U8,ro,,,0x5,read
+0x23800001,PRBS generator_Shift register init,U16,rw,0,65535,0xD008,read
+0x23800002,PRBS generator_Gain,S16,rw,-32768,32767,0x1,read
+0x23800003,PRBS generator_Offset,S16,rw,-32768,32767,0x0,read
+0x23800004,PRBS generator_Sample rate factor,U8,rw,0,255,0x0,read
+0x23800005,PRBS generator_Enable,U8,rw,0,255,0x0,read
+0x23810000,Start up generator_Number of entries,U8,ro,,,0x8,read
+0x23810001,Start up generator_Speed threshold,U16,rw,0,65535,0x0,read
+0x23810002,Start up generator_Timeout time,U32,rw,0,4294967295,0,read
+0x23810003,Start up generator_Target value,U16,rw,0,65535,0x0,read
+0x23810004,Start up generator_Reset,U8,rw,0,255,0x0,read
+0x23810005,Start up generator_Enable,U8,rw,0,255,0x0,read
+0x23810006,Start up generator_Ready,U32,rw,0,4294967295,0,read
+0x23810007,Start up generator_TimeThreshold,U32,rw,0,4294967295,0,read
+0x23810008,Start up generator_Iteration,U32,rw,0,4294967295,0,read
+0x23820000,Sinusoidal excitation_Number of entries,U8,ro,,,0x3,read
+0x23820001,Sinusoidal excitation_Amplitude,U16,rw,0,65535,0x0,read
+0x23820002,Sinusoidal excitation_Frequency,U16,rw,0,65535,0x0,read
+0x23820003,Sinusoidal excitation_Enable,U8,rw,0,255,0x0,read
+0x238F0000,Select signal generator source_Number of entries,U8,ro,,,0x1,read
+0x238F0001,Select signal generator source_Selector,U8,rw,0,255,0x0,read
+0x23F00000,23F0_00_Number of entries,U8,ro,,,0x6,read
+0x23F00001,23F0_00_23F0_01,U32,ro,,,274,read
+0x23F00002,23F0_00_23F0_02,U8,ro,,,0x0,read
+0x23F00003,23F0_00_23F0_03,U8,ro,,,0x3,read
+0x23F00004,23F0_00_23F0_04,U16,ro,,,0x1,read
+0x23F00005,23F0_00_23F0_05,U32,ro,,,960,read
+0x23F00006,23F0_00_23F0_06,U32,ro,,,0,read
+0x23F10000,23F1_00_Number of entries,U8,ro,,,0x2,read
+0x23F10001,23F1_00_23F1_01,S32,ro,,,0,read
+0x23F10002,23F1_00_23F1_02,S32,ro,,,0,read
+0x23F30000,23F2_00 _Number of entries,U8,ro,,,0x5,read
+0x23F30001,23F2_00 _Actual state,S8,ro,,,0x5,read
+0x23F30002,23F2_00 _Demand position,S32,ro,,,98039,read
+0x23F30003,23F2_00 _Demand speed,S32,ro,,,0,read
+0x23F30004,23F2_00 _Demand acceleration,S16,ro,,,0x0,read
+0x23F30005,23F2_00 _Initial state,S8,ro,,,0x1,read
+0x24000000,Communication parameters_Number of entries,U8,ro,,,0x7,read
+0x24000001,Communication parameters_CAN rate,U8,unknown,,,0x9,read
+0x24000002,Communication parameters_RS232 rate,U8,unknown,,,0x3,read
+0x24000003,Communication parameters_Node ID,U8,rw,1,127,0x1,read
+0x24000004,Communication parameters_Communication settings,U32,rw,0,0x00078303,197378,read
+0x24000005,Communication parameters_RS232 NetMode,U8,rw,0,255,0x0,read
+0x24000006,Communication parameters_ComState,U16,ro,,,0x0,read
+0x24000007,Communication parameters_ErrState,U16,ro,,,0x0,read
+0x24010000,USB Delay,U8,wo,0,255,0x1,read
+0x24040000,FAID,U16,wo,0,65535,0x1,read
+0x24050000,Bootloader SW version,string,ro,,,0140.02F-CAN-USART,read
+0x24060000,OD revision number,U32,ro,,,3066,read
+0x24070000,SW revision number,U32,ro,,,3073,read
+0x24080000,XDC Number,U32,ro,,,16203,read
+0x24100000,CAL access_Number of entries,U8,ro,,,0x1,read
+0x24100001,CAL access_CAL key,U32,rw,0,4294967295,305419896,read
+0x25000000,ADC scaling (offset|gain)_Number of entries,U8,ro,,,0xE,read
+0x25000001,ADC scaling (offset|gain)_IA scaling,U32,ro,0x0,,-133503060,read
+0x25000002,ADC scaling (offset|gain)_IB scaling,U32,ro,0x0,,-134158337,read
+0x25000003,ADC scaling (offset|gain)_IC scaling,U32,ro,0x0,,-134223936,read
+0x25000004,ADC scaling (offset|gain)_Hall A scaling,U32,ro,0x0,,-132307041,read
+0x25000005,ADC scaling (offset|gain)_Hall B scaling,U32,ro,0x0,,-132307041,read
+0x25000006,ADC scaling (offset|gain)_Hall C scaling,U32,ro,0x0,,-132307041,read
+0x25000007,ADC scaling (offset|gain)_Analog input 1 scaling,U32,ro,0x0,,-134306304,read
+0x25000008,ADC scaling (offset|gain)_Analog input 2 scaling,U32,ro,0x0,,-323584,read
+0x25000009,ADC scaling (offset|gain)_Uel scaling,U32,ro,0x0,,399496,read
+0x2500000A,ADC scaling (offset|gain)_Udc scaling,U32,ro,0x0,,-583499,read
+0x2500000B,ADC scaling (offset|gain)_Internal temperature scaling,U32,ro,0x0,,3300,read
+0x2500000C,ADC scaling (offset|gain)_External temperature scaling,U32,ro,0x0,,4096,read
+0x2500000D,ADC scaling (offset|gain)_Motor NTC gain,S32,ro,0x80000000,,268445722,read
+0x2500000E,ADC scaling (offset|gain)_Motor NTC offset,S16,ro,0xFFFF8000,,0x7C9,read
+0x25010000,Hall scaling_Number of entries,U8,ro,,,0xE,read
+0x25010001,Hall scaling_Gain A,U16,ro,,,0xCF5,read
+0x25010002,Hall scaling_Hall A  offset,U16,ro,,,0x0,read
+0x25010003,Hall scaling_Hall A sin,U16,ro,,,0x0,read
+0x25010004,Hall scaling_Hall A cos,U16,ro,,,0x0,read
+0x25010005,Hall scaling_Corr A,U16,ro,,,0xC,read
+0x25010006,Hall scaling_Hall B offset,U16,ro,,,0x0,read
+0x25010007,Hall scaling_Hall B sin,U16,ro,,,0x0,read
+0x25010008,Hall scaling_Hall B cos,U16,ro,,,0x0,read
+0x25010009,Hall scaling_Corr B,U16,ro,,,0x5C,read
+0x2501000A,Hall scaling_Hall C offset,U16,ro,,,0x0,read
+0x2501000B,Hall scaling_Hall C sin,U16,ro,,,0x0,read
+0x2501000C,Hall scaling_Hall C cos,U16,ro,,,0x0,read
+0x2501000D,Hall scaling_Offset A,U16,ro,,,0xFFD5,read
+0x2501000E,Hall scaling_Offset B,U16,ro,,,0xFFED,read
+0x25020000,Internal filter parameters_Number of entries,U8,ro,,,0xD,read
+0x25020001,Internal filter parameters_Filter time actual velocity,U16,rw,0,65535,0x100,read
+0x25020002,Internal filter parameters_Filter time IA ,U16,ro,,,0x0,read
+0x25020003,Internal filter parameters_Filter time IB,U16,ro,,,0x0,read
+0x25020004,Internal filter parameters_Filter time IC,U16,ro,,,0x0,read
+0x25020005,Internal filter parameters_Filter time Uel,U16,ro,,,0xA,read
+0x25020006,Internal filter parameters_Filter time Umot,U16,ro,,,0xA,read
+0x25020007,Internal filter parameters_Additional filter time Uel,U16,ro,0x0,,0x100,read
+0x25020008,Internal filter parameters_Additional filter time Umot,U16,ro,0x0,,0x100,read
+0x25020009,Internal filter parameters_Filter time Iq thermal model,U16,ro,,,0x4,read
+0x2502000A,Internal filter parameters_Filter time Id thermal model,U16,ro,,,0x4,read
+0x2502000B,Internal filter parameters_Filter time Imot thermal model,U16,ro,,,0x4,read
+0x2502000C,Internal filter parameters_Filter time setpoint voltage model,U16,ro,,,0x1,read
+0x2502000D,Internal filter parameters_Filter time electrical time constant,U16,rw,0,65535,0x1,read
+0x25030000,Boot options,U16,rw,0,2,0x1,read
+0x25040000,Hall compensation_Number of entries,U8,ro,,,0xC,read
+0x25040001,Hall compensation_Entry 01,S16,ro,,,0x0,read
+0x25040002,Hall compensation_Entry 02,S16,ro,,,0x0,read
+0x25040003,Hall compensation_Entry 03,S16,ro,,,0x0,read
+0x25040004,Hall compensation_Entry 04,S16,ro,,,0x0,read
+0x25040005,Hall compensation_Entry 05,S16,ro,,,0x0,read
+0x25040006,Hall compensation_Entry 06,S16,ro,,,0x0,read
+0x25040007,Hall compensation_Entry 07,S16,ro,,,0x0,read
+0x25040008,Hall compensation_Entry 08,S16,ro,,,0x0,read
+0x25040009,Hall compensation_Entry 09,S16,ro,,,0x0,read
+0x2504000A,Hall compensation_Entry 10,S16,ro,,,0x0,read
+0x2504000B,Hall compensation_Entry 11,S16,ro,,,0x0,read
+0x2504000C,Hall compensation_Entry 12,S16,ro,,,0x0,read
+0x25060000,Encoder compensation_Number of entries,U8,ro,,,0x40,read
+0x25060001,Encoder compensation_Value 0,S16,rw,-32768,32767,0x0,read
+0x25060002,Encoder compensation_Value 1,S16,rw,-32768,32767,0x0,read
+0x25060003,Encoder compensation_Value 2,S16,rw,-32768,32767,0x0,read
+0x25060004,Encoder compensation_Value 3,S16,rw,-32768,32767,0x0,read
+0x25060005,Encoder compensation_Value 4,S16,rw,-32768,32767,0x0,read
+0x25060006,Encoder compensation_Value 5,S16,rw,-32768,32767,0x0,read
+0x25060007,Encoder compensation_Value 6,S16,rw,-32768,32767,0x0,read
+0x25060008,Encoder compensation_Value 7,S16,rw,-32768,32767,0x0,read
+0x25060009,Encoder compensation_Value 8,S16,rw,-32768,32767,0x0,read
+0x2506000A,Encoder compensation_Value 9,S16,rw,-32768,32767,0x0,read
+0x2506000B,Encoder compensation_Value 10,S16,rw,-32768,32767,0x0,read
+0x2506000C,Encoder compensation_Value 11,S16,rw,-32768,32767,0x0,read
+0x2506000D,Encoder compensation_Value 12,S16,rw,-32768,32767,0x0,read
+0x2506000E,Encoder compensation_Value 13,S16,rw,-32768,32767,0x0,read
+0x2506000F,Encoder compensation_Value 14,S16,rw,-32768,32767,0x0,read
+0x25060010,Encoder compensation_Value 15,S16,rw,-32768,32767,0x0,read
+0x25060011,Encoder compensation_Value 16,S16,rw,-32768,32767,0x0,read
+0x25060012,Encoder compensation_Value 17,S16,rw,-32768,32767,0x0,read
+0x25060013,Encoder compensation_Value 18,S16,rw,-32768,32767,0x0,read
+0x25060014,Encoder compensation_Value 19,S16,rw,-32768,32767,0x0,read
+0x25060015,Encoder compensation_Value 20,S16,rw,-32768,32767,0x0,read
+0x25060016,Encoder compensation_Value 21,S16,rw,-32768,32767,0x0,read
+0x25060017,Encoder compensation_Value 22,S16,rw,-32768,32767,0x0,read
+0x25060018,Encoder compensation_Value 23,S16,rw,-32768,32767,0x0,read
+0x25060019,Encoder compensation_Value 24,S16,rw,-32768,32767,0x0,read
+0x2506001A,Encoder compensation_Value 25,S16,rw,-32768,32767,0x0,read
+0x2506001B,Encoder compensation_Value 26,S16,rw,-32768,32767,0x0,read
+0x2506001C,Encoder compensation_Value 27,S16,rw,-32768,32767,0x0,read
+0x2506001D,Encoder compensation_Value 28,S16,rw,-32768,32767,0x0,read
+0x2506001E,Encoder compensation_Value 29,S16,rw,-32768,32767,0x0,read
+0x2506001F,Encoder compensation_Value 30,S16,rw,-32768,32767,0x0,read
+0x25060020,Encoder compensation_Value 31,S16,rw,-32768,32767,0x0,read
+0x25060021,Encoder compensation_Value 32,S16,rw,-32768,32767,0x0,read
+0x25060022,Encoder compensation_Value 33,S16,rw,-32768,32767,0x0,read
+0x25060023,Encoder compensation_Value 34,S16,rw,-32768,32767,0x0,read
+0x25060024,Encoder compensation_Value 35,S16,rw,-32768,32767,0x0,read
+0x25060025,Encoder compensation_Value 36,S16,rw,-32768,32767,0x0,read
+0x25060026,Encoder compensation_Value 37,S16,rw,-32768,32767,0x0,read
+0x25060027,Encoder compensation_Value 38,S16,rw,-32768,32767,0x0,read
+0x25060028,Encoder compensation_Value 39,S16,rw,-32768,32767,0x0,read
+0x25060029,Encoder compensation_Value 40,S16,rw,-32768,32767,0x0,read
+0x2506002A,Encoder compensation_Value 41,S16,rw,-32768,32767,0x0,read
+0x2506002B,Encoder compensation_Value 42,S16,rw,-32768,32767,0x0,read
+0x2506002C,Encoder compensation_Value 43,S16,rw,-32768,32767,0x0,read
+0x2506002D,Encoder compensation_Value 44,S16,rw,-32768,32767,0x0,read
+0x2506002E,Encoder compensation_Value 45,S16,rw,-32768,32767,0x0,read
+0x2506002F,Encoder compensation_Value 46,S16,rw,-32768,32767,0x0,read
+0x25060030,Encoder compensation_Value 47,S16,rw,-32768,32767,0x0,read
+0x25060031,Encoder compensation_Value 48,S16,rw,-32768,32767,0x0,read
+0x25060032,Encoder compensation_Value 49,S16,rw,-32768,32767,0x0,read
+0x25060033,Encoder compensation_Value 50,S16,rw,-32768,32767,0x0,read
+0x25060034,Encoder compensation_Value 51,S16,rw,-32768,32767,0x0,read
+0x25060035,Encoder compensation_Value 52,S16,rw,-32768,32767,0x0,read
+0x25060036,Encoder compensation_Value 53,S16,rw,-32768,32767,0x0,read
+0x25060037,Encoder compensation_Value 54,S16,rw,-32768,32767,0x0,read
+0x25060038,Encoder compensation_Value 55,S16,rw,-32768,32767,0x0,read
+0x25060039,Encoder compensation_Value 56,S16,rw,-32768,32767,0x0,read
+0x2506003A,Encoder compensation_Value 57,S16,rw,-32768,32767,0x0,read
+0x2506003B,Encoder compensation_Value 58,S16,rw,-32768,32767,0x0,read
+0x2506003C,Encoder compensation_Value 59,S16,rw,-32768,32767,0x0,read
+0x2506003D,Encoder compensation_Value 60,S16,rw,-32768,32767,0x0,read
+0x2506003E,Encoder compensation_Value 61,S16,rw,-32768,32767,0x0,read
+0x2506003F,Encoder compensation_Value 62,S16,rw,-32768,32767,0x0,read
+0x25060040,Encoder compensation_Value 63,S16,rw,-32768,32767,0x0,read
+0x250A0000,Pwm frequency,U8,rw,1,10,0x4,read
+0x250F0000,250F_00,U8,wo,0,255,0x1,read
+0x26000000,Drive system gear_Number of entries,U8,ro,,,0x2,read
+0x26000001,Drive system gear_Gear ratio num,U32,rw,1,4294967295,1,read
+0x26000002,Drive system gear_Gear ratio den,U32,rw,1,4294967295,1,read
+0x26010000,Drive system load transmission_Number of entries,U8,ro,,,0x3,read
+0x26010001,Drive system load transmission_Load transmission,U8,rw,0,255,0x0,read
+0x26010002,Drive system load transmission_Load transmission ratio num,U32,rw,1,4294967295,1,read
+0x26010003,Drive system load transmission_Load transmission ratio den,U32,rw,1,4294967295,1,read
+0x26020000,Drive system numbers_Number of entries,U8,ro,,,0x3,read
+0x26020001,Drive system numbers_Gear catalog number,string,rw,,,-,read
+0x26020002,Drive system numbers_Encoder cataloge number,string,rw,,,-,read
+0x26020003,Drive system numbers_Drive combination number,string,rw,,,-,read
+0x26030000,Drive system units_Number of entries,U8,ro,,,0x2,read
+0x26030001,Drive system units_Unit reference,U8,rw,0,255,0x2,read
+0x26030002,Drive system units_Unit names,string,rw,,,inc|inc/s,read
+0x26040000,Nominal voltage,U16,rw,0,65535,0x0,read
+0x26050000,Drive system settings,U32,rw,0,4294967295,0,read
+0x26100000,OEM DeviceData_Number of entries,U8,ro,,,0x3,read
+0x26100001,OEM DeviceData_OEM product descriptor ,string,rw,,,-,read
+0x26100002,OEM DeviceData_OEM product code,string,rw,,,-,read
+0x26100003,OEM DeviceData_OEM serial number,U32,rw,0,4294967295,0,read
+0x30000000,User programs_Number of entries,U8,ro,,,0x8,read
+0x30000001,User programs_User program 1 start address,U16,rw,0,65535,0xFFFF,read
+0x30000002,User programs_User program 2 start address,U16,rw,0,65535,0xFFFF,read
+0x30000003,User programs_User program 3 start address,U16,rw,0,65535,0xFFFF,read
+0x30000004,User programs_User program 4 start address,U16,rw,0,65535,0xFFFF,read
+0x30000005,User programs_User program 5 start address,U16,rw,0,65535,0xFFFF,read
+0x30000006,User programs_User program 6 start address,U16,rw,0,65535,0xFFFF,read
+0x30000007,User programs_User program 7 start address,U16,rw,0,65535,0xFFFF,read
+0x30000008,User programs_User program 8 start address,U16,rw,0,65535,0xFFFF,read
+0x30010000,Active program_Number of entries,U8,ro,,,0xA,read
+0x30010001,Active program_Actual program command,U8,rw,0,255,0x0,read
+0x30010002,Active program_Actual program number,U8,rw,0,255,0x0,read
+0x30010003,Active program_Actual program position,U16,ro,,,0x0,read
+0x30010004,Active program_Actual program state,U8,ro,,,0x0,read
+0x30010005,Active program_Breakpoint address,U16,rw,0,65535,0xFFFF,read
+0x30010007,Active program_Upload/Download buffer,string,rw,,,,read
+0x30010008,Active program_Error state,U8,ro,,,0x1,read
+0x30010009,Active program_Error code,U16,ro,,,0x0,read
+0x3001000A,Active program_Program memory,U16,ro,,,0x3EE4,read
+0x30020000,Auto start program,U8,rw,0,8,0x0,read
+0x30030000,Access key,U32,wo,0,4294967295,100728833,read
+0x30040000,Debug user program_Number of entries,U8,ro,,,0x2,read
+0x30040001,Debug user program_Select variable,U8,rw,0,25,0x0,read
+0x30040002,Debug user program_Selected variable value,S32,rw,-2147483648,2147483647,0,read
+0x30050000,User program variables_Number of entries,U8,ro,,,0x1A,read
+0x30050001,User program variables_User prog variable a,S32,rw,-2147483648,2147483647,0,read
+0x30050002,User program variables_User prog variable b,S32,rw,-2147483648,2147483647,0,read
+0x30050003,User program variables_User prog variable c,S32,rw,-2147483648,2147483647,0,read
+0x30050004,User program variables_User prog variable d,S32,rw,-2147483648,2147483647,0,read
+0x30050005,User program variables_User prog variable e,S32,rw,-2147483648,2147483647,0,read
+0x30050006,User program variables_User prog variable f,S32,rw,-2147483648,2147483647,0,read
+0x30050007,User program variables_User prog variable g,S32,rw,-2147483648,2147483647,0,read
+0x30050008,User program variables_User prog variable h,S32,rw,-2147483648,2147483647,0,read
+0x30050009,User program variables_User prog variable i,S32,rw,-2147483648,2147483647,0,read
+0x3005000A,User program variables_User prog variable j,S32,rw,-2147483648,2147483647,0,read
+0x3005000B,User program variables_User prog variable k,S32,rw,-2147483648,2147483647,0,read
+0x3005000C,User program variables_User prog variable l,S32,rw,-2147483648,2147483647,0,read
+0x3005000D,User program variables_User prog variable m,S32,rw,-2147483648,2147483647,0,read
+0x3005000E,User program variables_User prog variable n,S32,rw,-2147483648,2147483647,0,read
+0x3005000F,User program variables_User prog variable o,S32,rw,-2147483648,2147483647,0,read
+0x30050010,User program variables_User prog variable p,S32,rw,-2147483648,2147483647,0,read
+0x30050011,User program variables_User prog variable q,S32,rw,-2147483648,2147483647,0,read
+0x30050012,User program variables_User prog variable r,S32,rw,-2147483648,2147483647,0,read
+0x30050013,User program variables_User prog variable s,S32,rw,-2147483648,2147483647,0,read
+0x30050014,User program variables_User prog variable t,S32,rw,-2147483648,2147483647,0,read
+0x30050015,User program variables_User prog variable u,S32,rw,-2147483648,2147483647,0,read
+0x30050016,User program variables_User prog variable v,S32,rw,-2147483648,2147483647,0,read
+0x30050017,User program variables_User prog variable w,S32,rw,-2147483648,2147483647,0,read
+0x30050018,User program variables_User prog variable x,S32,rw,-2147483648,2147483647,0,read
+0x30050019,User program variables_User prog variable y,S32,rw,-2147483648,2147483647,0,read
+0x3005001A,User program variables_User prog variable z,S32,rw,-2147483648,2147483647,0,read
+0x30060000,Scripting stack / Number of levels_Number of levels,U8,ro,,,0x1,read
+0x30060001,Scripting stack / Number of levels_Call stack level 0,U16,ro,,,0x0,read
+0x30060002,Scripting stack / Number of levels_Call stack level 1,U16,ro,,,0x11,read
+0x30060003,Scripting stack / Number of levels_Call stack level 2,U16,ro,,,0x11,read
+0x30060004,Scripting stack / Number of levels_Call stack level 3,U16,ro,,,0x11,read
+0x30060005,Scripting stack / Number of levels_Call stack level 4,U16,ro,,,0x11,read
+0x30060006,Scripting stack / Number of levels_Call stack level 5,U16,ro,,,0x11,read
+0x30060007,Scripting stack / Number of levels_Call stack level 6,U16,ro,,,0x11,read
+0x30060008,Scripting stack / Number of levels_Call stack level 7,U16,ro,,,0x11,read
+0x30060009,Scripting stack / Number of levels_Call stack level 8,U16,ro,,,0x11,read
+0x3006000A,Scripting stack / Number of levels_Call stack level 9,U16,ro,,,0x11,read
+0x3006000B,Scripting stack / Number of levels_Call stack level 10,U16,ro,,,0x11,read
+0x3006000C,Scripting stack / Number of levels_Call stack level 11,U16,ro,,,0x11,read
+0x3006000D,Scripting stack / Number of levels_Call stack level 12,U16,ro,,,0x11,read
+0x3006000E,Scripting stack / Number of levels_Call stack level 13,U16,ro,,,0x11,read
+0x3006000F,Scripting stack / Number of levels_Call stack level 14,U16,ro,,,0x11,read
+0x300F0000,Variable access key,U32,wo,0,4294967295,100728833,read
+0x30100000,Program constants_Number of entries,U8,ro,,,0x10,read
+0x30100001,Program constants_Program constant 0,S32,rw,-2147483648,2147483647,3720000,read
+0x30100002,Program constants_Program constant 1,S32,rw,-2147483648,2147483647,0,read
+0x30100003,Program constants_Program constant 2,S32,rw,-2147483648,2147483647,0,read
+0x30100004,Program constants_Program constant 3,S32,rw,-2147483648,2147483647,0,read
+0x30100005,Program constants_Program constant 4,S32,rw,-2147483648,2147483647,0,read
+0x30100006,Program constants_Program constant 5,S32,rw,-2147483648,2147483647,0,read
+0x30100007,Program constants_Program constant 6,S32,rw,-2147483648,2147483647,0,read
+0x30100008,Program constants_Program constant 7,S32,rw,-2147483648,2147483647,0,read
+0x30100009,Program constants_Program constant 8,S32,rw,-2147483648,2147483647,0,read
+0x3010000A,Program constants_Program constant 9,S32,rw,-2147483648,2147483647,0,read
+0x3010000B,Program constants_Program constant 10,S32,rw,-2147483648,2147483647,0,read
+0x3010000C,Program constants_Program constant 11,S32,rw,-2147483648,2147483647,0,read
+0x3010000D,Program constants_Program constant 12,S32,rw,-2147483648,2147483647,0,read
+0x3010000E,Program constants_Program constant 13,S32,rw,-2147483648,2147483647,0,read
+0x3010000F,Program constants_Program constant 14,S32,rw,-2147483648,2147483647,0,read
+0x30100010,Program constants_Program constant 15,S32,rw,-2147483648,2147483647,0,read
+0x60070000,Abort connection option code,S16,unknown,,,0x1,read
+0x60400000,Controlword,U16,rw,0,65535,0xF,read
+0x60410000,Statusword,U16,ro,0x0,,0x427,read
+0x605A0000,Quick-Stop option code,S16,unknown,,,0x2,read
+0x605B0000,Shutdown option code,S16,unknown,,,0x0,read
+0x605C0000,Disable operation option code,S16,unknown,,,0x1,read
+0x605D0000,Halt option code,S16,unknown,,,0x1,read
+0x605E0000,Fault reaction option code,S16,unknown,,,0x2,read
+0x60600000,Modes of operation,S8,unknown,,,0x1,read
+0x60610000,Modes of operation display,S8,ro,,,0x1,read
+0x60620000,Position demand value,S32,ro,,,4902,read
+0x60630000,Position actual internal value,S32,ro,,,4901,read
+0x60640000,Position actual value,S32,ro,,,4902,read
+0x60650000,Following error window,U32,rw,0,4294967295,4096,read
+0x60660000,Following error time out,U16,rw,1,65535,0x30,read
+0x60670000,Position window,U32,rw,0,4294967295,40,read
+0x60680000,Position window time,U16,rw,1,65535,0x30,read
+0x606B0000,Velocity demand value,S32,ro,,,0,read
+0x606C0000,Velocity actual value,S32,ro,,,26,read
+0x606D0000,Velocity window,U16,rw,0,65535,0x20,read
+0x606E0000,Velocity window time,U16,rw,1,65535,0x30,read
+0x606F0000,Velocity threshold,U16,rw,0,65535,0x20,read
+0x60700000,Velocity threshold time,U16,rw,1,65535,0x30,read
+0x60710000,Target torque,S16,rw,-32768,32767,0x0,read
+0x60720000,Max torque,U16,ro,,,0x1F2,read
+0x60740000,Torque demand,S16,ro,,,0x22,read
+0x60770000,Torque actual value,S16,ro,,,0x21,read
+0x60780000,Current actual value,S16,ro,,,0x22,read
+0x607A0000,Target position,S32,rw,-2147483648,2147483647,4902,read
+0x607B0000,Position range limit_Number of entries,U8,ro,,,0x2,read
+0x607B0001,Position range limit_Min position range limit,S32,rw,-2147483648,2147483647,-2147483648,read
+0x607B0002,Position range limit_Max position range limit,S32,rw,-2147483648,2147483647,2147483647,read
+0x607C0000,Home offset,S32,rw,-2147483648,2147483647,0,read
+0x607D0000,Software position limit_Number of entries,U8,ro,,,0x2,read
+0x607D0001,Software position limit_Min position limit,S32,rw,-2147483648,2147483647,-347000,read
+0x607D0002,Software position limit_Max position limit,S32,rw,-2147483648,2147483647,347000,read
+0x607E0000,Polarity,U8,unknown,,,0x0,read
+0x60800000,Max motor speed ,U32,rw,1,4294967295,327680,read
+0x60810000,Profile velocity,U32,rw,1,4294967295,327680,read
+0x60830000,Profile acceleration,U32,rw,1,32767,3000,read
+0x60840000,Profile deceleration,U32,rw,1,32767,3000,read
+0x60850000,Quick stop deceleration,U32,rw,10,32767,30000,read
+0x60860000,Motion profile type,S16,unknown,,,0x1,read
+0x608F0000,Position encoder resolution_Number of entries,U8,ro,,,0x2,read
+0x608F0001,Position encoder resolution_Encoder increments,U32,ro,,,4096,read
+0x608F0002,Position encoder resolution_Motor revolutions,U32,ro,,,1,read
+0x60900000,Velocity encoder resolution_Number of entries,U8,ro,,,0x2,read
+0x60900001,Velocity encoder resolution_Encoder increments,U32,ro,,,4096,read
+0x60900002,Velocity encoder resolution_Motor revolutions,U32,ro,,,1,read
+0x60910000,Gear ratio_Number of entries,U8,ro,,,0x2,read
+0x60910001,Gear ratio_Motor shaft revolutions,U32,rw,1,4294967295,1,read
+0x60910002,Gear ratio_Driving shaft revolutions,U32,rw,1,4294967295,1,read
+0x60920000,Feed constant_Number of entries,U8,ro,,,0x2,read
+0x60920001,Feed constant_Feed,U32,rw,1,4294967295,4096,read
+0x60920002,Feed constant_Shaft revolutions,U32,rw,1,4294967295,1,read
+0x60960000,Velocity factor_Number of entries,U8,ro,,,0x2,read
+0x60960001,Velocity factor_Numerator,U32,rw,1,4294967295,1,read
+0x60960002,Velocity factor_Divisor,U32,rw,1,4294967295,60,read
+0x60980000,Homing method,S8,rw,-4,37,0x25,read
+0x60990000,Homing speeds_Number of entries,U8,ro,,,0x2,read
+0x60990001,Homing speeds_Switch seek velocity,U32,rw,0,4294967295,400,read
+0x60990002,Homing speeds_Homing speed,U32,rw,0,4294967295,400,read
+0x609A0000,Homing acceleration,U32,rw,0,4294967295,389,read
+0x60B00000,Position offset,S32,rw,-2147483648,2147483647,0,read
+0x60B10000,Velocity offset,S32,rw,-2147483648,2147483647,0,read
+0x60B20000,Torque offset,S16,rw,-32768,32767,0x0,read
+0x60B80000,Touch probe function,U16,rw,,,0x0,read
+0x60B90000,Touch probe status,U16,ro,,,0x0,read
+0x60BA0000,Touch probe 1 positive edge,S32,ro,,,0,read
+0x60BB0000,Touch probe 1 negative edge,S32,ro,,,0,read
+0x60BC0000,Touch probe 2 positive edge,S32,ro,,,0,read
+0x60BD0000,Touch probe 2 negative edge,S32,ro,,,0,read
+0x60C50000,Max acceleration,U32,rw,10,32767,30000,read
+0x60C60000,Max deceleration,U32,rw,10,32767,30000,read
+0x60D50000,Touch probe 1 positive edge counter,U16,ro,,,0x0,read
+0x60D60000,Touch probe 1 negative edge counter,U16,ro,,,0x0,read
+0x60D70000,Touch probe 2 positive edge counter,U16,ro,,,0x0,read
+0x60D80000,Touch probe 2 negative edge counter,U16,ro,,,0x0,read
+0x60E00000,Positive torque limit value,U16,rw,0,6000,0x1F4,read
+0x60E10000,Negative torque limit value,U16,rw,0,6000,0x1F4,read
+0x60F20000,Position option code,U16,unknown,,,0x0,read
+0x60F40000,Following error actual value,S32,ro,,,1,read
+0x60FD0000,Digital Inputs,U32,ro,,,0,read
+0x60FF0000,Target velocity,S32,rw,-2147483648,2147483647,0,read
+0x64030000,Motor catalogue number,string,ro,,,2232S024BX4,read
+0x65020000,Supported drive modes,U32,ro,,,933,read
+0x65030000,Drive catalogue number,string,const,,,2232.P0146,read

@@ -1,13 +1,14 @@
-# additional TILL-Variables
-UINT	TILL_POINTER 		@0x3b0  	a pointer for spi = 32b
-UINT	TILL_VERSION  		@0x3b1
-LONG	TILL_POS  		@0x3b2		for move
-FIXED	TILL_SPEED  		@0x3b4  	for move
-UINT	TILL_PROFILE 		@0x3b6  	0=trapezoid, 1=s-curve
-FIXED	TILL_HOMESPEED  	@0x3b8  	to move out of limit sensor
-FIXED	TILL_SPEED2  		@0x3be  	for service move
-UINT	TILL_STATUS  		@0x3C0  	bit 0-13 tpos, 14:busy 
-#TILL-EPROM-Variablen
+# additional TILL/BIZ-Variables Stand 2021
+INT	TILL_Encoder		@0x3b0  	µstep/encoder*2^14 52100/80000*2^14=20972 (signed, nicht größer 32768!), for z: ^13
+UINT	TILL_STATUS  		@0x3b1		TILL-ID error register, =0 all OK, bit1: needs cal, bit:14 cal runnig
+UINT	TILL_CALADR		@0x3b2		Address for goto cal
+UINT	TILL_RANGEADR  		@0x3b3  	Address for goto range measure, NoOp for SSI
+UINT	TILL_ABSADR  		@0x3b4  	Address for absolute move, value in cpos
+UINT	TILL_RELADR  		@0x3b5  	Address for relative move, value in cpos
+LONG	TILL_SSIOFFSET 		@0x3b6  	ssi encoder offset (here tpos=0)
+LONG	TILL_SSINOISE  		@0x3BE  	ssi test result, 16 added absolute differences from sequential reads 
+FIXED	TILL_FREE  		@0x3bA  	free
+#TILL-EPROM-Variablen -very Old
 UINT	TILLE_Version 		@0x15001 	Till-EPROM Version
 UINT	TILLE_Magic 		@0x15003 	Till-EPROM Magic Number?
 UINT	TILLE_DeviceType 	@0x15005 	Till-EPROM Device Type
@@ -73,7 +74,7 @@ LONG		CAPPOS2		@0x081E
 UINT		CBR		@0x030D
 UINT		CBR_table	@0x0928
 UINT		CCR		@0x030A
-FIXED		CDEC		@0x0859		[µstep/Ts_S^2]
+FIXED		CDEC		@0x0858		[µstep/Ts_S^2] war mal 859?!
 FIXED		CDREF		@0x02a4
 UINT		CER		@0x0301
 INT		CI0		@0x028d
@@ -165,6 +166,7 @@ INT		IQREFFILTERED	@0x0987		[A*90277]
 INT		IQRSTEP		@0x027c		[A*9027]
 UINT		ISR		@0x0306
 FIXED		JERK		@0x08D1		[rad/s^3]
+LONG		ABSPOSSSI	@0x854  	[FW G6GRA ssi abolute encoder, eigentlich nur positive u32!]	
 INT		KDFP		@0x264
 INT		KDP		@0x262
 INT		KFFA		@0x026e
@@ -184,6 +186,9 @@ INT		KVOLT		@0x279
 INT		LEVEL_AD5	@0x086f
 UINT		LOG_PTR		@0x0365
 INT		LSACTIVE	@0x0832
+LONG		SWNEGLS		@0x088A		default 0, negative software limit, hier war mal 0x84D 
+LONG		SWPOSLS		@0x088C		positive software limit, hier war mal 0x899 
+INT		ISSWLS		@0xCA0A		software limit switch? oder ASR +4096 +0x1000
 INT		MASTERID	@0x0927
 LONG		MASTERRES	@0x081A
 UINT		MAXPWMWOB	@0x028f
@@ -308,7 +313,7 @@ INT		THTST		@0x282		[deg]
 UINT		TIMAXPROT		@0x02c4		[s]
 LONG		TIME0		@0x02be		[s]
 UINT		TIMELIM		@0x286		[s]
-UINT  		TIMESBC  	@0x028b  	[s]
+UINT  		TIMESBC  	@0x028b  	[s] time to standbycurrent sbycrt
 INT		TINCTST		@0x283		[deg/s]
 LONG		TJERK		@0x08D1		[s]
 UINT		TMLINTPER		@0x0983		[s]

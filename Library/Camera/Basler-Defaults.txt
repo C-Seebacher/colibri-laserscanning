@@ -1,0 +1,232 @@
+AcquisitionAttributes::AdvancedGenicam::CommandTimeout ,U32 ,1,1, 100  
+AcquisitionAttributes::AdvancedGenicam::EventQueueDepth ,U32 ,1,1, 50  
+AcquisitionAttributes::AdvancedGenicam::EventsEnabled ,Bool ,1,1, 1  
+AcquisitionAttributes::AdvancedGenicam::EventsSupported ,Bool ,1,0, 1  
+AcquisitionAttributes::Bayer::Algorithm ,Enum ,1,1, 0;Bilinear=0 ;VNG=1   
+AcquisitionAttributes::Bayer::GainB ,DBL ,1,1, 1.000000E+0  
+AcquisitionAttributes::Bayer::GainG ,DBL ,1,1, 1.000000E+0  
+AcquisitionAttributes::Bayer::GainR ,DBL ,1,1, 1.000000E+0  
+AcquisitionAttributes::Bayer::Pattern ,Enum ,1,1, 5;Use hardware value=5 ;None=0 ;GB=1 ;GR=2 ;BG=3 ;RG=4   
+AcquisitionAttributes::ChunkDataDecoding::ChunkDataDecodingEnabled ,Bool ,1,1, 0  
+AcquisitionAttributes::ChunkDataDecoding::MaximumChunkCopySize ,U32 ,1,1, 64  
+CameraAttributes::SequencerControl::SequencerMode ,Enum ,1,1, 0;Off=0 ;On=1   
+CameraAttributes::SequencerControl::SequencerSetActive ,I64 ,0,0, Not Readable  
+CameraAttributes::SequencerControl::SequencerConfigurationMode ,Enum ,1,1, 0;Off=0 ;On=1   
+CameraAttributes::SequencerControl::SequencerSetStart ,I64 ,1,0, 0  
+CameraAttributes::SequencerControl::SequencerSetSelector ,I64 ,1,0, 0  
+CameraAttributes::SequencerControl::SequencerSetLoad ,Command ,0,0, Not Readable  
+CameraAttributes::SequencerControl::SequencerSetSave ,Command ,0,0, Not Readable  
+CameraAttributes::SequencerControl::SequencerPathSelector ,I64 ,1,0, 1  
+CameraAttributes::SequencerControl::SequencerSetNext ,I64 ,1,0, 1  
+CameraAttributes::SequencerControl::SequencerTriggerSource ,Enum ,1,0, 36;Line 1=1 ;Line 3=3 ;Line 4=4 ;Software Signal 1=15 ;Software Signal 2=16 ;Software Signal 3=17 ;Counter 2 End=33 ;Frame Start=36   
+CameraAttributes::SequencerControl::SequencerTriggerActivation ,Enum ,1,0, 3;Level High=3   
+CameraAttributes::ImageFormatControl::SensorWidth ,I64 ,1,0, 5496  
+CameraAttributes::ImageFormatControl::SensorHeight ,I64 ,1,0, 3672  
+CameraAttributes::ImageFormatControl::WidthMax ,I64 ,1,0, 5496  
+CameraAttributes::ImageFormatControl::HeightMax ,I64 ,1,0, 3672  
+CameraAttributes::ImageFormatControl::Width ,I64 ,1,1, 5472  
+CameraAttributes::ImageFormatControl::Height ,I64 ,1,1, 3648  
+CameraAttributes::ImageFormatControl::OffsetX ,I64 ,1,1, 12  
+CameraAttributes::ImageFormatControl::OffsetY ,I64 ,1,1, 12  
+CameraAttributes::ImageFormatControl::CenterX ,Bool ,1,1, 0  
+CameraAttributes::ImageFormatControl::CenterY ,Bool ,1,1, 0  
+CameraAttributes::ImageFormatControl::BinningHorizontalMode ,Enum ,1,1, 0;Sum=0 ;Average=1   
+CameraAttributes::ImageFormatControl::BinningHorizontal ,I64 ,1,1, 1  
+CameraAttributes::ImageFormatControl::BinningVerticalMode ,Enum ,1,1, 0;Sum=0 ;Average=1   
+CameraAttributes::ImageFormatControl::BinningVertical ,I64 ,1,1, 1  
+CameraAttributes::ImageFormatControl::ReverseX ,Bool ,1,1, 0  
+CameraAttributes::ImageFormatControl::ReverseY ,Bool ,1,1, 0  
+CameraAttributes::ImageFormatControl::PixelFormat ,Enum ,1,1, 17563719;Mono 8=17301505 ;Mono 12=17825797 ;Mono 12p=17563719   
+CameraAttributes::ImageFormatControl::PixelSize ,Enum ,1,0, 12;8 Bits/Pixel=8 ;10 Bits/Pixel=10 ;12 Bits/Pixel=12 ;16 Bits/Pixel=16 ;24 Bits/Pixel=24   
+CameraAttributes::ImageFormatControl::PixelColorFilter ,Enum ,1,0, 0;No Filter=0 ;Bayer RG=1 ;Bayer GB=2 ;Bayer GR=3 ;Bayer BG=4   
+CameraAttributes::ImageFormatControl::PixelDynamicRangeMin ,I64 ,1,0, 0  
+CameraAttributes::ImageFormatControl::PixelDynamicRangeMax ,I64 ,1,0, 4095  
+CameraAttributes::ImageFormatControl::TestImageSelector ,Enum ,1,1, 0;Test Image Off=0 ;Test Image 1=1 ;Test Image 2=2 ;Test Image 3=3 ;Test Image 4=4 ;Test Image 5=5   
+CameraAttributes::ImageFormatControl::TestImageResetAndHold ,Bool ,1,1, 0  
+CameraAttributes::AnalogControl::GainAuto ,Enum ,1,1, 0;Off=0 ;Once=1 ;Continuous=2   
+CameraAttributes::AnalogControl::GainSelector ,Enum ,1,1, 0;All=0   
+CameraAttributes::AnalogControl::Gain ,DBL ,1,1, -0.000000E+0  
+CameraAttributes::AnalogControl::BlackLevelSelector ,Enum ,1,1, 0;All=0   
+CameraAttributes::AnalogControl::BlackLevel ,DBL ,1,1, 0.000000E+0  
+CameraAttributes::AnalogControl::Gamma ,DBL ,1,1, 1.000000E+0  
+CameraAttributes::AnalogControl::DigitalShift ,I64 ,1,1, 0  
+CameraAttributes::ImageQualityControl::PGIControl::PgiMode ,Enum ,1,1, 0;Off=0 ;On=1   
+CameraAttributes::ImageQualityControl::PGIControl::NoiseReduction ,DBL ,0,0, Not Readable  
+CameraAttributes::ImageQualityControl::PGIControl::SharpnessEnhancement ,DBL ,0,0, Not Readable  
+CameraAttributes::ImageQualityControl::ColorTransformationValue ,DBL ,0,0, Not Readable  
+CameraAttributes::AcquisitionControl::AcquisitionMode ,Enum ,1,1, 2;Single Frame=0 ;Continuous=2   
+CameraAttributes::AcquisitionControl::ShutterMode ,Enum ,1,1, 0;Rolling=0 ;Global Reset Release=1   
+CameraAttributes::AcquisitionControl::ExposureAuto ,Enum ,1,1, 0;Off=0 ;Once=1 ;Continuous=2   
+CameraAttributes::AcquisitionControl::ExposureMode ,Enum ,1,1, 1;Timed=1   
+CameraAttributes::AcquisitionControl::ExposureTime ,DBL ,1,1, 4.176000E+3  
+CameraAttributes::AcquisitionControl::AcquisitionBurstFrameCount ,I64 ,1,1, 1  
+CameraAttributes::AcquisitionControl::TriggerSelector ,Enum ,1,1, 1;Frame Burst Start=0 ;Frame Start=1   
+CameraAttributes::AcquisitionControl::TriggerMode ,Enum ,1,1, 0;Off=0 ;On=1   
+CameraAttributes::AcquisitionControl::TriggerSoftware ,Command ,0,1, Not Readable  
+CameraAttributes::AcquisitionControl::TriggerSource ,Enum ,1,1, 1;Software=0 ;Line 1=1 ;Line 3=3 ;Line 4=4 ;Software Signal 1=15 ;Software Signal 2=16 ;Software Signal 3=17   
+CameraAttributes::AcquisitionControl::TriggerActivation ,Enum ,1,1, 0;Rising Edge=0 ;Falling Edge=1   
+CameraAttributes::AcquisitionControl::TriggerDelay ,DBL ,1,1, 0.000000E+0  
+CameraAttributes::AcquisitionControl::AcquisitionFrameRateEnable ,Bool ,1,1, 0  
+CameraAttributes::AcquisitionControl::AcquisitionFrameRate ,DBL ,1,1, 2.899980E+1  
+CameraAttributes::AcquisitionControl::ResultingFrameRate ,DBL ,1,0, 1.202140E+1  
+CameraAttributes::AcquisitionControl::SensorReadoutTime ,DBL ,1,0, 5.550600E+4  
+CameraAttributes::AcquisitionControl::AcquisitionStatusSelector ,Enum ,1,1, 3;Frame Burst Trigger Wait=0 ;Frame Trigger Wait=3 ;Acquisition Idle=7   
+CameraAttributes::AcquisitionControl::AcquisitionStatus ,Bool ,1,0, 0  
+CameraAttributes::AutoFunctionControl::AutoTargetBrightness ,DBL ,1,1, 5.001221E-1  
+CameraAttributes::AutoFunctionControl::AutoFunctionProfile ,Enum ,1,1, 0;Minimize Gain=0 ;Minimize Exposure Time=1   
+CameraAttributes::AutoFunctionControl::AutoGainLowerLimit ,DBL ,1,1, -0.000000E+0  
+CameraAttributes::AutoFunctionControl::AutoGainUpperLimit ,DBL ,1,1, 2.704577E+1  
+CameraAttributes::AutoFunctionControl::AutoExposureTimeLowerLimit ,DBL ,1,1, 5.000000E+1  
+CameraAttributes::AutoFunctionControl::AutoExposureTimeUpperLimit ,DBL ,1,1, 1.000000E+5  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROISelector ,Enum ,1,1, 2;ROI 1=1 ;ROI 2=2   
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIWidth ,I64 ,1,1, 5472  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIHeight ,I64 ,1,1, 3648  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIOffsetX ,I64 ,1,1, 12  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIOffsetY ,I64 ,1,1, 12  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIUseBrightness ,Bool ,1,1, 0  
+CameraAttributes::AutoFunctionControl::AutoFunctionROIControl::AutoFunctionROIUseWhiteBalance ,Bool ,1,1, 1  
+CameraAttributes::LUTControl::LUTSelector ,Enum ,1,1, 0;Luminance LUT=0   
+CameraAttributes::LUTControl::LUTEnable ,Bool ,1,1, 0  
+CameraAttributes::LUTControl::LUTIndex ,I64 ,1,1, 0  
+CameraAttributes::LUTControl::LUTValue ,I64 ,1,1, 0  
+CameraAttributes::DigitalIOControl::LineSelector ,Enum ,1,1, 0;Line 1=0 ;Line 2=1 ;Line 3=2 ;Line 4=3   
+CameraAttributes::DigitalIOControl::LineMode ,Enum ,1,1, 0;Input=0   
+CameraAttributes::DigitalIOControl::LineFormat ,Enum ,1,0, 5;Opto-coupled=5   
+CameraAttributes::DigitalIOControl::LineLogic ,Enum ,1,0, 0;Positive=0 ;Negative=1   
+CameraAttributes::DigitalIOControl::LineSource ,Enum ,0,0, Not Readable  
+CameraAttributes::DigitalIOControl::LineInverter ,Bool ,1,1, 0  
+CameraAttributes::DigitalIOControl::LineDebouncerTime ,DBL ,1,1, 0.000000E+0  
+CameraAttributes::DigitalIOControl::LineMinimumOutputPulseWidth ,DBL ,0,0, Not Readable  
+CameraAttributes::DigitalIOControl::LineOverloadStatus ,Bool ,0,0, Not Readable  
+CameraAttributes::DigitalIOControl::LineStatus ,Bool ,1,0, 0  
+CameraAttributes::DigitalIOControl::LineStatusAll ,I64 ,1,0, 14  
+CameraAttributes::DigitalIOControl::UserOutputSelector ,Enum ,1,1, 0;User Output 1=0 ;User Output 2=1 ;User Output 3=2   
+CameraAttributes::DigitalIOControl::UserOutputValue ,Bool ,1,1, 0  
+CameraAttributes::DigitalIOControl::UserOutputValueAll ,I64 ,1,1, 0  
+CameraAttributes::SoftwareSignalControl::SoftwareSignalSelector ,Enum ,1,1, 0;Software Signal 1=0 ;Software Signal 2=1 ;Software Signal 3=2   
+CameraAttributes::SoftwareSignalControl::SoftwareSignalPulse ,Command ,0,1, Not Readable  
+CameraAttributes::CounterAndTimerControl::TimerSelector ,Enum ,1,1, 0;Timer 1=0   
+CameraAttributes::CounterAndTimerControl::TimerDuration ,DBL ,1,1, 1.000000E+1  
+CameraAttributes::CounterAndTimerControl::TimerDelay ,DBL ,1,1, 0.000000E+0  
+CameraAttributes::CounterAndTimerControl::TimerTriggerSource ,Enum ,1,1, 0;Exposure Start=0   
+CameraAttributes::CounterAndTimerControl::CounterSelector ,Enum ,1,1, 1;Counter 1=0 ;Counter 2=1   
+CameraAttributes::CounterAndTimerControl::CounterEventSource ,Enum ,1,1, 5;Frame Start=5   
+CameraAttributes::CounterAndTimerControl::CounterResetSource ,Enum ,1,1, 20;Counter 2 End=20   
+CameraAttributes::CounterAndTimerControl::CounterResetActivation ,Enum ,1,1, 0;Rising Edge=0   
+CameraAttributes::CounterAndTimerControl::CounterReset ,Command ,0,0, Not Readable  
+CameraAttributes::CounterAndTimerControl::CounterDuration ,I64 ,1,1, 1  
+CameraAttributes::ChunkDataControl::ChunkModeActive ,Bool ,1,1, 0  
+CameraAttributes::ChunkDataControl::ChunkSelector ,Enum ,1,1, 2;Gain=0 ;Exposure Time=1 ;Timestamp=2 ;Line Status All=3 ;Counter Value=4 ;Sequencer Set Active=5 ;CRC Checksum=6   
+CameraAttributes::ChunkDataControl::ChunkEnable ,Bool ,1,1, 0  
+CameraAttributes::ChunkDataControl::ChunkGainSelector ,Enum ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkGain ,DBL ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkExposureTime ,DBL ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkLineStatusAll ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkCounterSelector ,Enum ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkCounterValue ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkSequencerSetActive ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkPayloadCRC16 ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkGainSelector ,Enum ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkGain ,DBL ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkExposureTime ,DBL ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkLineStatusAll ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkCounterSelector ,Enum ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkCounterValue ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkSequencerSetActive ,I64 ,0,0, Not Readable  
+CameraAttributes::ChunkDataControl::ChunkData::ChunkPayloadCRC16 ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventSelector ,Enum ,1,1, 4;Exposure End=4 ;Frame Burst Start=36869 ;Frame Start Overtrigger=36865 ;Frame Burst Start Overtrigger=36866 ;Critical Temperature=36870 ;Over Temperature=36871 ;Frame Start Wait=36872 ;Frame Burst Start Wait=36873   
+CameraAttributes::EventControl::EventNotification ,Enum ,1,1, 0;Off=0 ;On=1   
+CameraAttributes::EventControl::EventExposureEndData::EventExposureEnd ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventExposureEndData::EventExposureEndTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventExposureEndData::EventExposureEndFrameID ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartData::EventFrameBurstStart ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartData::EventFrameBurstStartTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartData::EventFrameBurstStartFrameID ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameStartOvertriggerData::EventFrameStartOvertrigger ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameStartOvertriggerData::EventFrameStartOvertriggerTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameStartOvertriggerData::EventFrameStartOvertriggerFrameID ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartOvertriggerData::EventFrameBurstStartOvertrigger ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartOvertriggerData::EventFrameBurstStartOvertriggerTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartOvertriggerData::EventFrameBurstStartOvertriggerFrameID ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventCriticalTemperatureData::EventCriticalTemperature ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventCriticalTemperatureData::EventCriticalTemperatureTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventOverTemperatureData::EventOverTemperature ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventOverTemperatureData::EventOverTemperatureTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameStartWaitData::EventFrameStartWait ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameStartWaitData::EventFrameStartWaitTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartWaitData::EventFrameBurstStartWait ,I64 ,0,0, Not Readable  
+CameraAttributes::EventControl::EventFrameBurstStartWaitData::EventFrameBurstStartWaitTimestamp ,I64 ,0,0, Not Readable  
+CameraAttributes::UserSetControl::UserSetSelector ,Enum ,1,1, 0;Default User Set=0 ;High Gain=8 ;Auto Functions=9 ;User Set 1=1 ;User Set 2=2 ;User Set 3=3   
+CameraAttributes::UserSetControl::UserSetLoad ,Command ,0,1, Not Readable  
+CameraAttributes::UserSetControl::UserSetSave ,Command ,0,1, Not Readable  
+CameraAttributes::UserSetControl::UserSetDefault ,Enum ,1,1, 0;Default User Set=0 ;High Gain=8 ;Auto Functions=9 ;User Set 1=1 ;User Set 2=2 ;User Set 3=3   
+CameraAttributes::TransportLayerControl::PayloadSize ,I64 ,1,0, 29942784  
+CameraAttributes::TransportLayerControl::BslUSBSpeedMode ,Enum ,1,0, 8;High Speed=4 ;SuperSpeed=8   
+CameraAttributes::TransportLayerControl::SIPayloadTransferSize ,I64 ,1,0, 3424256  
+CameraAttributes::TransportLayerControl::SIPayloadTransferCount ,I64 ,1,0, 8  
+CameraAttributes::TransportLayerControl::SIPayloadFinalTransfer1Size ,I64 ,1,0, 2548736  
+CameraAttributes::TransportLayerControl::SIPayloadFinalTransfer2Size ,I64 ,1,0, 0  
+CameraAttributes::DeviceControl::DeviceVendorName ,String ,1,0, Basler  
+CameraAttributes::DeviceControl::DeviceModelName ,String ,1,0, acA5472-17um  
+CameraAttributes::DeviceControl::DeviceManufacturerInfo ,String ,1,0, none  
+CameraAttributes::DeviceControl::DeviceVersion ,String ,1,0, 107771-05  
+CameraAttributes::DeviceControl::DeviceFirmwareVersion ,String ,1,0, 107771-05;U;acA5472_17um;V1.1-0;0  
+CameraAttributes::DeviceControl::DeviceSerialNumber ,String ,1,0, 22994236  
+CameraAttributes::DeviceControl::DeviceUserID ,String ,1,1,   
+CameraAttributes::DeviceControl::DeviceScanType ,Enum ,1,0, 0;Area Scan=0 ;Line Scan=1   
+CameraAttributes::DeviceControl::TimestampLatch ,Command ,0,1, Not Readable  
+CameraAttributes::DeviceControl::TimestampLatchValue ,I64 ,1,0, 0  
+CameraAttributes::DeviceControl::DeviceLinkSelector ,I64 ,1,1, 0  
+CameraAttributes::DeviceControl::DeviceLinkSpeed ,I64 ,1,0, 500000000  
+CameraAttributes::DeviceControl::DeviceLinkThroughputLimitMode ,Enum ,1,1, 1;Off=0 ;On=1   
+CameraAttributes::DeviceControl::DeviceLinkThroughputLimit ,I64 ,1,1, 360000000  
+CameraAttributes::DeviceControl::DeviceLinkCurrentThroughput ,I64 ,1,0, 359998413  
+CameraAttributes::DeviceControl::DeviceTemperatureSelector ,Enum ,1,1, 0;Coreboard=0   
+CameraAttributes::DeviceControl::DeviceTemperature ,DBL ,1,0, 5.600000E+1  
+CameraAttributes::DeviceControl::TemperatureState ,Enum ,1,0, 0;OK=0 ;Critical=1 ;Error=2   
+CameraAttributes::DeviceControl::DeviceSFNCVersionMajor ,I64 ,1,0, 2  
+CameraAttributes::DeviceControl::DeviceSFNCVersionMinor ,I64 ,1,0, 1  
+CameraAttributes::DeviceControl::DeviceSFNCVersionSubMinor ,I64 ,1,0, 0  
+CameraAttributes::UserDefinedValueControl::UserDefinedValueSelector ,Enum ,1,1, 0;Value 1=0 ;Value 2=1 ;Value 3=2 ;Value 4=3 ;Value 5=4   
+CameraAttributes::UserDefinedValueControl::UserDefinedValue ,I64 ,1,1, 0  
+CameraAttributes::RemoveParameterLimitControl::RemoveParameterLimitSelector ,Enum ,1,1, 1;Gain=0 ;Exposure Time=1   
+CameraAttributes::RemoveParameterLimitControl::RemoveParameterLimit ,Bool ,0,0, Not Readable  
+CameraAttributes::ExpertFeatureAccess::ExpertFeatureAccessSelector ,Enum ,1,1, 4;Expert Feature 1=4 ;Expert Feature 2=5 ;Expert Feature 3=6 ;Expert Feature 4=8 ;Expert Feature 5=9 ;Expert Feature 6=11 ;Expert Feature 7=12 ;Expert Feature 8=13 ;Expert Feature 9=14 ;Expert Feature 10=15   
+CameraAttributes::ExpertFeatureAccess::ExpertFeatureAccessKey ,I64 ,1,1, 0  
+CameraAttributes::ExpertFeatureAccess::ExpertFeatureEnable ,Bool ,0,0, Not Readable  
+CameraAttributes::FileAccessControl::FileSelector ,Enum ,1,1, 16;User Set 1=16 ;User Set 2=17 ;User Set 3=18   
+CameraAttributes::FileAccessControl::FileOperationSelector ,Enum ,1,1, 4;Open=4   
+CameraAttributes::FileAccessControl::FileOpenMode ,Enum ,1,1, 0;Read=0 ;Write=1   
+CameraAttributes::FileAccessControl::FileAccessOffset ,I64 ,1,1, 0  
+CameraAttributes::FileAccessControl::FileAccessLength ,I64 ,1,1, 0  
+CameraAttributes::FileAccessControl::FileOperationStatus ,Enum ,1,0, 0;Success=0 ;Failure=1   
+CameraAttributes::FileAccessControl::FileOperationResult ,I64 ,1,0, 0  
+CameraAttributes::FileAccessControl::FileSize ,I64 ,1,0, 16  
+CameraAttributes::FileAccessControl::FileOperationExecute ,Command ,0,1, Not Readable  
+AcquisitionAttributes::BitsPerPixel ,Enum ,1,1, 0;Use hardware value=0 ;10-bit=10 ;12-bit=12 ;14-bit=14 ;16-bit=16   
+AcquisitionAttributes::ImageDecoderCopyMode ,Enum ,1,1, 0;Auto=0 ;Always=1 ;Never=2   
+AcquisitionAttributes::IncompleteBufferMode ,Enum ,1,1, 0;Ignore=0 ;Fail=1   
+AcquisitionAttributes::OutputImageType ,Enum ,1,1, 2147483647;Auto=2147483647 ;Grayscale (U8)=0 ;Grayscale (I16)=1 ;Grayscale (U16)=7 ;RGB (U32)=4 ;RGB (U64)=6   
+AcquisitionAttributes::OverwriteMode ,Enum ,1,1, 3;Get Oldest=0 ;Fail=2 ;Get Newest=3   
+AcquisitionAttributes::ReceiveTimestampMode ,Enum ,1,1, 0;None=0 ;Tick Count=1 ;System Time=2   
+AcquisitionAttributes::ShiftPixelBits ,Bool ,1,1, 0  
+AcquisitionAttributes::SwapPixelBytes ,Bool ,1,1, 0  
+AcquisitionAttributes::Timeout ,U32 ,1,1, 5000  
+CameraInformation::BaseAddress ,U32 ,1,0, 0  
+CameraInformation::BusType ,Enum ,1,0, 1431519795;FireWire=825440564 ;Ethernet=1768977972 ;Simulator=544434541 ;DirectShow=1685284983 ;IP=1230005101 ;SmartCamera2=1396924722 ;USB3 Vision=1431519795 ;UVC=1431716640   
+CameraInformation::ModelName ,String ,1,0, acA5472-17um  
+CameraInformation::PrimaryURLString ,String ,1,0, Local:Basler__acA5472-17um_107771-05_53ea559031b0ad20dcd1aa3e7d3e2f2b7915eb7b.zip;00000000c0000000;000000000000a5e0  
+CameraInformation::SecondaryURLString ,String ,1,0,   
+CameraInformation::SerialNumberHigh ,U32 ,1,0, 9846  
+CameraInformation::SerialNumberLow ,U32 ,1,0, 22994236  
+CameraInformation::USBConnectionSpeed ,Enum ,1,0, 8;Low-Speed (USB 2.0)=1 ;Full-Speed (USB 2.0)=2 ;Hi-Speed (USB 2.0)=4 ;SuperSpeed (USB 3.0)=8   
+CameraInformation::VendorName ,String ,1,0, Basler  
+StatusInformation::AcqInProgress ,Bool ,1,0, 0  
+StatusInformation::HandledEventCount ,I64 ,1,0, 0  
+StatusInformation::IncompleteBufferCount ,I64 ,1,0, 0  
+StatusInformation::LastBufferCount ,I64 ,1,0, 0  
+StatusInformation::LastBufferNumber ,U32 ,1,0, 4294967292  
+StatusInformation::LostBufferCount ,I64 ,1,0, 0  
+StatusInformation::LostEventCount ,I64 ,1,0, 0  

@@ -1,0 +1,2093 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ISO15745ProfileContainer xmlns="http://www.canopen.org/xml/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.canopen.org/xml/1.0 CANopen.xsd">
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>CAN device profile</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName></ProfileName>
+			<ProfileSource></ProfileSource>
+			<ProfileClassID>Device</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>1</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>CANopen</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_Device_CANopen" fileName="605.0161.01-O.xdd" fileCreator="Dr. Fritz Faulhaber GmbH &amp; Co KG" fileCreationDate="2024-11-08" fileCreationTime="07:04:39" fileModificationDate="2024-11-08" fileModificationTime="07:04:39" fileModifiedBy="Dr. Fritz Faulhaber GmbH &amp; Co KG" fileVersion="1" supportedLanguages="en">
+			<DeviceIdentity>
+				<vendorName readOnly="true">Dr. Fritz Faulhaber GmbH &amp; Co KG</vendorName>
+				<vendorID readOnly="true">327</vendorID>
+				<vendorText readOnly="true">
+					<label lang="en" />
+				</vendorText>
+				<deviceFamily readOnly="true">
+					<label lang="en" />
+				</deviceFamily>
+				<productFamily readOnly="true">MC V3.x</productFamily>
+				<productName readOnly="true">IMC *</productName>
+				<productID readOnly="true">016101</productID>
+				<productText readOnly="true">
+					<description lang="en">FileDescription=Faulhaber MC V3.x device description|EdsVersion=4.0|FileRevison=1|RevisionNum=0x00010000|</description>
+				</productText>
+				<orderNumber readOnly="true">0</orderNumber>
+				<version versionType="SW" readOnly="true"></version>
+				<version versionType="FW" readOnly="true"></version>
+				<version versionType="HW" readOnly="true"></version>
+				<specificationRevision readOnly="true"></specificationRevision>
+				<instanceName readOnly="true"></instanceName>
+			</DeviceIdentity>
+			<DeviceManager>
+				<indicatorList>
+					<LEDList>
+						<LED LEDcolors="monocolor" LEDtype="device">
+							<label lang="en" />
+							<LEDstate uniqueID="LED_State_1" state="off" LEDcolor="green">
+								<label lang="en" />
+							</LEDstate>
+						</LED>
+					</LEDList>
+				</indicatorList>
+			</DeviceManager>
+			<DeviceFunction>
+				<capabilities>
+					<characteristicsList>
+						<characteristic>
+							<characteristicName>
+								<label lang="en" />
+							</characteristicName>
+							<characteristicContent>
+								<label lang="en" />
+							</characteristicContent>
+						</characteristic>
+					</characteristicsList>
+				</capabilities>
+			</DeviceFunction>
+			<ApplicationProcess>
+				<parameterList>
+					<parameter uniqueID="UID_PARAM_102901" access="readWrite">
+						<label lang="en">Communication error</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_230004" access="readWrite">
+						<label lang="en">Number of emulated digital inputs</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="2" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231001" access="readWrite">
+						<label lang="en">Select lower limit switch inputs</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0x0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="4" />
+							<value value="8" />
+							<value value="16" />
+							<value value="32" />
+							<value value="64" />
+							<value value="128" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231002" access="readWrite">
+						<label lang="en">Select upper limit switch inputs</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0x0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="4" />
+							<value value="8" />
+							<value value="16" />
+							<value value="32" />
+							<value value="64" />
+							<value value="128" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231003" access="readWrite">
+						<label lang="en">Limit switch option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="1" />
+						<allowedValues>
+							<range>
+								<minValue value="-32768" />
+								<maxValue value="32767" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231006" access="readWrite">
+						<label lang="en">Select stop input</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0x0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="4" />
+							<value value="8" />
+							<value value="16" />
+							<value value="32" />
+							<value value="64" />
+							<value value="128" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231011" access="readWrite">
+						<label lang="en">Input threshold level</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="1" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_23130A" access="readWriteInput">
+						<label lang="en">AnIn 1 enable virtual input</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_23131A" access="readWriteInput">
+						<label lang="en">AnIn 2 enable virtual input</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_231701" access="readWrite">
+						<label lang="en">Digital input pin</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="2" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_232801" access="read">
+						<label lang="en">Controller type</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<allowedValues>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_23290B" access="read">
+						<label lang="en">Motor type</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<allowedValues>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233001" access="readWriteInput">
+						<label lang="en">Actual commutation angle source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="15" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233002" access="readWriteInput">
+						<label lang="en">Actual velocity source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="24" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="13" />
+							<value value="23" />
+							<value value="24" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233003" access="readWriteInput">
+						<label lang="en">Actual position source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="13" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="13" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233101" access="readWriteInput">
+						<label lang="en">Target voltage source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="10" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="7" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233102" access="readWriteInput">
+						<label lang="en">Target current source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="10" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="7" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233103" access="readWriteInput">
+						<label lang="en">Target velocity source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="10" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_233104" access="readWriteInput">
+						<label lang="en">Target position source</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="10" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_234001" access="readWrite">
+						<label lang="en">Commutation type</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="3" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_234406" access="readWriteInput">
+						<label lang="en">Integral part option</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="2" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_234602" access="readWriteInput">
+						<label lang="en">Setpoint filter enable</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237301" access="readWrite">
+						<label lang="en">Event trigger event selection</label>
+						<UINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="65535" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237805" access="readWriteInput">
+						<label lang="en">Channel 1 start event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="13" />
+							<value value="14" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237806" access="readWriteInput">
+						<label lang="en">Channel 1 update event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="13" />
+							<value value="14" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237905" access="readWriteInput">
+						<label lang="en">Channel 2 startevent selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="14" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237906" access="readWriteInput">
+						<label lang="en">Channel 2 update event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="14" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237A05" access="readWriteInput">
+						<label lang="en">Channel 3 start event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="13" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237A06" access="readWriteInput">
+						<label lang="en">Channel 3 update event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="13" />
+							<value value="15" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237B05" access="readWriteInput">
+						<label lang="en">Channel 4 start event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="13" />
+							<value value="14" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_237B06" access="readWriteInput">
+						<label lang="en">Channel 4 update event selection</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="11" />
+							<value value="12" />
+							<value value="13" />
+							<value value="14" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_240001" access="readWrite">
+						<label lang="en">CAN rate</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="9" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="9" />
+							</range>
+							<value value="0" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+							<value value="9" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_240002" access="readWrite">
+						<label lang="en">RS232 rate</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="3" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="3" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_6007" access="readWriteInput">
+						<label lang="en">Abort connection option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="1" />
+						<allowedValues>
+							<range>
+								<minValue value="-32768" />
+								<maxValue value="32767" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_605A" access="readWriteInput">
+						<label lang="en">Quick-Stop option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="2" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="8" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+							<value value="5" />
+							<value value="6" />
+							<value value="7" />
+							<value value="8" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_605B" access="readWriteInput">
+						<label lang="en">Shutdown option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="1" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_605C" access="readWriteInput">
+						<label lang="en">Disable operation option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="1" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="1" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_605D" access="readWriteInput">
+						<label lang="en">Halt option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="1" />
+						<allowedValues>
+							<range>
+								<minValue value="1" />
+								<maxValue value="4" />
+							</range>
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_605E" access="readWriteInput">
+						<label lang="en">Fault reaction option code</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="2" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="4" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+							<value value="2" />
+							<value value="3" />
+							<value value="4" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_6060" access="readWriteInput">
+						<label lang="en">Modes of operation</label>
+						<SINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="-6" />
+								<maxValue value="10" />
+							</range>
+							<value value="1" />
+							<value value="3" />
+							<value value="6" />
+							<value value="8" />
+							<value value="9" />
+							<value value="10" />
+							<value value="-1" />
+							<value value="-2" />
+							<value value="-3" />
+							<value value="-4" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_607E" access="readWriteInput">
+						<label lang="en">Polarity</label>
+						<USINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0x0" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="255" />
+							</range>
+							<value value="0xC0" />
+							<value value="0x80" />
+							<value value="0x40" />
+							<value value="0x0" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_6086" access="readWriteInput">
+						<label lang="en">Motion profile type</label>
+						<INT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0" />
+						<allowedValues>
+							<range>
+								<minValue value="-32768" />
+								<maxValue value="32767" />
+							</range>
+							<value value="0" />
+							<value value="1" />
+						</allowedValues>
+					</parameter>
+					<parameter uniqueID="UID_PARAM_60F2" access="readWriteInput">
+						<label lang="en">Position option code</label>
+						<UINT />
+						<denotation>
+							<label lang="en" />
+						</denotation>
+						<defaultValue value="0x0000" />
+						<allowedValues>
+							<range>
+								<minValue value="0" />
+								<maxValue value="0x00C0" />
+							</range>
+							<value value="0x0000" />
+							<value value="0x00C0" />
+						</allowedValues>
+					</parameter>
+				</parameterList>
+			</ApplicationProcess>
+		</ProfileBody>
+	</ISO15745Profile>
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>CAN comm net profile</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName></ProfileName>
+			<ProfileSource></ProfileSource>
+			<ProfileClassID>CommunicationNetwork</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>1</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>CANopen</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_CommunicationNetwork_CANopen" fileName="605.0161.01-O.xdd" fileCreator="Dr. Fritz Faulhaber GmbH &amp; Co KG" fileCreationDate="2024-11-08" fileCreationTime="07:04:39" fileModificationDate="2024-11-08" fileModificationTime="07:04:39" fileModifiedBy="Dr. Fritz Faulhaber GmbH &amp; Co KG" fileVersion="1" supportedLanguages="en">
+			<ApplicationLayers>
+				<identity>
+					<vendorID>327</vendorID>
+					<productID>016101</productID>
+				</identity>
+				<CANopenObjectList>
+					<CANopenObject index="1000" name="Device type" objectType="7" dataType="0007" accessType="ro" defaultValue="0x420192" PDOmapping="no" />
+					<CANopenObject index="1001" name="Error register" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="1003" name="Pre-defined error field" objectType="8" subNumber="9">
+						<CANopenSubObject subIndex="00" name="Number of errors" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="01" name="Standard error field 1" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="02" name="Standard error field 2" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="03" name="Standard error field 3" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="04" name="Standard error field 4" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="05" name="Standard error field 5" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="06" name="Standard error field 6" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="07" name="Standard error field 7" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="08" name="Standard error field 8" objectType="7" dataType="0007" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="0003" />
+					</CANopenObject>
+					<CANopenObject index="1005" name="COB-ID SYNC" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="0x80" PDOmapping="no" />
+					<CANopenObject index="1008" name="Manufacturer device name" objectType="7" dataType="0009" accessType="const" PDOmapping="no" />
+					<CANopenObject index="1009" name="Manufacturer hardware version" objectType="7" dataType="0009" accessType="const" PDOmapping="no" />
+					<CANopenObject index="100A" name="Manufacturer software version" objectType="7" dataType="0009" accessType="const" PDOmapping="no" />
+					<CANopenObject index="100C" name="Guard time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					<CANopenObject index="100D" name="Life time factor" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" />
+					<CANopenObject index="1010" name="Store parameters" objectType="8" subNumber="10">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="9" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="01" name="Save all parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="02" name="Save comm parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="03" name="Save app parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="04" name="Save app parameters 1" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="05" name="Save app parameters 2" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="06" name="Save cal parameters" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="07" name="Save factory parameter alls" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="08" name="Save factory parameters com" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="09" name="Save factory parameters app" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="0003" />
+					</CANopenObject>
+					<CANopenObject index="1011" name="Restore default parameters" objectType="8" subNumber="7">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="6" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="01" name="Restore all default parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="02" name="Restore comm default parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="03" name="Restore app default parameters" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="04" name="Restore app saved" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="05" name="Restore app 1 saved" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="06" name="Restore app 2 saved" objectType="7" dataType="0007" accessType="rw" PDOmapping="no" objFlags="0001" />
+					</CANopenObject>
+					<CANopenObject index="1014" name="COB-ID EMCY" objectType="7" dataType="0007" accessType="rw" defaultValue="$NODEID+0x80" PDOmapping="no" />
+					<CANopenObject index="1016" name="Consumer heartbeat time" objectType="8" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Consumer heartbeat time" objectType="7" dataType="0007" lowLimit="0" highLimit="0x007FFFFF" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1017" name="Producer heartbeat time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					<CANopenObject index="1018" name="Identity object" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="4" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Vendor ID" objectType="7" dataType="0007" accessType="ro" defaultValue="327" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Product code" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="Revision number" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="Serial number" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1029" name="Error behaviour / Number of error classes" objectType="8" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of error classes" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Communication error" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_102901" />
+					</CANopenObject>
+					<CANopenObject index="1200" name="Server SDO parameter" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID client to server (rx)" objectType="7" dataType="0007" accessType="ro" defaultValue="$NODEID+0x600" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="COB-ID server to client (tx)" objectType="7" dataType="0007" accessType="ro" defaultValue="$NODEID+0x580" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1400" name="Receive PDO1 parameter" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by RxPDO1" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x200" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1401" name="Receive PDO2 parameter" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by RxPDO2" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x300" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1402" name="Receive PDO3 parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by RxPDO3" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x400" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1403" name="Receive PDO4 parameter" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by RxPDO4" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x500" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1600" name="Receive PDO1 mapping / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="RxPDO 1 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60400010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="RxPDO 1 Mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="RxPDO 1 Mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="RxPDO 1 Mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1601" name="Receive PDO2 mapping / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="RxPDO2 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60400010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="RxPDO2 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x607A0020" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="RxPDO2 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="RxPDO2 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1602" name="Receive PDO3 mapping / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="RxPDO3 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60400010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="RxPDO3 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60FF0020" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="RxPDO3 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="RxPDO3 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1603" name="Receive PDO4 mapping / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="RxPDO4 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60400010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="RxPDO4 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60710010" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="RxPDO4 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="RxPDO4 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1800" name="Transmit PDO1 parameter" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by TxPDO1" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x180" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+						<CANopenSubObject subIndex="05" name="Eventtimer" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1801" name="Transmit PDO2 parameter" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by TxPDO2" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x280" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+						<CANopenSubObject subIndex="05" name="Eventtimer" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1802" name="Transmit PDO3 parameter" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by TxPDO3" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x380" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+						<CANopenSubObject subIndex="05" name="Eventtimer" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1803" name="Transmit PDO4 parameter" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="COB-ID used by TxPDO4" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="$NODEID+0x480" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Transmission type" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="255" PDOmapping="no" />
+						<CANopenSubObject subIndex="05" name="Eventtimer" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1A00" name="Transmit PDO1 mapping  / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="TPDO1 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60410010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="TPDO1 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="TxPDO1 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="TxPDO1 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1A01" name="Transmit PDO2 mapping  / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="TxPDO1 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60410010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="TxPDO2 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60640020" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="TxPDO3 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="TxPDO4 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1A02" name="Transmit PDO3 mapping  / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="TxPDO3 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60410010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="TxPDO3 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x606C0020" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="TxPDO3 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="TxPDO3 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="1A03" name="Transmit PDO4 mapping  / Number of mapped objects" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="0005" lowLimit="0" highLimit="4" accessType="rw" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="TxPDO4 mapping entry 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60410010" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="TxPDO4 mapping entry 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x60770010" PDOmapping="no" />
+						<CANopenSubObject subIndex="03" name="TxPDO4 mapping entry 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+						<CANopenSubObject subIndex="04" name="TxPDO4 mapping entry 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="2300" name="Number of I/Os" objectType="8" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="4" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Number of digital inputs" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Number of digital outputs" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Number of analog inputs" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Number of emulated digital inputs" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_230004" />
+					</CANopenObject>
+					<CANopenObject index="2310" name="Digital input settings" objectType="9" subNumber="13">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="18" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Select lower limit switch inputs" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231001" />
+						<CANopenSubObject subIndex="02" name="Select upper limit switch inputs" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231002" />
+						<CANopenSubObject subIndex="03" name="Limit switch option code" objectType="7" dataType="0003" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231003" />
+						<CANopenSubObject subIndex="04" name="Select reference switch input" objectType="7" dataType="0005" lowLimit="0" highLimit="8" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Emulated input threshold level" objectType="7" dataType="0005" lowLimit="0" highLimit="0x03" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Select stop input" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231006" />
+						<CANopenSubObject subIndex="08" name="Debug Write Digital Input Values" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="09" name="Debug Write Brake / Fault Pin" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0F" name="Select digital inputs used" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0xFF" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="10" name="Input polarity" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="11" name="Input threshold level" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231011" />
+						<CANopenSubObject subIndex="12" name="Input filter active" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2311" name="Digital I/O status" objectType="9" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="4" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Digital input logical state" objectType="7" dataType="0005" lowLimit="0x0" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="02" name="Digital input physical state" objectType="7" dataType="0005" lowLimit="0x0" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="03" name="Digital output status" objectType="7" dataType="0005" lowLimit="0x0" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Write digital outputs" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0" PDOmapping="RPDO" />
+					</CANopenObject>
+					<CANopenObject index="2312" name="Digital output settings" objectType="9" subNumber="13">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="16" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Select fault output pin" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Select brake control pin" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Brake delay time" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="DiagOut 1 pin selection" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="DiagOut 1 mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="DiagOut 2 pin selection" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0B" name="DiagOut 2 mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0C" name="DiagOut 3 pin selection" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0D" name="DiagOut 3 mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="DiagOut 4 pin selection" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="DiagOut 4 mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="10" name="Output polarity" objectType="7" dataType="0005" lowLimit="0" highLimit="0x07" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2313" name="Analog inputs" objectType="9" subNumber="21">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="26" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="AnIn 1 gain (numerator/divisor)" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0x7FFF8000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="AnIn 1 offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="AnIn 1 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="AnIn 1 user scaled value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="AnIn 1 resolution as encoder" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="AnIn 1 min input limit" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="-32768" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="AnIn 1 max input limit" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="32767" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="AnIn 1 select dir pin" objectType="7" dataType="0005" lowLimit="0" highLimit="8" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="AnIn 1 virtual input value" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="AnIn 1 enable virtual input" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_23130A" />
+						<CANopenSubObject subIndex="11" name="AnIn 2 gain (numerator/divisor)" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0x7FFF8000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="12" name="AnIn 2 offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="13" name="AnIn 2 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="14" name="AnIn 2 user scaled value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="15" name="AnIn 2 resolution as encoder" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="16" name="AnIn 2 min input limit" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="-32768" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="17" name="AnIn 2 max input limit" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="32767" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="18" name="AnIn 2 select dir pin" objectType="7" dataType="0005" lowLimit="0" highLimit="8" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="19" name="AnIn 2 virtual input value" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="1A" name="AnIn 2 enable virtual input" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_23131A" />
+					</CANopenObject>
+					<CANopenObject index="2314" name="Manufacturer scaled analog input values" objectType="8" subNumber="13">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="12" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="AnIn 1 scaled value (IA)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="02" name="AnIn 2 scaled value (IB)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="03" name="AnIn 3 scaled value (IC)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="AnIn 4 scaled value (Hall A)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="05" name="AnIn 5 scaled value (Hall B)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="06" name="AnIn 6 scaled value (Hall C)" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="07" name="AnIn 7 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="08" name="AnIn 8 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="09" name="AnIn 9 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="0A" name="AnIn 10 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="0B" name="AnIn 11 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="0C" name="AnIn 12 scaled value " objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2315" name="Motor encoder" objectType="9" subNumber="11">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="10" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Operation mode, index polarity" objectType="7" dataType="0006" lowLimit="0" highLimit="0x9F07" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="IE resolution" objectType="7" dataType="0007" lowLimit="0" highLimit="4194304" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Motor encoder position" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="Gain  (numerator/divisor)" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0x40004000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="MotorEnc scaled position" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="06" name="Absolute encoder bits" objectType="7" dataType="0007" lowLimit="0x0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Encoder status" objectType="7" dataType="0005" accessType="ro" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="Motor encoder act speed" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="09" name="Speed filter" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="10" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Single turn position 16 bit" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2316" name="Reference encoder" objectType="9" subNumber="8">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="9" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Operation mode, index polarity" objectType="7" dataType="0006" lowLimit="0" highLimit="0x0107" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="IE resolution" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="2048" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Reference encoder position" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="Gain  (numerator/divisor)" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0x40004000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="RefEnc scaled position" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="08" name="Reference encoder act speed" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="09" name="Speed filter" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="10" PDOmapping="TPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2317" name="PWM input" objectType="9" subNumber="8">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="7" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Digital input pin" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_231701" />
+						<CANopenSubObject subIndex="02" name="PWM input frequency" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Duty cycle raw value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Duty cycle  gain (numerator/divisor)" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x7FFF8000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Duty cycle offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Duty cycle scaled value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Resolution as encoder" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="1000" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2318" name="Hall configuration" objectType="9" subNumber="6">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Hall sensor type" objectType="7" dataType="0005" highLimit="0x83" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="02" name="Enable adaptation" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Adaptation threshold speed" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="1000" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Digital hall settings of Non-Faulhaber motors" objectType="7" dataType="0005" lowLimit="0" highLimit="0x81" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Hall filter configuration" objectType="7" dataType="0005" lowLimit="0" highLimit="0x03" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2319" name="Reduction ratio, external position encoder" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Numerator" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Divisor" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="231F" name="231F_00" objectType="8" subNumber="16">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="15" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="01" name="231F_01" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="02" name="231F_02" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="03" name="231F_03" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="04" name="231F_04" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="05" name="231F_05" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="06" name="231F_06" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="07" name="231F_07" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="08" name="231F_08" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="09" name="231F_09" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0A" name="231F_0A" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0B" name="231F_0B" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0C" name="231F_0C" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0D" name="231F_0D" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0E" name="231F_0E" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0F" name="231F_0F" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="2320" name="Faulhaber error register" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="2321" name="Error mask" objectType="8" subNumber="8">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="7" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="EMCY mask" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Fault mask" objectType="7" dataType="0006" lowLimit="0" highLimit="0xBFD3" accessType="rw" defaultValue="0x0000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Error out mask" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Disable voltage mask manufacturer" objectType="7" dataType="0006" accessType="ro" defaultValue="0x402C" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="Disable voltage mask user" objectType="7" dataType="0006" lowLimit="0" highLimit="0xBFD3" accessType="rw" defaultValue="0x0000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Quick stop mask" objectType="7" dataType="0006" lowLimit="0" highLimit="0xBFD3" accessType="rw" defaultValue="0x0000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Error bit mask" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0000" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2322" name="Error codes" objectType="8" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="ScriptingError" objectType="7" dataType="0006" accessType="ro" defaultValue="0" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2324" name="Device status" objectType="9" subNumber="10">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="9" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Device status word" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="02" name="Limit check delay time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="10" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Reserved 3" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="04" name="Reserved 4" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="05" name="Reserved 5" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="06" name="Reserved 6" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="07" name="Reserved 7" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="08" name="Reserved 8" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="09" name="Reserved 9" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" PDOmapping="TPDO" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="2325" name="Voltage monitor" objectType="9" subNumber="8">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="7" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Device supply lower threshold" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" objFlags="00030000" />
+						<CANopenSubObject subIndex="02" name="Motor supply lower threshold" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Motor supply max threshold" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" objFlags="00030000" />
+						<CANopenSubObject subIndex="04" name="Motor supply upper threshold" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Voltage error delay time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="200" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Device supply voltage" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="07" name="Motor supply voltage" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2326" name="Device temperature" objectType="9" subNumber="12">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="11" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="CPU temperature" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="02" name="Power stage temperature" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="03" name="Winding temperature" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="CPU temperature shutdown threshold" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="CPU temperature warning threshold" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="06" name="Power stage temperature shutdown threshold" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="07" name="Power stage temperature warning threshold" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Winding temperature shutdown threshold" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Winding temperature warning threshold" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Motor NTC temperature" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="0B" name="Motor NTC enable" objectType="7" dataType="0003" lowLimit="0" highLimit="1" accessType="ro" defaultValue="1" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2327" name="Device data" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Device nominal current" objectType="7" dataType="0006" lowLimit="1000" highLimit="5000" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="02" name="Device peak current" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="03" name="Device nominal voltage" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2328" name="Device data for thermal model" objectType="9" subNumber="10">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="9" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Controller type" objectType="7" dataType="0005" PDOmapping="no" objFlags="00030000" uniqueIDRef="UID_PARAM_232801" />
+						<CANopenSubObject subIndex="02" name="Power stage Rdson" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="03" name="Power stage LossFactor" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="04" name="Power stage Rth1" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="Power stage Time Constant 1" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="06" name="Power stage Rth2" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="07" name="Power stage Time Constant 2" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Power stage Rth3" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="09" name="Power stage Rth4" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2329" name="Motor and application data for motor control" objectType="9" subNumber="19">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="18" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Rated current" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Continous current" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Peak current" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Torque constant / Force constant" objectType="7" dataType="0007" lowLimit="0" highLimit="3500000" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Terminal inductance" objectType="7" dataType="0007" lowLimit="0" highLimit="200000" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Inductance Ld" objectType="7" dataType="0007" lowLimit="0" highLimit="200000" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Number of pole pairs" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Phase angle offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="09" name="Rotor inertia / Rod weight" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Load inertia / Load mass" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0B" name="Motor type" objectType="7" dataType="0005" PDOmapping="no" objFlags="00030000" uniqueIDRef="UID_PARAM_23290B" />
+						<CANopenSubObject subIndex="0C" name="Magnetic pitch of linear motor" objectType="7" dataType="0005" lowLimit="0" highLimit="60" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0D" name="Filter phase inductance" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Factor speed constant" objectType="7" dataType="0006" lowLimit="750" highLimit="1250" accessType="rw" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="0F" name="Steps per turn" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="24" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="10" name="Stepper interpolation factor" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="512" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="11" name="Stepper current reduction at n=0" objectType="7" dataType="0005" lowLimit="0" highLimit="100" accessType="rw" defaultValue="60" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="12" name="Current holding time at n=0" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="200" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="232A" name="Motor and application data for thermal motor model" objectType="9" subNumber="11">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="10" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Terminal resistance" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Friction" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Friction,dynamic" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Thermal resistance 1" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Thermal resistance 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Thermal time constant 1" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Thermal time constant 2" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="Ambient temperature" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="22" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Reduction of thermal resistance 2" objectType="7" dataType="0005" lowLimit="0" highLimit="99" accessType="rw" defaultValue="25" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Selection of thermal model" objectType="7" dataType="0005" lowLimit="0" highLimit="2" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="232B" name="Motor alignment parameters" objectType="9" subNumber="6">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Setup time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="5" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Delta time step 1" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="250" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Delta time step 2" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="250" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Delta time step 3" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="250" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Delta postion tolerance" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="4096" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="232C" name="Motor alignment results" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Position A1" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="02" name="Position B" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="03" name="Position A2" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="2330" name="Switch position for actual values " objectType="8" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Actual commutation angle source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233001" />
+						<CANopenSubObject subIndex="02" name="Actual velocity source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233002" />
+						<CANopenSubObject subIndex="03" name="Actual position source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233003" />
+					</CANopenObject>
+					<CANopenObject index="2331" name="Discrete sources" objectType="8" subNumber="5">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="4" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Target voltage source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233101" />
+						<CANopenSubObject subIndex="02" name="Target current source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233102" />
+						<CANopenSubObject subIndex="03" name="Target velocity source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233103" />
+						<CANopenSubObject subIndex="04" name="Target position source" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_233104" />
+					</CANopenObject>
+					<CANopenObject index="2332" name="Cyclic mode interpolation rate " objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="233A" name="Manufacturer specified bits" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Bit mask for bit 14" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Bit mask for bit 15" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="233E" name="Selection of controller scaling" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="233F" name="Operation mode options" objectType="7" dataType="0006" lowLimit="0x0" highLimit="0x80FF" accessType="rw" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2340" name="General parameters" objectType="9" subNumber="10">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="9" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Commutation type" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_234001" />
+						<CANopenSubObject subIndex="02" name="Motor output voltage DC" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="03" name="Motor output voltage BL block" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="Motor output voltage Xd" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="05" name="Motor output voltage Xq" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="06" name="Sinus output voltage Ua" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="07" name="Sinus output voltage Ub" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="08" name="Sinus output voltage Uc" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="09" name="Sinus output voltage Ud" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="2341" name="Target voltage" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="2342" name="Torque control parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain Kpi" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Integral time Tni" objectType="7" dataType="0006" lowLimit="150" highLimit="2600" accessType="rw" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="2343" name="Flux control parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain Kpi" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Integral time Tni" objectType="7" dataType="0006" lowLimit="150" highLimit="2600" accessType="rw" PDOmapping="no" />
+					</CANopenObject>
+					<CANopenObject index="2344" name="Velocity control parameters" objectType="9" subNumber="7">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="6" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain KP" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="RPDO" />
+						<CANopenSubObject subIndex="02" name="Integral time TN" objectType="7" dataType="0006" lowLimit="20" highLimit="1000" accessType="rw" PDOmapping="RPDO" />
+						<CANopenSubObject subIndex="03" name="Velocity deviation threshold" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="65535" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Velocity deviation time" objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" defaultValue="100" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Velocity warning threshold" objectType="7" dataType="0007" lowLimit="1" highLimit="0x007FFFFF" accessType="rw" defaultValue="30000" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Integral part option" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_234406" />
+					</CANopenObject>
+					<CANopenObject index="2345" name="Velocity filter parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Actual velocity filter TF" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Display velocity filter" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2346" name="Setpoint velocity filter parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Setpoint velocity filter TF" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Setpoint filter enable" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_234602" />
+					</CANopenObject>
+					<CANopenObject index="2347" name="Gain scheduling" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain factor Kpn" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="128" PDOmapping="RPDO" />
+						<CANopenSubObject subIndex="02" name="Gain factor Kv" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="128" PDOmapping="RPDO" />
+					</CANopenObject>
+					<CANopenObject index="2348" name="Position control parameters" objectType="9" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain Kv" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="RPDO" />
+					</CANopenObject>
+					<CANopenObject index="2349" name="Current feedforward parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Current feedforward factor" objectType="7" dataType="0005" lowLimit="0" highLimit="128" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Current feedforward delay" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="234A" name="Velocity feedforward parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Velocity feedforward factor" objectType="7" dataType="0005" lowLimit="0" highLimit="128" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Velocity feedforward delay" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="234B" name="Current filter parameters" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Display current filter TF" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Display torque filter TF" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="234C" name="Current compensation parameters" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gravity compensation" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Positive friction compensation" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Negative friction compensation" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2350" name="Positive torque limit homing" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="1000" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="2351" name="Negative torque limit homing" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="1000" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="2360" name="Actual values" objectType="9" subNumber="11">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="10" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Motor current Id actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="02" name="Motor current Iq actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="03" name="Motor currrent IBlock actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="04" name="Motor current IDC actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="05" name="Velocity actual internal value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="06" name="Position actual internal value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="07" name="Actual commutation segment" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="08" name="Actual commutation angle" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="09" name="Reserved 9" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" objFlags="00020003" />
+						<CANopenSubObject subIndex="0A" name="Reserved 10" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="wo" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="2370" name="Trace configuration" objectType="9" subNumber="16">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="15" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Trigger value" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Trigger threshold" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Trigger offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Trigger mode" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Buffer length" objectType="7" dataType="0006" lowLimit="1" highLimit="2048" accessType="rw" defaultValue="2048" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Sample time" objectType="7" dataType="0005" lowLimit="1" highLimit="255" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Trace source of channel 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="Trace source of channel 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Trace source of channel 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Trace source of channel 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0B" name="Monitor source of channel 1" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0C" name="Monitor source of channel 2" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0D" name="Monitor source of channel 3" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Monitor source of channel 4" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Extended recorder mode" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="wo" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2371" name="Trace buffer" objectType="9" subNumber="6">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Trace state" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" />
+						<CANopenSubObject subIndex="02" name="Trace value of channel 1" objectType="2" dataType="0009" accessType="ro" PDOmapping="no" objFlags="0002" />
+						<CANopenSubObject subIndex="03" name="Trace value of channel 2" objectType="2" dataType="0009" accessType="ro" PDOmapping="no" objFlags="0002" />
+						<CANopenSubObject subIndex="04" name="Trace value of channel 3" objectType="2" dataType="0009" accessType="ro" PDOmapping="no" objFlags="0002" />
+						<CANopenSubObject subIndex="05" name="Trace value of channel 4" objectType="2" dataType="0009" accessType="ro" PDOmapping="no" objFlags="0002" />
+					</CANopenObject>
+					<CANopenObject index="2372" name="Logic trigger configuration" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Logic trigger AND mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Logic trigger OR mask" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0x00" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2373" name="Event trigger configuration" objectType="9" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Event trigger event selection" objectType="7" dataType="0006" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_237301" />
+					</CANopenObject>
+					<CANopenObject index="2374" name="Event flag configuration" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Event flag set mask" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Event flag reset mask" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2378" name="Trace channel configuration" objectType="9" subNumber="18">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="23" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Channel 1 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Channel 1 sample time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Channel 1 number of samples" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="512" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Channel 1 monitoring values" objectType="7" dataType="0006" lowLimit="0" highLimit="0x003F" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Channel 1 start event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237805" />
+						<CANopenSubObject subIndex="06" name="Channel 1 update event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237806" />
+						<CANopenSubObject subIndex="07" name="Channel 1 number of eval-cycles" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Channel 1 number of turnovers" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Channel 1 done" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="10" name="Channel 1 abs min value" objectType="7" dataType="0004" accessType="ro" defaultValue="2147483647" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="11" name="Channel 1 abs max value" objectType="7" dataType="0004" accessType="ro" defaultValue="-2147483648" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="12" name="Channel 1 minimum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="13" name="Channel 1 maximum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="14" name="Channel 1 mean value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="15" name="Channel 1 rms value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="16" name="Channel 1 period time" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="17" name="Channel 1 sigma" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2379" name="Trace channel configuration" objectType="9" subNumber="18">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="23" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Channel 2 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Channel 2 sample time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Channel 2 number of samples" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="512" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Channel 2 monitoring values" objectType="7" dataType="0006" lowLimit="0" highLimit="0x003F" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Channel 2 startevent selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237905" />
+						<CANopenSubObject subIndex="06" name="Channel 2 update event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237906" />
+						<CANopenSubObject subIndex="07" name="Channel 2 number of eval-cycles" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Channel 2 number of turn-overs" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Channel 2 done" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="10" name="Channel 2 abs min value" objectType="7" dataType="0004" accessType="ro" defaultValue="2147483647" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="11" name="Channel 2 abs max value" objectType="7" dataType="0004" accessType="ro" defaultValue="-2147483648" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="12" name="Channel 2 minimum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="13" name="Channel 2 maximum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="14" name="Channel 2 mean value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="15" name="Channel 2 rms value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="16" name="Channel 2 period time" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="17" name="Channel 2 sigma" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="237A" name="Trace channel configuration" objectType="9" subNumber="18">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="23" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Channel 3 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Channel 3 sample time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Channel 3 number of samples" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="512" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Channel 3 monitoring values" objectType="7" dataType="0006" lowLimit="0" highLimit="0x003F" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Channel 3 start event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237A05" />
+						<CANopenSubObject subIndex="06" name="Channel 3 update event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237A06" />
+						<CANopenSubObject subIndex="07" name="Channel 3 number of eval-cycles" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Channel 3 number of turn-overs" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Channel 3 done" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="10" name="Channel 3 abs min value" objectType="7" dataType="0004" accessType="ro" defaultValue="2147483647" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="11" name="Channel 3 abs max value" objectType="7" dataType="0004" accessType="ro" defaultValue="-2147483648" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="12" name="Channel 3 minimum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="13" name="Channel 3 maximum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="14" name="Channel 3 mean value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="15" name="Channel 3 rms value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="16" name="Channel 3 period time" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="17" name="Channel 3 sigma" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="237B" name="Trace channel configuration" objectType="9" subNumber="18">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="23" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Channel 4 filter time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Channel 4 sample time" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Channel 4 number of samples" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="512" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Channel 4 monitoring values" objectType="7" dataType="0006" lowLimit="0" highLimit="0x003F" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Channel 4 start event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237B05" />
+						<CANopenSubObject subIndex="06" name="Channel 4 update event selection" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_237B06" />
+						<CANopenSubObject subIndex="07" name="Channel 4 number of eval-cycles" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Channel 4 number of turn-overs" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Channel 4 done" objectType="7" dataType="0005" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="10" name="Channel 4 abs min value" objectType="7" dataType="0004" accessType="ro" defaultValue="2147483647" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="11" name="Channel 4 abs max value" objectType="7" dataType="0004" accessType="ro" defaultValue="-2147483648" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="12" name="Channel 4 minimum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="13" name="Channel 4 maximum" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="14" name="Channel 4 mean value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="15" name="Channel 4 rms value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="16" name="Channel 4 period time" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" />
+						<CANopenSubObject subIndex="17" name="Channel 4 sigma" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					</CANopenObject>
+					<CANopenObject index="2380" name="PRBS generator" objectType="9" subNumber="6">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="01" name="Shift register init" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="02" name="Gain" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="03" name="Offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="04" name="Sample rate factor" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="05" name="Enable" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020002" />
+					</CANopenObject>
+					<CANopenObject index="2381" name="Start up generator" objectType="9" subNumber="9">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="8" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="01" name="Speed threshold" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="02" name="Timeout time" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="03" name="Target value" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="04" name="Reset" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="05" name="Enable" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="06" name="Ready" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="07" name="TimeThreshold" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="08" name="Iteration" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020002" />
+					</CANopenObject>
+					<CANopenObject index="2382" name="Sinusoidal excitation" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="01" name="Amplitude" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="02" name="Frequency" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="03" name="Enable" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020002" />
+					</CANopenObject>
+					<CANopenObject index="238F" name="Select signal generator source" objectType="9" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" objFlags="00020002" />
+						<CANopenSubObject subIndex="01" name="Selector" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020002" />
+					</CANopenObject>
+					<CANopenObject index="23F0" name="23F0_00" objectType="9" subNumber="7">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="6" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="01" name="23F0_01" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="02" name="23F0_02" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="03" name="23F0_03" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="04" name="23F0_04" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="05" name="23F0_05" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="06" name="23F0_06" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="23F1" name="23F1_00" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="01" name="23F1_01" objectType="7" dataType="0004" accessType="ro" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="02" name="23F1_02" objectType="7" dataType="0004" accessType="ro" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="23F3" name="23F2_00 " objectType="9" subNumber="6">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="5" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="01" name="Actual state" objectType="7" dataType="0002" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="02" name="Demand position" objectType="7" dataType="0004" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="03" name="Demand speed" objectType="7" dataType="0004" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="04" name="Demand acceleration" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="0003" />
+						<CANopenSubObject subIndex="05" name="Initial state" objectType="7" dataType="0002" accessType="ro" PDOmapping="no" objFlags="0003" />
+					</CANopenObject>
+					<CANopenObject index="2400" name="Communication parameters" objectType="9" subNumber="8">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="7" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="CAN rate" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020000" uniqueIDRef="UID_PARAM_240001" />
+						<CANopenSubObject subIndex="02" name="RS232 rate" objectType="7" dataType="0005" PDOmapping="no" objFlags="00020001" uniqueIDRef="UID_PARAM_240002" />
+						<CANopenSubObject subIndex="03" name="Node ID" objectType="7" dataType="0005" lowLimit="1" highLimit="127" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="04" name="Communication settings" objectType="7" dataType="0007" lowLimit="0" highLimit="0x00078303" accessType="rw" defaultValue="0x00030302" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="RS232 NetMode" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="ComState" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="ErrState" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="0003" />
+					</CANopenObject>
+					<CANopenObject index="2401" name="USB Delay" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" defaultValue="5" PDOmapping="no" objFlags="00020001" />
+					<CANopenObject index="2404" name="FAID" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="wo" defaultValue="0" PDOmapping="no" objFlags="00020003" />
+					<CANopenObject index="2405" name="Bootloader SW version" objectType="7" dataType="0009" accessType="ro" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2406" name="OD revision number" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2407" name="SW revision number" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2408" name="XDC Number" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2410" name="CAL access" objectType="9" subNumber="2">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="1" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="CAL key" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2500" name="ADC scaling (offset|gain)" objectType="9" subNumber="15">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="14" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="IA scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="IB scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="IC scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Hall A scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Hall B scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Hall C scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Analog input 1 scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="Analog input 2 scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Uel scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Udc scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0B" name="Internal temperature scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0C" name="External temperature scaling" objectType="7" dataType="0007" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0D" name="Motor NTC gain" objectType="7" dataType="0004" lowLimit="0x80000000" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0E" name="Motor NTC offset" objectType="7" dataType="0003" lowLimit="0xFFFF8000" accessType="ro" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2501" name="Hall scaling" objectType="9" subNumber="15">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="14" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gain A" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="02" name="Hall A  offset" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="03" name="Hall A sin" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="04" name="Hall A cos" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="Corr A" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="06" name="Hall B offset" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="07" name="Hall B sin" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Hall B cos" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="09" name="Corr B" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0A" name="Hall C offset" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0B" name="Hall C sin" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0C" name="Hall C cos" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0D" name="Offset A" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0E" name="Offset B" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2502" name="Internal filter parameters" objectType="9" subNumber="14">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="13" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Filter time actual velocity" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="256" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Filter time IA " objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="03" name="Filter time IB" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="04" name="Filter time IC" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="Filter time Uel" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="06" name="Filter time Umot" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="07" name="Additional filter time Uel" objectType="7" dataType="0006" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Additional filter time Umot" objectType="7" dataType="0006" lowLimit="0x0" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="09" name="Filter time Iq thermal model" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0A" name="Filter time Id thermal model" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0B" name="Filter time Imot thermal model" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0C" name="Filter time setpoint voltage model" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0D" name="Filter time electrical time constant" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2503" name="Boot options" objectType="7" dataType="0006" lowLimit="0" highLimit="2" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2504" name="Hall compensation" objectType="9" subNumber="13">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="12" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Entry 01" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="02" name="Entry 02" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="03" name="Entry 03" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="04" name="Entry 04" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="05" name="Entry 05" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="06" name="Entry 06" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="07" name="Entry 07" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="08" name="Entry 08" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="09" name="Entry 09" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0A" name="Entry 10" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0B" name="Entry 11" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+						<CANopenSubObject subIndex="0C" name="Entry 12" objectType="7" dataType="0003" accessType="ro" PDOmapping="no" objFlags="00030000" />
+					</CANopenObject>
+					<CANopenObject index="2506" name="Encoder compensation" objectType="9" subNumber="65">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="64" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Value 0" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Value 1" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Value 2" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Value 3" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Value 4" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="06" name="Value 5" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="07" name="Value 6" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="08" name="Value 7" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Value 8" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Value 9" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0B" name="Value 10" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0C" name="Value 11" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0D" name="Value 12" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0E" name="Value 13" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0F" name="Value 14" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="10" name="Value 15" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="11" name="Value 16" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="12" name="Value 17" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="13" name="Value 18" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="14" name="Value 19" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="15" name="Value 20" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="16" name="Value 21" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="17" name="Value 22" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="18" name="Value 23" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="19" name="Value 24" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1A" name="Value 25" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1B" name="Value 26" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1C" name="Value 27" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1D" name="Value 28" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1E" name="Value 29" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="1F" name="Value 30" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="20" name="Value 31" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="21" name="Value 32" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="22" name="Value 33" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="23" name="Value 34" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="24" name="Value 35" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="25" name="Value 36" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="26" name="Value 37" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="27" name="Value 38" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="28" name="Value 39" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="29" name="Value 40" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2A" name="Value 41" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2B" name="Value 42" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2C" name="Value 43" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2D" name="Value 44" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2E" name="Value 45" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="2F" name="Value 46" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="30" name="Value 47" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="31" name="Value 48" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="32" name="Value 49" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="33" name="Value 50" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="34" name="Value 51" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="35" name="Value 52" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="36" name="Value 53" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="37" name="Value 54" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="38" name="Value 55" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="39" name="Value 56" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3A" name="Value 57" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3B" name="Value 58" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3C" name="Value 59" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3D" name="Value 60" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3E" name="Value 61" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="3F" name="Value 62" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="40" name="Value 63" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="250A" name="Pwm frequency" objectType="7" dataType="0005" lowLimit="1" highLimit="10" accessType="rw" defaultValue="4" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="250F" name="250F_00" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="wo" defaultValue="0" PDOmapping="no" objFlags="00020003" />
+					<CANopenObject index="2600" name="Drive system gear" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gear ratio num" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Gear ratio den" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2601" name="Drive system load transmission" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Load transmission" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Load transmission ratio num" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Load transmission ratio den" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2602" name="Drive system numbers" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Gear catalog number" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Encoder cataloge number" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="Drive combination number" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2603" name="Drive system units" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Unit reference" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Unit names" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="2604" name="Nominal voltage" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2605" name="Drive system settings" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="2610" name="OEM DeviceData" objectType="9" subNumber="4">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="3" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="OEM product descriptor " objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="OEM product code" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="03" name="OEM serial number" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="3000" name="User programs" objectType="8" subNumber="9">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="8" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="User program 1 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="02" name="User program 2 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="03" name="User program 3 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="04" name="User program 4 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="05" name="User program 5 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="06" name="User program 6 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="07" name="User program 7 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="08" name="User program 8 start address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+					</CANopenObject>
+					<CANopenObject index="3001" name="Active program" objectType="9" subNumber="10">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="10" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Actual program command" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="02" name="Actual program number" objectType="7" dataType="0005" lowLimit="0" highLimit="255" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="03" name="Actual program position" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="04" name="Actual program state" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="05" name="Breakpoint address" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0xFFFF" PDOmapping="no" objFlags="00020001" />
+						<CANopenSubObject subIndex="07" name="Upload/Download buffer" objectType="7" dataType="0009" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="08" name="Error state" objectType="7" dataType="0005" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="09" name="Error code" objectType="7" dataType="0006" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="0A" name="Program memory" objectType="7" dataType="0006" accessType="ro" defaultValue="0" PDOmapping="no" objFlags="00020001" />
+					</CANopenObject>
+					<CANopenObject index="3002" name="Auto start program" objectType="7" dataType="0005" lowLimit="0" highLimit="8" accessType="rw" defaultValue="0" PDOmapping="no" />
+					<CANopenObject index="3003" name="Access key" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="wo" defaultValue="0" PDOmapping="no" objFlags="00020001" />
+					<CANopenObject index="3004" name="Debug user program" objectType="9" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Select variable" objectType="7" dataType="0005" lowLimit="0" highLimit="25" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Selected variable value" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="3005" name="User program variables" objectType="9" subNumber="27">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="26" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="User prog variable a" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="02" name="User prog variable b" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="03" name="User prog variable c" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="04" name="User prog variable d" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="05" name="User prog variable e" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="06" name="User prog variable f" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="07" name="User prog variable g" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="08" name="User prog variable h" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="09" name="User prog variable i" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0A" name="User prog variable j" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0B" name="User prog variable k" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0C" name="User prog variable l" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0D" name="User prog variable m" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0E" name="User prog variable n" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="0F" name="User prog variable o" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="10" name="User prog variable p" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="11" name="User prog variable q" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="12" name="User prog variable r" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="13" name="User prog variable s" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="14" name="User prog variable t" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="15" name="User prog variable u" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="16" name="User prog variable v" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="17" name="User prog variable w" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="18" name="User prog variable x" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="19" name="User prog variable y" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+						<CANopenSubObject subIndex="1A" name="User prog variable z" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" objFlags="00020001" />
+					</CANopenObject>
+					<CANopenObject index="3006" name="Scripting stack / Number of levels" objectType="8" subNumber="16">
+						<CANopenSubObject subIndex="00" name="Number of levels" objectType="7" dataType="0005" accessType="ro" defaultValue="15" PDOmapping="no" objFlags="0001" />
+						<CANopenSubObject subIndex="01" name="Call stack level 0" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="02" name="Call stack level 1" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="03" name="Call stack level 2" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="04" name="Call stack level 3" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="05" name="Call stack level 4" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="06" name="Call stack level 5" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="07" name="Call stack level 6" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="08" name="Call stack level 7" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="09" name="Call stack level 8" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0A" name="Call stack level 9" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0B" name="Call stack level 10" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0C" name="Call stack level 11" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0D" name="Call stack level 12" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0E" name="Call stack level 13" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+						<CANopenSubObject subIndex="0F" name="Call stack level 14" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0" PDOmapping="no" objFlags="00020003" />
+					</CANopenObject>
+					<CANopenObject index="300F" name="Variable access key" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="wo" defaultValue="0" PDOmapping="TPDO" objFlags="00020000" />
+					<CANopenObject index="3010" name="Program constants" objectType="9" subNumber="17">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="16" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Program constant 0" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="02" name="Program constant 1" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="03" name="Program constant 2" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="04" name="Program constant 3" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="05" name="Program constant 4" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="06" name="Program constant 5" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="07" name="Program constant 6" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="08" name="Program constant 7" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="09" name="Program constant 8" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0A" name="Program constant 9" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0B" name="Program constant 10" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0C" name="Program constant 11" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0D" name="Program constant 12" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0E" name="Program constant 13" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="0F" name="Program constant 14" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+						<CANopenSubObject subIndex="10" name="Program constant 15" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="optional" />
+					</CANopenObject>
+					<CANopenObject index="6007" name="Abort connection option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_6007" />
+					<CANopenObject index="6040" name="Controlword" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" defaultValue="0x0" PDOmapping="RPDO" objFlags="0001" />
+					<CANopenObject index="6041" name="Statusword" objectType="7" dataType="0006" lowLimit="0x0" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="605A" name="Quick-Stop option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_605A" />
+					<CANopenObject index="605B" name="Shutdown option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_605B" />
+					<CANopenObject index="605C" name="Disable operation option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_605C" />
+					<CANopenObject index="605D" name="Halt option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_605D" />
+					<CANopenObject index="605E" name="Fault reaction option code" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_605E" />
+					<CANopenObject index="6060" name="Modes of operation" objectType="7" dataType="0002" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_6060" />
+					<CANopenObject index="6061" name="Modes of operation display" objectType="7" dataType="0002" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+					<CANopenObject index="6062" name="Position demand value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6063" name="Position actual internal value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6064" name="Position actual value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6065" name="Following error window" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6066" name="Following error time out" objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6067" name="Position window" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6068" name="Position window time" objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="606B" name="Velocity demand value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="606C" name="Velocity actual value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="606D" name="Velocity window" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="606E" name="Velocity window time" objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="606F" name="Velocity threshold" objectType="7" dataType="0006" lowLimit="0" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6070" name="Velocity threshold time" objectType="7" dataType="0006" lowLimit="1" highLimit="65535" accessType="rw" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6071" name="Target torque" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="6072" name="Max torque" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6074" name="Torque demand" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6077" name="Torque actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="6078" name="Current actual value" objectType="7" dataType="0003" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="607A" name="Target position" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="607B" name="Position range limit" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Min position range limit" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="-2147483648" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Max position range limit" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="2147483647" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="607C" name="Home offset" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="607D" name="Software position limit" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Min position limit" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="-2147483648" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Max position limit" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="2147483647" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="607E" name="Polarity" objectType="7" dataType="0005" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_607E" />
+					<CANopenObject index="6080" name="Max motor speed " objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="32767" PDOmapping="RPDO" />
+					<CANopenObject index="6081" name="Profile velocity" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="32767" PDOmapping="RPDO" />
+					<CANopenObject index="6083" name="Profile acceleration" objectType="7" dataType="0007" lowLimit="1" highLimit="32767" accessType="rw" defaultValue="30000" PDOmapping="RPDO" />
+					<CANopenObject index="6084" name="Profile deceleration" objectType="7" dataType="0007" lowLimit="1" highLimit="32767" accessType="rw" defaultValue="30000" PDOmapping="RPDO" />
+					<CANopenObject index="6085" name="Quick stop deceleration" objectType="7" dataType="0007" lowLimit="10" highLimit="32767" accessType="rw" defaultValue="30000" PDOmapping="RPDO" />
+					<CANopenObject index="6086" name="Motion profile type" objectType="7" dataType="0003" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_6086" />
+					<CANopenObject index="608F" name="Position encoder resolution" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Encoder increments" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Motor revolutions" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="6090" name="Velocity encoder resolution" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Encoder increments" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Motor revolutions" objectType="7" dataType="0007" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="6091" name="Gear ratio" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Motor shaft revolutions" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Driving shaft revolutions" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="6092" name="Feed constant" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Feed" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="4096" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Shaft revolutions" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="6096" name="Velocity factor" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Numerator" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="1" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Divisor" objectType="7" dataType="0007" lowLimit="1" highLimit="4294967295" accessType="rw" defaultValue="4096" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="6098" name="Homing method" objectType="7" dataType="0002" lowLimit="-4" highLimit="37" accessType="rw" defaultValue="0" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="6099" name="Homing speeds" objectType="8" subNumber="3">
+						<CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="0005" accessType="ro" defaultValue="2" PDOmapping="no" />
+						<CANopenSubObject subIndex="01" name="Switch seek velocity" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="400" PDOmapping="RPDO" objFlags="00020000" />
+						<CANopenSubObject subIndex="02" name="Homing speed" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="400" PDOmapping="RPDO" objFlags="00020000" />
+					</CANopenObject>
+					<CANopenObject index="609A" name="Homing acceleration" objectType="7" dataType="0007" lowLimit="0" highLimit="4294967295" accessType="rw" defaultValue="50" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="60B0" name="Position offset" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="60B1" name="Velocity offset" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="60B2" name="Torque offset" objectType="7" dataType="0003" lowLimit="-32768" highLimit="32767" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="60B8" name="Touch probe function" objectType="7" dataType="0006" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="60B9" name="Touch probe status" objectType="7" dataType="0006" accessType="ro" defaultValue="0x0000" PDOmapping="TPDO" />
+					<CANopenObject index="60BA" name="Touch probe 1 positive edge" objectType="7" dataType="0004" accessType="ro" defaultValue="0x0000" PDOmapping="TPDO" />
+					<CANopenObject index="60BB" name="Touch probe 1 negative edge" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60BC" name="Touch probe 2 positive edge" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60BD" name="Touch probe 2 negative edge" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60C5" name="Max acceleration" objectType="7" dataType="0007" lowLimit="10" highLimit="32767" accessType="rw" defaultValue="30000" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="60C6" name="Max deceleration" objectType="7" dataType="0007" lowLimit="10" highLimit="32767" accessType="rw" defaultValue="30000" PDOmapping="RPDO" objFlags="00020000" />
+					<CANopenObject index="60D5" name="Touch probe 1 positive edge counter" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60D6" name="Touch probe 1 negative edge counter" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60D7" name="Touch probe 2 positive edge counter" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60D8" name="Touch probe 2 negative edge counter" objectType="7" dataType="0006" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60E0" name="Positive torque limit value" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="2000" PDOmapping="RPDO" />
+					<CANopenObject index="60E1" name="Negative torque limit value" objectType="7" dataType="0006" lowLimit="0" highLimit="6000" accessType="rw" defaultValue="2000" PDOmapping="RPDO" />
+					<CANopenObject index="60F2" name="Position option code" objectType="7" dataType="0006" PDOmapping="RPDO" objFlags="00020000" uniqueIDRef="UID_PARAM_60F2" />
+					<CANopenObject index="60F4" name="Following error actual value" objectType="7" dataType="0004" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60FD" name="Digital Inputs" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" />
+					<CANopenObject index="60FF" name="Target velocity" objectType="7" dataType="0004" lowLimit="-2147483648" highLimit="2147483647" accessType="rw" defaultValue="0" PDOmapping="RPDO" />
+					<CANopenObject index="6403" name="Motor catalogue number" objectType="7" dataType="0009" accessType="ro" PDOmapping="no" objFlags="00020000" />
+					<CANopenObject index="6502" name="Supported drive modes" objectType="7" dataType="0007" accessType="ro" PDOmapping="TPDO" objFlags="00020000" />
+					<CANopenObject index="6503" name="Drive catalogue number" objectType="7" dataType="0009" accessType="const" defaultValue="0" PDOmapping="no" objFlags="00020000" />
+				</CANopenObjectList>
+				<dummyUsage>
+					<dummy entry="Dummy0001=0" />
+					<dummy entry="Dummy0002=0" />
+					<dummy entry="Dummy0003=0" />
+					<dummy entry="Dummy0004=0" />
+					<dummy entry="Dummy0005=0" />
+					<dummy entry="Dummy0006=0" />
+					<dummy entry="Dummy0007=0" />
+				</dummyUsage>
+			</ApplicationLayers>
+			<TransportLayers>
+				<PhysicalLayer>
+					<baudRate defaultValue="250 Kbps">
+						<supportedBaudRate value="20 Kbps" />
+						<supportedBaudRate value="50 Kbps" />
+						<supportedBaudRate value="125 Kbps" />
+						<supportedBaudRate value="250 Kbps" />
+						<supportedBaudRate value="500 Kbps" />
+						<supportedBaudRate value="1000 Kbps" />
+					</baudRate>
+				</PhysicalLayer>
+			</TransportLayers>
+			<NetworkManagement>
+				<CANopenGeneralFeatures groupMessaging="false" dynamicChannels="0" selfStartingDevice="false" SDORequestingDevice="false" granularity="4" nrOfRxPDO="4" nrOfTxPDO="4" bootUpSlave="false" layerSettingServiceSlave="true" />
+				<CANopenMasterFeatures bootUpMaster="false" flyingMaster="false" SDOManager="false" configurationManager="false" layerSettingServiceMaster="true" />
+				<deviceCommissioning nodeID="1" nodeName="" actualBaudRate="250" networkNumber="0" networkName="" CANopenManager="false" />
+			</NetworkManagement>
+		</ProfileBody>
+	</ISO15745Profile>
+</ISO15745ProfileContainer>

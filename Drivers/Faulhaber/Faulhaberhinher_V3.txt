@@ -1,0 +1,12 @@
+TargetPosition=30000	10	0	
+Controlword=0xF	10	0
+Controlword=0x1F	1000	0	
+TargetPosition=-30000	10	0	
+Controlword=0xF	10	0
+Controlword=0x1F	1000	0	
+TargetPosition=0	10	0	
+Controlword=0xF	10	0
+Controlword=0x1F	1000	0	
+
+
+nicht getestet

@@ -1,0 +1,8 @@
+CameraAttributes::DeviceControl::DeviceLinkThroughputLimit ,I64 ,1,1,390000000
+CameraAttributes::ImageFormatControl::PixelFormat ,Enum ,1,1,17825797 =Mono12
+AcquisitionAttributes::OutputImageType ,Enum ,1,1, 1 =Grayscale (I16) 
+CameraAttributes::ImageFormatControl::OffsetX ,I64 ,1,1,0 
+CameraAttributes::ImageFormatControl::OffsetY ,I64 ,1,1,0
+CameraAttributes::ImageFormatControl::Width ,I64 ,1,1,5496
+CameraAttributes::ImageFormatControl::Height ,I64 ,1,1,3672
+
